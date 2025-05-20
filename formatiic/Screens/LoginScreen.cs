@@ -21,26 +21,35 @@ namespace formatiic
 
         private void botaoLogin_Click(object sender, EventArgs e)
         {
-            using (MySqlConnection con = ConnectionDB.GetConnection()){
+            using (MySqlConnection con = ConnectionDB.GetConnection())
+            {
                 if (con != null)
                 {
                     string email = campoEmailLogin.Text;
                     string password = campoSenhaLogin.Text;
 
-                    string sql = "SELECT id FROM shooter_tbl WHERE email = @email AND password = @password";
+                    string sql = "SELECT id, password FROM shooter_tbl WHERE email = @email";
                     MySqlCommand cmd = new MySqlCommand(sql, con);
                     cmd.Parameters.AddWithValue("@email", email);
-                    cmd.Parameters.AddWithValue("@password", password);
 
-                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    using (var reader = cmd.ExecuteReader())
                     {
-                        if (reader.HasRows)
+                        if (reader.Read())
                         {
-                            MessageBox.Show("Login successful!");
+                            string storedHash = reader.GetString("password");
+
+                            if (PasswordHasher.VerifyPassword(password, storedHash))
+                            {
+                                MessageBox.Show("Logado com sucesso!");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Senha incorreta!");
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("Invalid email or password.");
+                            MessageBox.Show("Usuário não encontrado.");
                         }
                     }
                 }
