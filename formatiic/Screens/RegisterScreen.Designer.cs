@@ -100,6 +100,7 @@
             this.botaoLogar.TabIndex = 6;
             this.botaoLogar.Text = "JÁ TENHO CONTA";
             this.botaoLogar.UseVisualStyleBackColor = true;
+            this.botaoLogar.Click += new System.EventHandler(this.botaoLogar_Click);
             // 
             // RegisterScreen
             // 
