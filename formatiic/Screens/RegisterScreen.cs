@@ -43,24 +43,28 @@ namespace formatiic
 
         private void botaoCadastrar_Click(object sender, EventArgs e)
         {
-            MySqlConnection con = ConnectionDB.GetConnection();
-            if (con != null) {
-                Shooter s = CreateShooter();
-                if (s == null) { return; }
-
-                string sql = "INSERT INTO shooter_tbl (name, email, cellphone, password) VALUES ('" + s.Name + "', '" + s.Email + "', '" + s.Cellphone + "', '" + s.Password + "');";
-                MySqlCommand cmd = new MySqlCommand(sql, con);
-                int i = cmd.ExecuteNonQuery();
-
-                if (i > -1) 
-                {
-                    MessageBox.Show("Dados inseridos com sucesso!");
-                }
-
-                con.Close();
-            } else
+            using (MySqlConnection con = ConnectionDB.GetConnection()) 
             {
-                MessageBox.Show("Não foi possível se conectar com o banco de dados!");
+                if (con != null)
+                {
+                    Shooter s = CreateShooter();
+                    if (s == null) { return; }
+
+                    string sql = "INSERT INTO shooter_tbl (name, email, cellphone, password) VALUES ('" + s.Name + "', '" + s.Email + "', '" + s.Cellphone + "', '" + s.Password + "');";
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    int i = cmd.ExecuteNonQuery();
+
+                    if (i > -1)
+                    {
+                        MessageBox.Show("Dados inseridos com sucesso!");
+
+                        RegisterScreen registerScreen = new RegisterScreen();
+                        registerScreen.Show();
+                        this.Hide();
+                    }
+
+                    con.Close();
+                }
             }
         }
 

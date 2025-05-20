@@ -21,24 +21,29 @@ namespace formatiic
 
         private void botaoLogin_Click(object sender, EventArgs e)
         {
-            MySqlConnection con = ConnectionDB.GetConnection();
-            if (con != null)
-            {
-                string email = campoEmailLogin.Text;
-                string password = campoSenhaLogin.Text;
-                
-                string sql = "SELECT * FROM shooter_tbl";
-                MySqlCommand cmd = new MySqlCommand(sql, con);
-                MySqlDataReader reader = cmd.ExecuteReader();
+            using (MySqlConnection con = ConnectionDB.GetConnection()){
+                if (con != null)
+                {
+                    string email = campoEmailLogin.Text;
+                    string password = campoSenhaLogin.Text;
 
-                while (reader.Read()) {
-                    MessageBox.Show("Name = " + reader["name"] + ", email = " + reader["email"] + ", cell = " + reader["cellphone"] + ", password = " + reader["password"]);
+                    string sql = "SELECT id FROM shooter_tbl WHERE email = @email AND password = @password";
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    cmd.Parameters.AddWithValue("@email", email);
+                    cmd.Parameters.AddWithValue("@password", password);
+
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            MessageBox.Show("Login successful!");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid email or password.");
+                        }
+                    }
                 }
-                con.Close();
-            }
-            else
-            {
-                MessageBox.Show("Não foi possível se conectar com o banco de dados!");
             }
         }
 
