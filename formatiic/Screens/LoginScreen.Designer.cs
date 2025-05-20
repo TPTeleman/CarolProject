@@ -51,28 +51,29 @@
             // 
             // campoEmailLogin
             // 
-            this.campoEmailLogin.Location = new System.Drawing.Point(448, 228);
+            this.campoEmailLogin.Location = new System.Drawing.Point(340, 262);
             this.campoEmailLogin.Multiline = true;
             this.campoEmailLogin.Name = "campoEmailLogin";
-            this.campoEmailLogin.Size = new System.Drawing.Size(351, 36);
+            this.campoEmailLogin.Size = new System.Drawing.Size(351, 28);
             this.campoEmailLogin.TabIndex = 2;
             // 
             // campoSenhaLogin
             // 
-            this.campoSenhaLogin.Location = new System.Drawing.Point(448, 327);
+            this.campoSenhaLogin.Location = new System.Drawing.Point(340, 363);
             this.campoSenhaLogin.Multiline = true;
             this.campoSenhaLogin.Name = "campoSenhaLogin";
-            this.campoSenhaLogin.Size = new System.Drawing.Size(351, 36);
+            this.campoSenhaLogin.Size = new System.Drawing.Size(351, 28);
             this.campoSenhaLogin.TabIndex = 3;
             // 
             // botaoLogin
             // 
-            this.botaoLogin.Location = new System.Drawing.Point(548, 459);
+            this.botaoLogin.Location = new System.Drawing.Point(385, 430);
             this.botaoLogin.Name = "botaoLogin";
             this.botaoLogin.Size = new System.Drawing.Size(251, 51);
             this.botaoLogin.TabIndex = 6;
             this.botaoLogin.Text = "LOGAR";
             this.botaoLogin.UseVisualStyleBackColor = true;
+            this.botaoLogin.Visible = false;
             this.botaoLogin.Click += new System.EventHandler(this.botaoLogin_Click);
             // 
             // recuperarSenha
@@ -86,12 +87,13 @@
             // 
             // botaoCadastro
             // 
-            this.botaoCadastro.Location = new System.Drawing.Point(324, 459);
+            this.botaoCadastro.Location = new System.Drawing.Point(709, 159);
             this.botaoCadastro.Name = "botaoCadastro";
             this.botaoCadastro.Size = new System.Drawing.Size(174, 51);
             this.botaoCadastro.TabIndex = 8;
             this.botaoCadastro.Text = "NÃO TENHO CONTA";
             this.botaoCadastro.UseVisualStyleBackColor = true;
+            this.botaoCadastro.Click += new System.EventHandler(this.botaoCadastro_Click);
             // 
             // LoginScreen
             // 

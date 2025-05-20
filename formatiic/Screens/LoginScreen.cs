@@ -21,5 +21,10 @@ namespace formatiic
         {
 
         }
+
+        private void botaoCadastro_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
