@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using formatiic.Scripts;
 using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace formatiic
 {
@@ -43,37 +44,63 @@ namespace formatiic
 
         private void botaoCadastrar_Click(object sender, EventArgs e)
         {
-            MySqlConnection con = ConnectionDB.GetConnection();
-            if (con != null) {
-                Shooter s = CreateShooter();
-                if (s == null) { return; }
-
-                string sql = "INSERT INTO shooter_tbl (name, email, cellphone, password) VALUES ('" + s.Name + "', '" + s.Email + "', '" + s.Cellphone + "', '" + s.Password + "');";
-                MySqlCommand cmd = new MySqlCommand(sql, con);
-                int i = cmd.ExecuteNonQuery();
-
-                if (i > -1) 
-                {
-                    MessageBox.Show("Dados inseridos com sucesso!");
-                }
-
-                con.Close();
-            } else
+            using (MySqlConnection con = ConnectionDB.GetConnection())
             {
-                MessageBox.Show("Não foi possível se conectar com o banco de dados!");
-            }
-        }
+                if (con != null)
+                {
+                    Shooter s = CreateShooter();
+                    if (s == null) { return; }
 
-        private void botaoLogar_Click(object sender, EventArgs e)
-        {
-            LoginScreen loginScreen = new LoginScreen();
-            loginScreen.Show();
-            this.Hide();
+                    string emailCheckSql = "SELECT COUNT(*) FROM shooter_tbl WHERE email = @Email";
+                    MySqlCommand cmd = new MySqlCommand(emailCheckSql, con);
+                    cmd.Parameters.AddWithValue("@Email", s.Email);
+
+                    long count = (long)cmd.ExecuteScalar();
+                    if (count > 0)
+                    {
+                        MessageBox.Show("Email já cadastrado.");
+                        return;
+                    }
+
+                    string hashedPassword = PasswordHasher.HashPassword(s.Password);
+
+                    string sql = "INSERT INTO shooter_tbl (name, email, cellphone, password) " +
+                                 "VALUES (@name, @email, @cellphone, @password)";
+                    cmd = new MySqlCommand(sql, con);
+                    cmd.Parameters.AddWithValue("@name", s.Name);
+                    cmd.Parameters.AddWithValue("@email", s.Email);
+                    cmd.Parameters.AddWithValue("@cellphone", s.Cellphone);
+                    cmd.Parameters.AddWithValue("@password", hashedPassword);
+
+                    try
+                    {
+                        int i = cmd.ExecuteNonQuery();
+                        if (i > 0)
+                        {
+                            MessageBox.Show("Dados inseridos com sucesso!");
+
+                            RegisterScreen registerScreen = new RegisterScreen();
+                            registerScreen.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Erro ao inserir dados.");
+                        }
+                    }
+                    catch (MySqlException ex)
+                    {
+                        MessageBox.Show("Erro de banco de dados: " + ex.Message);
+                    }
+                }
+            }
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            LoginScreen loginScreen = new LoginScreen();
+            loginScreen.Show();
+            this.Hide();
         }
     }
 }

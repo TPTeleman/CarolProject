@@ -5,13 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using Org.BouncyCastle.Bcpg;
 
 namespace formatiic.Scripts
 {
     public class ConnectionDB
     {
-        private static string server = "localhost", user = "root", password = "", database = "formatiicdb";
+        private static readonly string server = "localhost";
+        private static readonly string user = "root";
+        private static readonly string password = "";
+        private static readonly string database = "formatiicdb";
 
         public static MySqlConnection GetConnection()
         {

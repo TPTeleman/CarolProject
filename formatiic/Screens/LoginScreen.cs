@@ -21,28 +21,42 @@ namespace formatiic
 
         private void botaoLogin_Click(object sender, EventArgs e)
         {
-            MySqlConnection con = ConnectionDB.GetConnection();
-            if (con != null)
+            using (MySqlConnection con = ConnectionDB.GetConnection())
             {
-                string email = campoEmailLogin.Text;
-                string password = campoSenhaLogin.Text;
-                
-                string sql = "SELECT * FROM shooter_tbl";
-                MySqlCommand cmd = new MySqlCommand(sql, con);
-                MySqlDataReader reader = cmd.ExecuteReader();
+                if (con != null)
+                {
+                    string email = campoEmailLogin.Text;
+                    string password = campoSenhaLogin.Text;
 
-                while (reader.Read()) {
-                    MessageBox.Show("Name = " + reader["name"] + ", email = " + reader["email"] + ", cell = " + reader["cellphone"] + ", password = " + reader["password"]);
+                    string sql = "SELECT id, password FROM shooter_tbl WHERE email = @email";
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    cmd.Parameters.AddWithValue("@email", email);
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            string storedHash = reader.GetString("password");
+
+                            if (PasswordHasher.VerifyPassword(password, storedHash))
+                            {
+                                MessageBox.Show("Logado com sucesso!");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Senha incorreta!");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Usuário não encontrado.");
+                        }
+                    }
                 }
-                con.Close();
-            }
-            else
-            {
-                MessageBox.Show("Não foi possível se conectar com o banco de dados!");
             }
         }
 
-        private void botaoCadastro_Click(object sender, EventArgs e)
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             RegisterScreen registerScreen = new RegisterScreen();
             registerScreen.Show();

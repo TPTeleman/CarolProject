@@ -119,6 +119,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scripts\ConnectionDB.cs" />
+    <Compile Include="Scripts\PasswordHassher.cs" />
     <Compile Include="Scripts\Shooter.cs" />
     <EmbeddedResource Include="Screens\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
