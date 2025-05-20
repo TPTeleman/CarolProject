@@ -34,6 +34,7 @@
             this.campoTel = new System.Windows.Forms.TextBox();
             this.campoSenha = new System.Windows.Forms.TextBox();
             this.botaoCadastrar = new System.Windows.Forms.Button();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,19 +84,34 @@
             // 
             // botaoCadastrar
             // 
-            this.botaoCadastrar.Location = new System.Drawing.Point(460, 472);
+            this.botaoCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.botaoCadastrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.botaoCadastrar.ForeColor = System.Drawing.Color.White;
+            this.botaoCadastrar.Location = new System.Drawing.Point(476, 470);
             this.botaoCadastrar.Name = "botaoCadastrar";
-            this.botaoCadastrar.Size = new System.Drawing.Size(224, 45);
+            this.botaoCadastrar.Size = new System.Drawing.Size(169, 45);
             this.botaoCadastrar.TabIndex = 5;
             this.botaoCadastrar.Text = "CADASTRAR";
-            this.botaoCadastrar.UseVisualStyleBackColor = true;
+            this.botaoCadastrar.UseVisualStyleBackColor = false;
             this.botaoCadastrar.Click += new System.EventHandler(this.botaoCadastrar_Click);
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(510, 518);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(103, 13);
+            this.linkLabel2.TabIndex = 7;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Ja estou cadastrado";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // RegisterScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1130, 584);
+            this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.botaoCadastrar);
             this.Controls.Add(this.campoSenha);
             this.Controls.Add(this.campoTel);
@@ -118,5 +134,6 @@
         private System.Windows.Forms.TextBox campoTel;
         private System.Windows.Forms.TextBox campoSenha;
         private System.Windows.Forms.Button botaoCadastrar;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }
