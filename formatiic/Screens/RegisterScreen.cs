@@ -68,16 +68,11 @@ namespace formatiic
             }
         }
 
-        private void botaoLogar_Click(object sender, EventArgs e)
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             LoginScreen loginScreen = new LoginScreen();
             loginScreen.Show();
             this.Hide();
-        }
-
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
         }
     }
 }

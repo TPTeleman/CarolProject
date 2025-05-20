@@ -47,7 +47,7 @@ namespace formatiic
             }
         }
 
-        private void botaoCadastro_Click(object sender, EventArgs e)
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             RegisterScreen registerScreen = new RegisterScreen();
             registerScreen.Show();
