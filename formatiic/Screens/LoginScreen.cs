@@ -34,6 +34,7 @@ namespace formatiic
                 while (reader.Read()) {
                     MessageBox.Show("Name = " + reader["name"] + ", email = " + reader["email"] + ", cell = " + reader["cellphone"] + ", password = " + reader["password"]);
                 }
+                con.Close();
             }
             else
             {

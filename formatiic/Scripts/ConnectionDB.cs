@@ -18,19 +18,18 @@ namespace formatiic.Scripts
         {
             if (con == null)
             {
-                string connString = "server=" + server + ";uid=" + user + ";pwd=" + password + "database=" + database;
+                string connString = "server=" + server + ";uid=" + user + ";pwd=" + password + ";database=" + database;
                 try
                 {
                     con = new MySqlConnection();
                     con.ConnectionString = connString;
-                    con.Open();
                 }
                 catch (MySqlException ex) 
                 {
                     MessageBox.Show(ex.ToString());
                 }
             }
-
+            con.Open();
             return con;
         }
     }

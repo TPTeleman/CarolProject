@@ -56,6 +56,8 @@ namespace formatiic
                 {
                     MessageBox.Show("Dados inseridos com sucesso!");
                 }
+
+                con.Close();
             } else
             {
                 MessageBox.Show("Não foi possível se conectar com o banco de dados!");
