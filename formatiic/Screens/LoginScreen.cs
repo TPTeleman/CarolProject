@@ -48,5 +48,10 @@ namespace formatiic
             registerScreen.Show();
             this.Hide();
         }
+
+        private void botaoCadastro_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -34,7 +34,6 @@
             this.campoTel = new System.Windows.Forms.TextBox();
             this.campoSenha = new System.Windows.Forms.TextBox();
             this.botaoCadastrar = new System.Windows.Forms.Button();
-            this.botaoLogar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,63 +50,52 @@
             // 
             // campoNome
             // 
-            this.campoNome.Location = new System.Drawing.Point(440, 172);
+            this.campoNome.Location = new System.Drawing.Point(341, 205);
             this.campoNome.Multiline = true;
             this.campoNome.Name = "campoNome";
-            this.campoNome.Size = new System.Drawing.Size(351, 36);
+            this.campoNome.Size = new System.Drawing.Size(456, 31);
             this.campoNome.TabIndex = 1;
             // 
             // campoEmail
             // 
-            this.campoEmail.Location = new System.Drawing.Point(440, 245);
+            this.campoEmail.Location = new System.Drawing.Point(341, 276);
             this.campoEmail.Multiline = true;
             this.campoEmail.Name = "campoEmail";
-            this.campoEmail.Size = new System.Drawing.Size(351, 36);
+            this.campoEmail.Size = new System.Drawing.Size(456, 30);
             this.campoEmail.TabIndex = 2;
             // 
             // campoTel
             // 
-            this.campoTel.Location = new System.Drawing.Point(440, 321);
+            this.campoTel.Location = new System.Drawing.Point(341, 350);
             this.campoTel.Multiline = true;
             this.campoTel.Name = "campoTel";
-            this.campoTel.Size = new System.Drawing.Size(351, 36);
+            this.campoTel.Size = new System.Drawing.Size(456, 33);
             this.campoTel.TabIndex = 3;
             this.campoTel.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // campoSenha
             // 
-            this.campoSenha.Location = new System.Drawing.Point(440, 392);
+            this.campoSenha.Location = new System.Drawing.Point(341, 425);
             this.campoSenha.Multiline = true;
             this.campoSenha.Name = "campoSenha";
-            this.campoSenha.Size = new System.Drawing.Size(351, 36);
+            this.campoSenha.Size = new System.Drawing.Size(456, 30);
             this.campoSenha.TabIndex = 4;
             // 
             // botaoCadastrar
             // 
-            this.botaoCadastrar.Location = new System.Drawing.Point(545, 457);
+            this.botaoCadastrar.Location = new System.Drawing.Point(460, 472);
             this.botaoCadastrar.Name = "botaoCadastrar";
-            this.botaoCadastrar.Size = new System.Drawing.Size(246, 51);
+            this.botaoCadastrar.Size = new System.Drawing.Size(224, 45);
             this.botaoCadastrar.TabIndex = 5;
             this.botaoCadastrar.Text = "CADASTRAR";
             this.botaoCadastrar.UseVisualStyleBackColor = true;
             this.botaoCadastrar.Click += new System.EventHandler(this.botaoCadastrar_Click);
-            // 
-            // botaoLogar
-            // 
-            this.botaoLogar.Location = new System.Drawing.Point(331, 457);
-            this.botaoLogar.Name = "botaoLogar";
-            this.botaoLogar.Size = new System.Drawing.Size(174, 51);
-            this.botaoLogar.TabIndex = 6;
-            this.botaoLogar.Text = "JÁ TENHO CONTA";
-            this.botaoLogar.UseVisualStyleBackColor = true;
-            this.botaoLogar.Click += new System.EventHandler(this.botaoLogar_Click);
             // 
             // RegisterScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1130, 584);
-            this.Controls.Add(this.botaoLogar);
             this.Controls.Add(this.botaoCadastrar);
             this.Controls.Add(this.campoSenha);
             this.Controls.Add(this.campoTel);
@@ -130,6 +118,5 @@
         private System.Windows.Forms.TextBox campoTel;
         private System.Windows.Forms.TextBox campoSenha;
         private System.Windows.Forms.Button botaoCadastrar;
-        private System.Windows.Forms.Button botaoLogar;
     }
 }

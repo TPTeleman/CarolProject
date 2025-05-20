@@ -33,7 +33,6 @@
             this.campoSenhaLogin = new System.Windows.Forms.TextBox();
             this.botaoLogin = new System.Windows.Forms.Button();
             this.recuperarSenha = new System.Windows.Forms.Button();
-            this.botaoCadastro = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,28 +50,29 @@
             // 
             // campoEmailLogin
             // 
-            this.campoEmailLogin.Location = new System.Drawing.Point(448, 228);
+            this.campoEmailLogin.Location = new System.Drawing.Point(340, 262);
             this.campoEmailLogin.Multiline = true;
             this.campoEmailLogin.Name = "campoEmailLogin";
-            this.campoEmailLogin.Size = new System.Drawing.Size(351, 36);
+            this.campoEmailLogin.Size = new System.Drawing.Size(457, 28);
             this.campoEmailLogin.TabIndex = 2;
             // 
             // campoSenhaLogin
             // 
-            this.campoSenhaLogin.Location = new System.Drawing.Point(448, 327);
+            this.campoSenhaLogin.Location = new System.Drawing.Point(340, 363);
             this.campoSenhaLogin.Multiline = true;
             this.campoSenhaLogin.Name = "campoSenhaLogin";
-            this.campoSenhaLogin.Size = new System.Drawing.Size(351, 36);
+            this.campoSenhaLogin.Size = new System.Drawing.Size(457, 28);
             this.campoSenhaLogin.TabIndex = 3;
             // 
             // botaoLogin
             // 
-            this.botaoLogin.Location = new System.Drawing.Point(548, 459);
+            this.botaoLogin.Location = new System.Drawing.Point(437, 410);
             this.botaoLogin.Name = "botaoLogin";
             this.botaoLogin.Size = new System.Drawing.Size(251, 51);
             this.botaoLogin.TabIndex = 6;
             this.botaoLogin.Text = "LOGAR";
             this.botaoLogin.UseVisualStyleBackColor = true;
+            this.botaoLogin.Visible = false;
             this.botaoLogin.Click += new System.EventHandler(this.botaoLogin_Click);
             // 
             // recuperarSenha
@@ -84,22 +84,11 @@
             this.recuperarSenha.Text = "Esqueci minha senha.";
             this.recuperarSenha.UseVisualStyleBackColor = true;
             // 
-            // botaoCadastro
-            // 
-            this.botaoCadastro.Location = new System.Drawing.Point(324, 459);
-            this.botaoCadastro.Name = "botaoCadastro";
-            this.botaoCadastro.Size = new System.Drawing.Size(174, 51);
-            this.botaoCadastro.TabIndex = 8;
-            this.botaoCadastro.Text = "NÃO TENHO CONTA";
-            this.botaoCadastro.UseVisualStyleBackColor = true;
-            this.botaoCadastro.Click += new System.EventHandler(this.botaoCadastro_Click);
-            // 
             // LoginScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1130, 584);
-            this.Controls.Add(this.botaoCadastro);
             this.Controls.Add(this.recuperarSenha);
             this.Controls.Add(this.botaoLogin);
             this.Controls.Add(this.campoSenhaLogin);
@@ -121,6 +110,5 @@
         private System.Windows.Forms.TextBox campoSenhaLogin;
         private System.Windows.Forms.Button botaoLogin;
         private System.Windows.Forms.Button recuperarSenha;
-        private System.Windows.Forms.Button botaoCadastro;
     }
 }
