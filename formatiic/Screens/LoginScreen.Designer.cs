@@ -92,6 +92,7 @@
             this.botaoCadastro.TabIndex = 8;
             this.botaoCadastro.Text = "NÃO TENHO CONTA";
             this.botaoCadastro.UseVisualStyleBackColor = true;
+            this.botaoCadastro.Click += new System.EventHandler(this.botaoCadastro_Click);
             // 
             // LoginScreen
             // 
