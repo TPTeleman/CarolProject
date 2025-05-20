@@ -12,25 +12,26 @@ namespace formatiic.Scripts
     public class ConnectionDB
     {
         private static string server = "localhost", user = "root", password = "", database = "formatiicdb";
-        private static MySqlConnection con;
 
         public static MySqlConnection GetConnection()
         {
-            if (con == null)
+            string connString = $"server={server};uid={user};pwd={password};database={database}";
+            MySqlConnection con;
+
+            try
             {
-                string connString = "server=" + server + ";uid=" + user + ";pwd=" + password + ";database=" + database;
-                try
-                {
-                    con = new MySqlConnection();
-                    con.ConnectionString = connString;
-                }
-                catch (MySqlException ex) 
-                {
-                    MessageBox.Show(ex.ToString());
-                }
+                con = new MySqlConnection();
+                con.ConnectionString = connString;
+                con.Open();
+
+                return con;
             }
-            con.Open();
-            return con;
+            catch (MySqlException ex) 
+            {
+                MessageBox.Show($"Database connection failed:\n{ex.Message}", "Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+
         }
     }
 }
