@@ -98,6 +98,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Screens\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\RegisterScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scripts\ConnectionDB.cs" />
     <Compile Include="Scripts\Shooter.cs" />
+    <EmbeddedResource Include="Screens\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\RegisterScreen.resx">
       <DependentUpon>RegisterScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +164,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\RegisterScreen1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MainScreen.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

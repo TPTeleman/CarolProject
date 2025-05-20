@@ -93,6 +93,16 @@ namespace formatiic.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap MainScreen {
+            get {
+                object obj = ResourceManager.GetObject("MainScreen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RegisterScreen {
             get {
                 object obj = ResourceManager.GetObject("RegisterScreen", resourceCulture);
