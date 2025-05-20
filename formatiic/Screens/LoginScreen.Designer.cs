@@ -33,6 +33,7 @@
             this.campoSenhaLogin = new System.Windows.Forms.TextBox();
             this.botaoLogin = new System.Windows.Forms.Button();
             this.recuperarSenha = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,12 +67,14 @@
             // 
             // botaoLogin
             // 
-            this.botaoLogin.Location = new System.Drawing.Point(437, 410);
+            this.botaoLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.botaoLogin.ForeColor = System.Drawing.Color.White;
+            this.botaoLogin.Location = new System.Drawing.Point(479, 435);
             this.botaoLogin.Name = "botaoLogin";
-            this.botaoLogin.Size = new System.Drawing.Size(251, 51);
+            this.botaoLogin.Size = new System.Drawing.Size(169, 45);
             this.botaoLogin.TabIndex = 6;
             this.botaoLogin.Text = "LOGAR";
-            this.botaoLogin.UseVisualStyleBackColor = true;
+            this.botaoLogin.UseVisualStyleBackColor = false;
             this.botaoLogin.Visible = false;
             this.botaoLogin.Click += new System.EventHandler(this.botaoLogin_Click);
             // 
@@ -84,11 +87,22 @@
             this.recuperarSenha.Text = "Esqueci minha senha.";
             this.recuperarSenha.UseVisualStyleBackColor = true;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(503, 483);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(117, 13);
+            this.linkLabel1.TabIndex = 8;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Não possuo uma conta";
+            // 
             // LoginScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1130, 584);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.recuperarSenha);
             this.Controls.Add(this.botaoLogin);
             this.Controls.Add(this.campoSenhaLogin);
@@ -110,5 +124,6 @@
         private System.Windows.Forms.TextBox campoSenhaLogin;
         private System.Windows.Forms.Button botaoLogin;
         private System.Windows.Forms.Button recuperarSenha;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
