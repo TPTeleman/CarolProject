@@ -24,11 +24,6 @@ namespace formatiic.Screens
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void panelDireita_Paint(object sender, PaintEventArgs e)
         {
 

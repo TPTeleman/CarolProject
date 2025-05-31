@@ -19,7 +19,7 @@ namespace formatiic
         {
             InitializeComponent();
             this.Size = new Size(1920, 1080); 
-            this.MinimumSize = new Size(800, 600); 
+            this.MinimumSize = new Size(1000, 600); 
         }
 
         private void botaoLogin_Click(object sender, EventArgs e)
@@ -117,6 +117,18 @@ namespace formatiic
             Principal principal = new Principal();
             principal.Show();
             this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            RegisterScreen registerScreen = new RegisterScreen();
+            registerScreen.Show();
+            this.Hide();
+        }
+
+        private void panelDireita_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

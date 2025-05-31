@@ -19,7 +19,7 @@ namespace formatiic
         {
             InitializeComponent();
             this.Size = new Size(1920, 1080);
-            this.MinimumSize = new Size(800, 600);
+            this.MinimumSize = new Size(1000, 600);
             this.FormBorderStyle = FormBorderStyle.Sizable;
         }
 
@@ -141,6 +141,18 @@ namespace formatiic
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void panelDireita_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            LoginScreen login = new LoginScreen();
+            login.Show();
+            this.Hide();
         }
     }
 }

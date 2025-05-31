@@ -29,37 +29,37 @@
         private void InitializeComponent()
         {
             this.panelEsquerda = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.LoginButton = new System.Windows.Forms.Button();
             this.campoSenhaLogin = new System.Windows.Forms.TextBox();
             this.campoEmailLogin = new System.Windows.Forms.TextBox();
             this.botaoLogin = new System.Windows.Forms.Button();
             this.panelDireita = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.icone = new System.Windows.Forms.PictureBox();
             this.roundedPanel1 = new RoundedPanel();
-            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panelEsquerda.SuspendLayout();
             this.panelDireita.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icone)).BeginInit();
             this.roundedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelEsquerda
             // 
             this.panelEsquerda.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panelEsquerda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panelEsquerda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(80)))));
+            this.panelEsquerda.Controls.Add(this.button3);
             this.panelEsquerda.Controls.Add(this.label1);
-            this.panelEsquerda.Controls.Add(this.LoginButton);
             this.panelEsquerda.Location = new System.Drawing.Point(0, 48);
             this.panelEsquerda.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.panelEsquerda.Name = "panelEsquerda";
@@ -67,11 +67,25 @@
             this.panelEsquerda.TabIndex = 10;
             this.panelEsquerda.Paint += new System.Windows.Forms.PaintEventHandler(this.panelEsquerda_Paint);
             // 
+            // button3
+            // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button3.Location = new System.Drawing.Point(148, 252);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(101, 37);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "Cadastrar";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(80)))));
             this.label1.Font = new System.Drawing.Font("Myanmar Text", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(104, 115);
@@ -81,25 +95,11 @@
             this.label1.Text = "Cadastre-se!";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // LoginButton
-            // 
-            this.LoginButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.LoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.LoginButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginButton.ForeColor = System.Drawing.Color.White;
-            this.LoginButton.Location = new System.Drawing.Point(151, 244);
-            this.LoginButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(101, 34);
-            this.LoginButton.TabIndex = 8;
-            this.LoginButton.Text = "Cadastrar";
-            this.LoginButton.UseVisualStyleBackColor = false;
-            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
-            // 
             // campoSenhaLogin
             // 
             this.campoSenhaLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.campoSenhaLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.campoSenhaLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoSenhaLogin.Location = new System.Drawing.Point(591, 265);
             this.campoSenhaLogin.Multiline = true;
             this.campoSenhaLogin.Name = "campoSenhaLogin";
@@ -110,6 +110,7 @@
             // 
             this.campoEmailLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.campoEmailLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.campoEmailLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoEmailLogin.Location = new System.Drawing.Point(591, 205);
             this.campoEmailLogin.Multiline = true;
             this.campoEmailLogin.Name = "campoEmailLogin";
@@ -120,7 +121,8 @@
             // 
             this.botaoLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.botaoLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.botaoLogin.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botaoLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoLogin.Font = new System.Drawing.Font("Myanmar Text", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botaoLogin.ForeColor = System.Drawing.Color.White;
             this.botaoLogin.Location = new System.Drawing.Point(663, 322);
             this.botaoLogin.Name = "botaoLogin";
@@ -145,17 +147,17 @@
             this.panelDireita.Name = "panelDireita";
             this.panelDireita.Size = new System.Drawing.Size(1065, 614);
             this.panelDireita.TabIndex = 13;
+            this.panelDireita.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDireita_Paint_1);
             // 
-            // pictureBox1
+            // button2
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::formatiic.Properties.Resources.email;
-            this.pictureBox1.Location = new System.Drawing.Point(25, 89);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(26, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
+            this.button2.Location = new System.Drawing.Point(456, 454);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -214,6 +216,28 @@
             this.roundedPanel1.Size = new System.Drawing.Size(412, 283);
             this.roundedPanel1.TabIndex = 14;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::formatiic.Properties.Resources.pass;
+            this.pictureBox2.Location = new System.Drawing.Point(27, 151);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(22, 22);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::formatiic.Properties.Resources.email;
+            this.pictureBox1.Location = new System.Drawing.Point(25, 89);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(26, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -226,27 +250,6 @@
             this.label2.Size = new System.Drawing.Size(168, 51);
             this.label2.TabIndex = 9;
             this.label2.Text = "Faça Login";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::formatiic.Properties.Resources.pass;
-            this.pictureBox2.Location = new System.Drawing.Point(27, 151);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(22, 22);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(456, 454);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // LoginScreen
             // 
@@ -265,20 +268,19 @@
             this.panelEsquerda.PerformLayout();
             this.panelDireita.ResumeLayout(false);
             this.panelDireita.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icone)).EndInit();
             this.roundedPanel1.ResumeLayout(false);
             this.roundedPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panelEsquerda;
-        private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox campoSenhaLogin;
         private System.Windows.Forms.TextBox campoEmailLogin;
@@ -293,5 +295,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
