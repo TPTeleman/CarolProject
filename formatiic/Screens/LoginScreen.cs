@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using formatiic.Screens;
 using formatiic.Scripts;
 using MySql.Data.MySqlClient;
 
@@ -17,6 +18,8 @@ namespace formatiic
         public LoginScreen()
         {
             InitializeComponent();
+            this.Size = new Size(1920, 1080); 
+            this.MinimumSize = new Size(800, 600); 
         }
 
         private void botaoLogin_Click(object sender, EventArgs e)
@@ -56,10 +59,63 @@ namespace formatiic
             }
         }
 
+      
+
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             RegisterScreen registerScreen = new RegisterScreen();
             registerScreen.Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+            RegisterScreen registerScreen = new RegisterScreen();
+            registerScreen.Show();
+            this.Hide();
+        }
+
+        private void panelEsquerda_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelDireita_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void LoginScreen_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RegisterScreen cadastro = new RegisterScreen();
+            cadastro.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Principal principal = new Principal();
+            principal.Show();
             this.Hide();
         }
     }

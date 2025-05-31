@@ -15,6 +15,23 @@ namespace formatiic.Screens
         public Principal()
         {
             InitializeComponent();
+            this.Size = new Size(1920, 1080);
+            this.MinimumSize = new Size(800, 600);
+        }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelDireita_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

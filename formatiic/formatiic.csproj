@@ -98,6 +98,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\RoundedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Screens\Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +171,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MainScreen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tell.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

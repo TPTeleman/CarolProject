@@ -63,6 +63,26 @@ namespace formatiic.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap email {
+            get {
+                object obj = ResourceManager.GetObject("email", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ico {
+            get {
+                object obj = ResourceManager.GetObject("ico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LoginScreen {
             get {
                 object obj = ResourceManager.GetObject("LoginScreen", resourceCulture);
@@ -103,6 +123,16 @@ namespace formatiic.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pass {
+            get {
+                object obj = ResourceManager.GetObject("pass", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RegisterScreen {
             get {
                 object obj = ResourceManager.GetObject("RegisterScreen", resourceCulture);
@@ -116,6 +146,26 @@ namespace formatiic.Properties {
         internal static System.Drawing.Bitmap RegisterScreen1 {
             get {
                 object obj = ResourceManager.GetObject("RegisterScreen1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tell {
+            get {
+                object obj = ResourceManager.GetObject("tell", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user {
+            get {
+                object obj = ResourceManager.GetObject("user", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

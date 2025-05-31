@@ -18,6 +18,9 @@ namespace formatiic
         public RegisterScreen()
         {
             InitializeComponent();
+            this.Size = new Size(1920, 1080);
+            this.MinimumSize = new Size(800, 600);
+            this.FormBorderStyle = FormBorderStyle.Sizable;
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -96,11 +99,48 @@ namespace formatiic
             }
         }
 
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+
+
+        private void RegisterScreen_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             LoginScreen loginScreen = new LoginScreen();
             loginScreen.Show();
             this.Hide();
+        }
+
+        private void campoSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
