@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelEsquerda = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.campoSenhaLogin = new System.Windows.Forms.TextBox();
@@ -36,7 +37,6 @@
             this.botaoLogin = new System.Windows.Forms.Button();
             this.panelDireita = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.icone = new System.Windows.Forms.PictureBox();
@@ -58,6 +58,7 @@
             this.panelEsquerda.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panelEsquerda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(80)))));
+            this.panelEsquerda.Controls.Add(this.label4);
             this.panelEsquerda.Controls.Add(this.button3);
             this.panelEsquerda.Controls.Add(this.label1);
             this.panelEsquerda.Location = new System.Drawing.Point(0, 48);
@@ -66,6 +67,20 @@
             this.panelEsquerda.Size = new System.Drawing.Size(401, 566);
             this.panelEsquerda.TabIndex = 10;
             this.panelEsquerda.Paint += new System.Windows.Forms.PaintEventHandler(this.panelEsquerda_Paint);
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(35, 168);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(329, 58);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Ainda não tem uma conta? Cadastre-se agora\r\npara aproveitar todos os recursos do " +
+    "sistema!";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // button3
             // 
@@ -136,7 +151,6 @@
             // 
             this.panelDireita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panelDireita.Controls.Add(this.button2);
-            this.panelDireita.Controls.Add(this.button1);
             this.panelDireita.Controls.Add(this.panel2);
             this.panelDireita.Controls.Add(this.botaoLogin);
             this.panelDireita.Controls.Add(this.campoEmailLogin);
@@ -158,16 +172,6 @@
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(456, 416);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
@@ -290,11 +294,11 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox icone;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
         private RoundedPanel roundedPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label4;
     }
 }
