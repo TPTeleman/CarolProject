@@ -36,9 +36,19 @@ namespace formatiic.Screens
 
         private void AddSoldier_Click(object sender, EventArgs e)
         {
-            FormSoldier adicionar = new FormSoldier();
-            adicionar.Show();
-            
+           
+            FormSoldier formAdd = new FormSoldier(this.SoldierPanel); 
+            formAdd.ShowDialog();
+
+        }
+
+        private void SoldierPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+
+
+
+
         }
     }
 }

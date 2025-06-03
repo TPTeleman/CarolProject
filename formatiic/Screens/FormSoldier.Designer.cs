@@ -37,13 +37,13 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.AddSoldier = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.icone = new System.Windows.Forms.PictureBox();
             this.Adicionar = new System.Windows.Forms.Button();
-            this.AddSoldier = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.CampoFoto)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -83,6 +83,7 @@
             // 
             // CampoFoto
             // 
+            this.CampoFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CampoFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CampoFoto.Location = new System.Drawing.Point(347, 54);
             this.CampoFoto.Name = "CampoFoto";
@@ -92,6 +93,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(16, 198);
             this.comboBox1.Name = "comboBox1";
@@ -101,6 +103,7 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(93, 198);
             this.comboBox2.Name = "comboBox2";
@@ -110,6 +113,7 @@
             // 
             // comboBox3
             // 
+            this.comboBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(171, 198);
             this.comboBox3.Name = "comboBox3";
@@ -137,6 +141,21 @@
             this.panel1.TabIndex = 8;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // AddSoldier
+            // 
+            this.AddSoldier.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.AddSoldier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.AddSoldier.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddSoldier.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddSoldier.ForeColor = System.Drawing.Color.White;
+            this.AddSoldier.Location = new System.Drawing.Point(166, 240);
+            this.AddSoldier.Name = "AddSoldier";
+            this.AddSoldier.Size = new System.Drawing.Size(164, 33);
+            this.AddSoldier.TabIndex = 9;
+            this.AddSoldier.Text = "Adicionar Soldado";
+            this.AddSoldier.UseVisualStyleBackColor = false;
+            this.AddSoldier.Click += new System.EventHandler(this.AddSoldier_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -148,6 +167,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 117);
             this.label2.Name = "label2";
@@ -157,6 +177,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 57);
             this.label1.Name = "label1";
@@ -186,28 +207,14 @@
             // 
             // Adicionar
             // 
-            this.Adicionar.Location = new System.Drawing.Point(355, 166);
+            this.Adicionar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Adicionar.Location = new System.Drawing.Point(356, 166);
             this.Adicionar.Name = "Adicionar";
             this.Adicionar.Size = new System.Drawing.Size(95, 23);
             this.Adicionar.TabIndex = 0;
             this.Adicionar.Text = "Adicionar foto";
             this.Adicionar.UseVisualStyleBackColor = true;
             this.Adicionar.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // AddSoldier
-            // 
-            this.AddSoldier.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.AddSoldier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.AddSoldier.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddSoldier.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddSoldier.ForeColor = System.Drawing.Color.White;
-            this.AddSoldier.Location = new System.Drawing.Point(166, 240);
-            this.AddSoldier.Name = "AddSoldier";
-            this.AddSoldier.Size = new System.Drawing.Size(164, 33);
-            this.AddSoldier.TabIndex = 9;
-            this.AddSoldier.Text = "Adicionar Soldado";
-            this.AddSoldier.UseVisualStyleBackColor = false;
-            this.AddSoldier.Click += new System.EventHandler(this.AddSoldier_Click);
             // 
             // FormSoldier
             // 

@@ -45,7 +45,7 @@
             // 
             // roundedPanel1
             // 
-            this.roundedPanel1.BackColor = System.Drawing.Color.White;
+            this.roundedPanel1.BackColor = System.Drawing.Color.Silver;
             this.roundedPanel1.Controls.Add(this.Data);
             this.roundedPanel1.Controls.Add(this.Atrasado);
             this.roundedPanel1.Controls.Add(this.Ausente);
@@ -66,7 +66,7 @@
             // Data
             // 
             this.Data.AutoSize = true;
-            this.Data.BackColor = System.Drawing.Color.White;
+            this.Data.BackColor = System.Drawing.Color.Transparent;
             this.Data.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.Data.Location = new System.Drawing.Point(162, 39);
             this.Data.Name = "Data";

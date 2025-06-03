@@ -32,9 +32,9 @@
             this.icone = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelDireita = new System.Windows.Forms.Panel();
+            this.SoldierPanel = new RoundedFlowLayoutPanel();
             this.AddSoldier = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.SoldierPanel = new RoundedFlowLayoutPanel();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             ((System.ComponentModel.ISupportInitialize)(this.icone)).BeginInit();
             this.panel3.SuspendLayout();
@@ -89,6 +89,23 @@
             this.panelDireita.TabIndex = 14;
             this.panelDireita.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDireita_Paint);
             // 
+            // SoldierPanel
+            // 
+            this.SoldierPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SoldierPanel.AutoScroll = true;
+            this.SoldierPanel.AutoSize = true;
+            this.SoldierPanel.BackColor = System.Drawing.Color.White;
+            this.SoldierPanel.BorderRadius = 20;
+            this.SoldierPanel.Controls.Add(this.vScrollBar1);
+            this.SoldierPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.SoldierPanel.Location = new System.Drawing.Point(327, 114);
+            this.SoldierPanel.Name = "SoldierPanel";
+            this.SoldierPanel.Size = new System.Drawing.Size(824, 362);
+            this.SoldierPanel.TabIndex = 16;
+            this.SoldierPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.SoldierPanel_Paint);
+            // 
             // AddSoldier
             // 
             this.AddSoldier.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -113,26 +130,11 @@
             this.panel1.Size = new System.Drawing.Size(236, 558);
             this.panel1.TabIndex = 15;
             // 
-            // SoldierPanel
-            // 
-            this.SoldierPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.SoldierPanel.BackColor = System.Drawing.Color.White;
-            this.SoldierPanel.BorderRadius = 20;
-            this.SoldierPanel.Controls.Add(this.vScrollBar1);
-            this.SoldierPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.SoldierPanel.Location = new System.Drawing.Point(327, 114);
-            this.SoldierPanel.Name = "SoldierPanel";
-            this.SoldierPanel.Size = new System.Drawing.Size(824, 195);
-            this.SoldierPanel.TabIndex = 16;
-            // 
             // vScrollBar1
             // 
-            this.vScrollBar1.Dock = System.Windows.Forms.DockStyle.Left;
             this.vScrollBar1.Location = new System.Drawing.Point(0, 0);
             this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(19, 195);
+            this.vScrollBar1.Size = new System.Drawing.Size(17, 362);
             this.vScrollBar1.TabIndex = 0;
             // 
             // Principal
@@ -149,6 +151,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panelDireita.ResumeLayout(false);
+            this.panelDireita.PerformLayout();
             this.SoldierPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -162,7 +165,7 @@
         private System.Windows.Forms.Panel panelDireita;
         private System.Windows.Forms.Panel panel1;
         private RoundedFlowLayoutPanel SoldierPanel;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.Button AddSoldier;
+        private System.Windows.Forms.VScrollBar vScrollBar1;
     }
 }

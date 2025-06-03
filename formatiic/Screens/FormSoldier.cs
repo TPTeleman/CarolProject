@@ -12,18 +12,23 @@ namespace formatiic.Screens
 {
     public partial class FormSoldier : Form
     {
-   
 
-        public FormSoldier()
+        private FlowLayoutPanel soldierPanel;
+
+        public FormSoldier(FlowLayoutPanel panel)
         {
             InitializeComponent();
+            this.soldierPanel = panel;
         }
 
         private void AddSoldier_Click(object sender, EventArgs e)
         {
+            SoldadoCard novoSoldado = new SoldadoCard();
+            novoSoldado.Width = soldierPanel.ClientSize.Width - 20; // ou qualquer largura desejada
+            novoSoldado.Height = 100; // altura desejada
 
-       
-            this.Close(); 
+            soldierPanel.Controls.Add(novoSoldado);
+            this.Close();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
