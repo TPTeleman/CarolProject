@@ -50,5 +50,16 @@ namespace formatiic.Screens
 
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            FormSoldier formAdd = new FormSoldier(this.SoldierPanel);
+            formAdd.ShowDialog();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
