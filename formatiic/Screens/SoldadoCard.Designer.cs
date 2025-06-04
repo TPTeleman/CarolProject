@@ -45,7 +45,7 @@
             // 
             // roundedPanel1
             // 
-            this.roundedPanel1.BackColor = System.Drawing.Color.Silver;
+            this.roundedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.roundedPanel1.Controls.Add(this.Data);
             this.roundedPanel1.Controls.Add(this.Atrasado);
             this.roundedPanel1.Controls.Add(this.Ausente);
@@ -59,7 +59,7 @@
             this.roundedPanel1.CornerRadius = 30;
             this.roundedPanel1.Location = new System.Drawing.Point(0, 0);
             this.roundedPanel1.Name = "roundedPanel1";
-            this.roundedPanel1.Size = new System.Drawing.Size(700, 68);
+            this.roundedPanel1.Size = new System.Drawing.Size(800, 66);
             this.roundedPanel1.TabIndex = 0;
             this.roundedPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.roundedPanel1_Paint);
             // 
@@ -79,7 +79,7 @@
             // 
             this.Atrasado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Atrasado.AutoSize = true;
-            this.Atrasado.Location = new System.Drawing.Point(594, 28);
+            this.Atrasado.Location = new System.Drawing.Point(644, 27);
             this.Atrasado.Name = "Atrasado";
             this.Atrasado.Size = new System.Drawing.Size(14, 13);
             this.Atrasado.TabIndex = 8;
@@ -90,7 +90,7 @@
             // 
             this.Ausente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Ausente.AutoSize = true;
-            this.Ausente.Location = new System.Drawing.Point(503, 28);
+            this.Ausente.Location = new System.Drawing.Point(553, 27);
             this.Ausente.Name = "Ausente";
             this.Ausente.Size = new System.Drawing.Size(14, 13);
             this.Ausente.TabIndex = 7;
@@ -101,7 +101,7 @@
             // 
             this.Presente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Presente.AutoSize = true;
-            this.Presente.Location = new System.Drawing.Point(412, 28);
+            this.Presente.Location = new System.Drawing.Point(462, 27);
             this.Presente.Name = "Presente";
             this.Presente.Size = new System.Drawing.Size(14, 13);
             this.Presente.TabIndex = 6;
@@ -112,7 +112,7 @@
             // 
             this.Remover.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Remover.AutoSize = true;
-            this.Remover.Location = new System.Drawing.Point(634, 51);
+            this.Remover.Location = new System.Drawing.Point(734, 49);
             this.Remover.Name = "Remover";
             this.Remover.Size = new System.Drawing.Size(50, 13);
             this.Remover.TabIndex = 5;
@@ -124,7 +124,7 @@
             this.Editar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Editar.AutoSize = true;
             this.Editar.LinkColor = System.Drawing.Color.Blue;
-            this.Editar.Location = new System.Drawing.Point(589, 51);
+            this.Editar.Location = new System.Drawing.Point(689, 49);
             this.Editar.Name = "Editar";
             this.Editar.Size = new System.Drawing.Size(34, 13);
             this.Editar.TabIndex = 4;
@@ -173,7 +173,7 @@
             // 
             this.foto.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.foto.BackColor = System.Drawing.Color.Black;
-            this.foto.Location = new System.Drawing.Point(6, 4);
+            this.foto.Location = new System.Drawing.Point(6, 3);
             this.foto.Name = "foto";
             this.foto.Size = new System.Drawing.Size(60, 60);
             this.foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -188,7 +188,7 @@
             this.Controls.Add(this.roundedPanel1);
             this.ForeColor = System.Drawing.Color.Transparent;
             this.Name = "SoldadoCard";
-            this.Size = new System.Drawing.Size(724, 66);
+            this.Size = new System.Drawing.Size(800, 66);
             this.roundedPanel1.ResumeLayout(false);
             this.roundedPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.foto)).EndInit();
