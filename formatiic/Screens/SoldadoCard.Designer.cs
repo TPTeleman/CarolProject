@@ -59,8 +59,9 @@
             this.roundedPanel1.Controls.Add(this.foto);
             this.roundedPanel1.CornerRadius = 30;
             this.roundedPanel1.Location = new System.Drawing.Point(0, 0);
+            this.roundedPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.roundedPanel1.Name = "roundedPanel1";
-            this.roundedPanel1.Size = new System.Drawing.Size(1200, 66);
+            this.roundedPanel1.Size = new System.Drawing.Size(1100, 102);
             this.roundedPanel1.TabIndex = 0;
             this.roundedPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.roundedPanel1_Paint);
             // 
@@ -69,9 +70,10 @@
             this.Data.AutoSize = true;
             this.Data.BackColor = System.Drawing.Color.Transparent;
             this.Data.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Data.Location = new System.Drawing.Point(162, 39);
+            this.Data.Location = new System.Drawing.Point(243, 60);
+            this.Data.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Data.Name = "Data";
-            this.Data.Size = new System.Drawing.Size(65, 13);
+            this.Data.Size = new System.Drawing.Size(89, 20);
             this.Data.TabIndex = 9;
             this.Data.Text = "00/00/0000";
             this.Data.Click += new System.EventHandler(this.Data_Click);
@@ -80,9 +82,10 @@
             // 
             this.Atrasado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Atrasado.AutoSize = true;
-            this.Atrasado.Location = new System.Drawing.Point(963, 27);
+            this.Atrasado.Location = new System.Drawing.Point(968, 42);
+            this.Atrasado.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Atrasado.Name = "Atrasado";
-            this.Atrasado.Size = new System.Drawing.Size(14, 13);
+            this.Atrasado.Size = new System.Drawing.Size(21, 20);
             this.Atrasado.TabIndex = 8;
             this.Atrasado.TabStop = true;
             this.Atrasado.UseVisualStyleBackColor = true;
@@ -91,9 +94,10 @@
             // 
             this.Ausente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Ausente.AutoSize = true;
-            this.Ausente.Location = new System.Drawing.Point(809, 27);
+            this.Ausente.Location = new System.Drawing.Point(744, 42);
+            this.Ausente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Ausente.Name = "Ausente";
-            this.Ausente.Size = new System.Drawing.Size(14, 13);
+            this.Ausente.Size = new System.Drawing.Size(21, 20);
             this.Ausente.TabIndex = 7;
             this.Ausente.TabStop = true;
             this.Ausente.UseVisualStyleBackColor = true;
@@ -102,9 +106,10 @@
             // 
             this.Presente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Presente.AutoSize = true;
-            this.Presente.Location = new System.Drawing.Point(662, 27);
+            this.Presente.Location = new System.Drawing.Point(523, 42);
+            this.Presente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Presente.Name = "Presente";
-            this.Presente.Size = new System.Drawing.Size(14, 13);
+            this.Presente.Size = new System.Drawing.Size(21, 20);
             this.Presente.TabIndex = 6;
             this.Presente.TabStop = true;
             this.Presente.UseVisualStyleBackColor = true;
@@ -114,9 +119,10 @@
             this.linkRemover.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.linkRemover.AutoSize = true;
             this.linkRemover.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.linkRemover.Location = new System.Drawing.Point(1134, 49);
+            this.linkRemover.Location = new System.Drawing.Point(1001, 75);
+            this.linkRemover.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkRemover.Name = "linkRemover";
-            this.linkRemover.Size = new System.Drawing.Size(50, 13);
+            this.linkRemover.Size = new System.Drawing.Size(73, 20);
             this.linkRemover.TabIndex = 5;
             this.linkRemover.TabStop = true;
             this.linkRemover.Text = "Remover";
@@ -128,9 +134,10 @@
             this.Editar.AutoSize = true;
             this.Editar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Editar.LinkColor = System.Drawing.Color.Blue;
-            this.Editar.Location = new System.Drawing.Point(1089, 49);
+            this.Editar.Location = new System.Drawing.Point(934, 75);
+            this.Editar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Editar.Name = "Editar";
-            this.Editar.Size = new System.Drawing.Size(34, 13);
+            this.Editar.Size = new System.Drawing.Size(51, 20);
             this.Editar.TabIndex = 4;
             this.Editar.TabStop = true;
             this.Editar.Text = "Editar";
@@ -141,9 +148,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Myanmar Text", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(74, 37);
+            this.label2.Location = new System.Drawing.Point(111, 57);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(25, 23);
+            this.label2.Size = new System.Drawing.Size(38, 36);
             this.label2.TabIndex = 3;
             this.label2.Text = "ID:";
             // 
@@ -153,9 +161,10 @@
             this.Id.BackColor = System.Drawing.Color.Transparent;
             this.Id.Font = new System.Drawing.Font("Myanmar Text", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Id.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Id.Location = new System.Drawing.Point(94, 37);
+            this.Id.Location = new System.Drawing.Point(141, 57);
+            this.Id.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Id.Name = "Id";
-            this.Id.Size = new System.Drawing.Size(52, 23);
+            this.Id.Size = new System.Drawing.Size(81, 36);
             this.Id.TabIndex = 2;
             this.Id.Text = "123456";
             this.Id.Click += new System.EventHandler(this.Id_Click);
@@ -166,9 +175,10 @@
             this.Nome.BackColor = System.Drawing.Color.Transparent;
             this.Nome.Font = new System.Drawing.Font("Myanmar Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Nome.Location = new System.Drawing.Point(72, 11);
+            this.Nome.Location = new System.Drawing.Point(108, 17);
+            this.Nome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Nome.Name = "Nome";
-            this.Nome.Size = new System.Drawing.Size(178, 34);
+            this.Nome.Size = new System.Drawing.Size(275, 51);
             this.Nome.TabIndex = 1;
             this.Nome.Text = "Nome Nome Nome";
             this.Nome.Click += new System.EventHandler(this.Nome_Click);
@@ -176,24 +186,28 @@
             // foto
             // 
             this.foto.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.foto.BackColor = System.Drawing.Color.Black;
-            this.foto.Location = new System.Drawing.Point(6, 3);
+            this.foto.BackColor = System.Drawing.Color.Transparent;
+            this.foto.BackgroundImage = global::formatiic.Properties.Resources.user;
+            this.foto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.foto.Location = new System.Drawing.Point(9, 5);
+            this.foto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.foto.Name = "foto";
-            this.foto.Size = new System.Drawing.Size(60, 60);
+            this.foto.Size = new System.Drawing.Size(90, 92);
             this.foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.foto.TabIndex = 0;
             this.foto.TabStop = false;
             // 
             // SoldadoCard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.roundedPanel1);
             this.ForeColor = System.Drawing.Color.Transparent;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SoldadoCard";
-            this.Size = new System.Drawing.Size(1217, 69);
+            this.Size = new System.Drawing.Size(1826, 117);
             this.roundedPanel1.ResumeLayout(false);
             this.roundedPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.foto)).EndInit();
