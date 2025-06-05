@@ -33,7 +33,7 @@
             this.Atrasado = new System.Windows.Forms.RadioButton();
             this.Ausente = new System.Windows.Forms.RadioButton();
             this.Presente = new System.Windows.Forms.RadioButton();
-            this.Remover = new System.Windows.Forms.LinkLabel();
+            this.linkRemover = new System.Windows.Forms.LinkLabel();
             this.Editar = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.Id = new System.Windows.Forms.Label();
@@ -45,12 +45,13 @@
             // 
             // roundedPanel1
             // 
+            this.roundedPanel1.AutoSize = true;
             this.roundedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.roundedPanel1.Controls.Add(this.Data);
             this.roundedPanel1.Controls.Add(this.Atrasado);
             this.roundedPanel1.Controls.Add(this.Ausente);
             this.roundedPanel1.Controls.Add(this.Presente);
-            this.roundedPanel1.Controls.Add(this.Remover);
+            this.roundedPanel1.Controls.Add(this.linkRemover);
             this.roundedPanel1.Controls.Add(this.Editar);
             this.roundedPanel1.Controls.Add(this.label2);
             this.roundedPanel1.Controls.Add(this.Id);
@@ -59,7 +60,7 @@
             this.roundedPanel1.CornerRadius = 30;
             this.roundedPanel1.Location = new System.Drawing.Point(0, 0);
             this.roundedPanel1.Name = "roundedPanel1";
-            this.roundedPanel1.Size = new System.Drawing.Size(800, 66);
+            this.roundedPanel1.Size = new System.Drawing.Size(1200, 66);
             this.roundedPanel1.TabIndex = 0;
             this.roundedPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.roundedPanel1_Paint);
             // 
@@ -79,7 +80,7 @@
             // 
             this.Atrasado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Atrasado.AutoSize = true;
-            this.Atrasado.Location = new System.Drawing.Point(644, 27);
+            this.Atrasado.Location = new System.Drawing.Point(963, 27);
             this.Atrasado.Name = "Atrasado";
             this.Atrasado.Size = new System.Drawing.Size(14, 13);
             this.Atrasado.TabIndex = 8;
@@ -90,7 +91,7 @@
             // 
             this.Ausente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Ausente.AutoSize = true;
-            this.Ausente.Location = new System.Drawing.Point(553, 27);
+            this.Ausente.Location = new System.Drawing.Point(809, 27);
             this.Ausente.Name = "Ausente";
             this.Ausente.Size = new System.Drawing.Size(14, 13);
             this.Ausente.TabIndex = 7;
@@ -101,30 +102,33 @@
             // 
             this.Presente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Presente.AutoSize = true;
-            this.Presente.Location = new System.Drawing.Point(462, 27);
+            this.Presente.Location = new System.Drawing.Point(662, 27);
             this.Presente.Name = "Presente";
             this.Presente.Size = new System.Drawing.Size(14, 13);
             this.Presente.TabIndex = 6;
             this.Presente.TabStop = true;
             this.Presente.UseVisualStyleBackColor = true;
             // 
-            // Remover
+            // linkRemover
             // 
-            this.Remover.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Remover.AutoSize = true;
-            this.Remover.Location = new System.Drawing.Point(734, 49);
-            this.Remover.Name = "Remover";
-            this.Remover.Size = new System.Drawing.Size(50, 13);
-            this.Remover.TabIndex = 5;
-            this.Remover.TabStop = true;
-            this.Remover.Text = "Remover";
+            this.linkRemover.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkRemover.AutoSize = true;
+            this.linkRemover.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.linkRemover.Location = new System.Drawing.Point(1134, 49);
+            this.linkRemover.Name = "linkRemover";
+            this.linkRemover.Size = new System.Drawing.Size(50, 13);
+            this.linkRemover.TabIndex = 5;
+            this.linkRemover.TabStop = true;
+            this.linkRemover.Text = "Remover";
+            this.linkRemover.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.BtnRemover_LinkClicked);
             // 
             // Editar
             // 
             this.Editar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Editar.AutoSize = true;
+            this.Editar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Editar.LinkColor = System.Drawing.Color.Blue;
-            this.Editar.Location = new System.Drawing.Point(689, 49);
+            this.Editar.Location = new System.Drawing.Point(1089, 49);
             this.Editar.Name = "Editar";
             this.Editar.Size = new System.Drawing.Size(34, 13);
             this.Editar.TabIndex = 4;
@@ -184,15 +188,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.roundedPanel1);
             this.ForeColor = System.Drawing.Color.Transparent;
             this.Name = "SoldadoCard";
-            this.Size = new System.Drawing.Size(800, 66);
+            this.Size = new System.Drawing.Size(1217, 69);
             this.roundedPanel1.ResumeLayout(false);
             this.roundedPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.foto)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -206,7 +212,7 @@
         private System.Windows.Forms.RadioButton Atrasado;
         private System.Windows.Forms.RadioButton Ausente;
         private System.Windows.Forms.RadioButton Presente;
-        private System.Windows.Forms.LinkLabel Remover;
+        private System.Windows.Forms.LinkLabel linkRemover;
         private System.Windows.Forms.LinkLabel Editar;
         private System.Windows.Forms.Label Data;
     }

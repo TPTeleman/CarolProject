@@ -30,24 +30,27 @@
         {
             this.panelEsquerda = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.icone = new System.Windows.Forms.PictureBox();
             this.campoSenhaLogin = new System.Windows.Forms.TextBox();
             this.campoEmailLogin = new System.Windows.Forms.TextBox();
             this.botaoLogin = new System.Windows.Forms.Button();
             this.panelDireita = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.icone = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.roundedPanel1 = new RoundedPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panelEsquerda.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.icone)).BeginInit();
             this.panelDireita.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.icone)).BeginInit();
             this.roundedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,8 +62,9 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panelEsquerda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(80)))));
             this.panelEsquerda.Controls.Add(this.label4);
-            this.panelEsquerda.Controls.Add(this.button3);
             this.panelEsquerda.Controls.Add(this.label1);
+            this.panelEsquerda.Controls.Add(this.label3);
+            this.panelEsquerda.Controls.Add(this.icone);
             this.panelEsquerda.Location = new System.Drawing.Point(0, 48);
             this.panelEsquerda.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.panelEsquerda.Name = "panelEsquerda";
@@ -70,45 +74,54 @@
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(35, 168);
+            this.label4.Location = new System.Drawing.Point(12, 537);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(329, 58);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Ainda não tem uma conta? Cadastre-se agora\r\npara aproveitar todos os recursos do " +
-    "sistema!";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // button3
-            // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button3.Location = new System.Drawing.Point(148, 252);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(101, 37);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Cadastrar";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.label4.Size = new System.Drawing.Size(38, 20);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "v1.0.0";
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(80)))));
-            this.label1.Font = new System.Drawing.Font("Myanmar Text", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Myanmar Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(104, 115);
+            this.label1.Location = new System.Drawing.Point(72, 274);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 51);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Cadastre-se!";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Size = new System.Drawing.Size(241, 68);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Seja bem-vindo ao sistema\r\n    de gestão de soldados!";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Myanmar Text", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(133, 203);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(128, 43);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Formattic";
+            // 
+            // icone
+            // 
+            this.icone.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.icone.BackColor = System.Drawing.Color.Transparent;
+            this.icone.Image = global::formatiic.Properties.Resources.ico;
+            this.icone.Location = new System.Drawing.Point(110, 50);
+            this.icone.Name = "icone";
+            this.icone.Size = new System.Drawing.Size(175, 175);
+            this.icone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.icone.TabIndex = 13;
+            this.icone.TabStop = false;
             // 
             // campoSenhaLogin
             // 
@@ -136,12 +149,13 @@
             // 
             this.botaoLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.botaoLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.botaoLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botaoLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botaoLogin.Font = new System.Drawing.Font("Myanmar Text", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botaoLogin.ForeColor = System.Drawing.Color.White;
             this.botaoLogin.Location = new System.Drawing.Point(663, 322);
             this.botaoLogin.Name = "botaoLogin";
-            this.botaoLogin.Size = new System.Drawing.Size(157, 54);
+            this.botaoLogin.Size = new System.Drawing.Size(157, 41);
             this.botaoLogin.TabIndex = 6;
             this.botaoLogin.Text = "Logar";
             this.botaoLogin.UseVisualStyleBackColor = false;
@@ -176,36 +190,62 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.icone);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.panel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1065, 51);
             this.panel2.TabIndex = 10;
             // 
-            // label3
+            // label6
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label3.Font = new System.Drawing.Font("Myanmar Text", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(49, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 43);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Formattic";
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(878, 21);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(94, 13);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Manual do usuário";
             // 
-            // icone
+            // panel3
             // 
-            this.icone.BackColor = System.Drawing.Color.Transparent;
-            this.icone.Image = global::formatiic.Properties.Resources.ico;
-            this.icone.Location = new System.Drawing.Point(0, 0);
-            this.icone.Name = "icone";
-            this.icone.Size = new System.Drawing.Size(65, 57);
-            this.icone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.icone.TabIndex = 13;
-            this.icone.TabStop = false;
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.BackgroundImage = global::formatiic.Properties.Resources.book_512;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Location = new System.Drawing.Point(853, 17);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(20, 20);
+            this.panel3.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(750, 21);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Ajuda / Contato";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImage = global::formatiic.Properties.Resources._CITYPNG_COM_White_Simple_Question_Symbol_Icon_PNG___1024x1024;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(724, 17);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(20, 20);
+            this.panel1.TabIndex = 0;
             // 
             // roundedPanel1
             // 
@@ -270,11 +310,11 @@
             this.Load += new System.EventHandler(this.LoginScreen_Load);
             this.panelEsquerda.ResumeLayout(false);
             this.panelEsquerda.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.icone)).EndInit();
             this.panelDireita.ResumeLayout(false);
             this.panelDireita.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.icone)).EndInit();
             this.roundedPanel1.ResumeLayout(false);
             this.roundedPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -285,7 +325,6 @@
 
         #endregion
         private System.Windows.Forms.Panel panelEsquerda;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox campoSenhaLogin;
         private System.Windows.Forms.TextBox campoEmailLogin;
         private System.Windows.Forms.Button botaoLogin;
@@ -297,8 +336,12 @@
         private RoundedPanel roundedPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button2;
     }
 }

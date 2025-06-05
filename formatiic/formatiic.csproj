@@ -113,6 +113,12 @@
     <Compile Include="Screens\FormSoldier.Designer.cs">
       <DependentUpon>FormSoldier.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Perfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Perfil.Designer.cs">
+      <DependentUpon>Perfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     <Compile Include="Scripts\Shooter.cs" />
     <EmbeddedResource Include="Screens\FormSoldier.resx">
       <DependentUpon>FormSoldier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Perfil.resx">
+      <DependentUpon>Perfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
@@ -210,6 +219,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upLoad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usercheck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usermiss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

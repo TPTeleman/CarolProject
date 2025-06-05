@@ -18,6 +18,7 @@ namespace formatiic.Screens
         public SoldadoCard()
         {
             InitializeComponent();
+            linkRemover.LinkClicked += LinkRemover_LinkClicked;
         }
 
         private void roundedPanel1_Paint(object sender, PaintEventArgs e)
@@ -38,6 +39,22 @@ namespace formatiic.Screens
         private void Data_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnRemover_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+           
+        }
+
+        private void LinkRemover_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            var confirm = MessageBox.Show("Deseja remover este soldado?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (confirm == DialogResult.Yes && this.Parent != null)
+            {
+                this.Parent.Controls.Remove(this);
+                
+            }
         }
     }
 }

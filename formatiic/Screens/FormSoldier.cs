@@ -19,6 +19,9 @@ namespace formatiic.Screens
         {
             InitializeComponent();
             this.soldierPanel = panel;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
         }
 
         private void AddSoldier_Click(object sender, EventArgs e)
@@ -30,6 +33,7 @@ namespace formatiic.Screens
             soldierPanel.Controls.Add(novoSoldado);
             this.Close();
         }
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -67,6 +71,11 @@ namespace formatiic.Screens
         }
 
         private void campoTel_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboTS_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
