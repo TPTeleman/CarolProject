@@ -30,5 +30,17 @@ namespace formatiic.Screens
         {
 
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            LoginScreen sair = new LoginScreen();
+            sair.ShowDialog();
+            this.Close();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
