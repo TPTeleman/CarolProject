@@ -15,6 +15,8 @@ namespace formatiic.Screens
         public CheckList()
         {
             InitializeComponent();
+            
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
         }

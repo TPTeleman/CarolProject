@@ -34,6 +34,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.icone = new System.Windows.Forms.PictureBox();
             this.roundedPanel1 = new RoundedPanel();
+            this.roundedPictureBox1 = new RoundedPictureBox();
             this.comboTS = new System.Windows.Forms.ComboBox();
             this.AddSoldier = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -53,7 +54,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.roundedPictureBox1 = new RoundedPictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icone)).BeginInit();
@@ -132,6 +132,20 @@
             this.roundedPanel1.Name = "roundedPanel1";
             this.roundedPanel1.Size = new System.Drawing.Size(516, 635);
             this.roundedPanel1.TabIndex = 10;
+            this.roundedPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.roundedPanel1_Paint);
+            // 
+            // roundedPictureBox1
+            // 
+            this.roundedPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.roundedPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.roundedPictureBox1.BackgroundImage = global::formatiic.Properties.Resources.user;
+            this.roundedPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.roundedPictureBox1.Location = new System.Drawing.Point(381, 111);
+            this.roundedPictureBox1.Name = "roundedPictureBox1";
+            this.roundedPictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.roundedPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.roundedPictureBox1.TabIndex = 34;
+            this.roundedPictureBox1.TabStop = false;
             // 
             // comboTS
             // 
@@ -401,19 +415,6 @@
             this.label9.Size = new System.Drawing.Size(77, 27);
             this.label9.TabIndex = 28;
             this.label9.Text = "Endereço:";
-            // 
-            // roundedPictureBox1
-            // 
-            this.roundedPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.roundedPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.roundedPictureBox1.BackgroundImage = global::formatiic.Properties.Resources.user;
-            this.roundedPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.roundedPictureBox1.Location = new System.Drawing.Point(381, 111);
-            this.roundedPictureBox1.Name = "roundedPictureBox1";
-            this.roundedPictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.roundedPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.roundedPictureBox1.TabIndex = 34;
-            this.roundedPictureBox1.TabStop = false;
             // 
             // FormSoldier
             // 
