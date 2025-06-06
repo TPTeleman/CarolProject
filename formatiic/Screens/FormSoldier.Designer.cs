@@ -38,7 +38,6 @@
             this.AddSoldier = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.CampoFoto = new System.Windows.Forms.PictureBox();
             this.btnMostrarSenhaConfirmar = new System.Windows.Forms.Button();
             this.Adicionar = new System.Windows.Forms.Button();
             this.btnMostrarSenha = new System.Windows.Forms.Button();
@@ -54,11 +53,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.roundedPictureBox1 = new RoundedPictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icone)).BeginInit();
             this.roundedPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CampoFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -106,11 +106,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.roundedPanel1.BackColor = System.Drawing.Color.White;
+            this.roundedPanel1.Controls.Add(this.roundedPictureBox1);
             this.roundedPanel1.Controls.Add(this.comboTS);
             this.roundedPanel1.Controls.Add(this.AddSoldier);
             this.roundedPanel1.Controls.Add(this.txtEmail);
             this.roundedPanel1.Controls.Add(this.label2);
-            this.roundedPanel1.Controls.Add(this.CampoFoto);
             this.roundedPanel1.Controls.Add(this.btnMostrarSenhaConfirmar);
             this.roundedPanel1.Controls.Add(this.Adicionar);
             this.roundedPanel1.Controls.Add(this.btnMostrarSenha);
@@ -126,7 +126,7 @@
             this.roundedPanel1.Controls.Add(this.label3);
             this.roundedPanel1.Controls.Add(this.label1);
             this.roundedPanel1.Controls.Add(this.label9);
-            this.roundedPanel1.CornerRadius = 30;
+            this.roundedPanel1.CornerRadius = 20;
             this.roundedPanel1.Location = new System.Drawing.Point(186, 51);
             this.roundedPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.roundedPanel1.Name = "roundedPanel1";
@@ -218,16 +218,6 @@
             this.label2.TabIndex = 32;
             this.label2.Text = "E-mail:";
             // 
-            // CampoFoto
-            // 
-            this.CampoFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CampoFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CampoFoto.Location = new System.Drawing.Point(378, 114);
-            this.CampoFoto.Name = "CampoFoto";
-            this.CampoFoto.Size = new System.Drawing.Size(105, 100);
-            this.CampoFoto.TabIndex = 4;
-            this.CampoFoto.TabStop = false;
-            // 
             // btnMostrarSenhaConfirmar
             // 
             this.btnMostrarSenhaConfirmar.BackColor = System.Drawing.Color.Transparent;
@@ -243,7 +233,7 @@
             // Adicionar
             // 
             this.Adicionar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.Adicionar.Location = new System.Drawing.Point(383, 220);
+            this.Adicionar.Location = new System.Drawing.Point(383, 217);
             this.Adicionar.Name = "Adicionar";
             this.Adicionar.Size = new System.Drawing.Size(95, 23);
             this.Adicionar.TabIndex = 0;
@@ -396,9 +386,9 @@
             this.label1.Location = new System.Drawing.Point(141, 17);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(246, 48);
+            this.label1.Size = new System.Drawing.Size(254, 48);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Cadastrar usuário";
+            this.label1.Text = "Cadastrar soldado";
             // 
             // label9
             // 
@@ -411,6 +401,19 @@
             this.label9.Size = new System.Drawing.Size(77, 27);
             this.label9.TabIndex = 28;
             this.label9.Text = "Endereço:";
+            // 
+            // roundedPictureBox1
+            // 
+            this.roundedPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.roundedPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.roundedPictureBox1.BackgroundImage = global::formatiic.Properties.Resources.user;
+            this.roundedPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.roundedPictureBox1.Location = new System.Drawing.Point(381, 111);
+            this.roundedPictureBox1.Name = "roundedPictureBox1";
+            this.roundedPictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.roundedPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.roundedPictureBox1.TabIndex = 34;
+            this.roundedPictureBox1.TabStop = false;
             // 
             // FormSoldier
             // 
@@ -426,7 +429,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.icone)).EndInit();
             this.roundedPanel1.ResumeLayout(false);
             this.roundedPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CampoFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -437,7 +440,6 @@
         private System.Windows.Forms.Button Adicionar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox icone;
-        private System.Windows.Forms.PictureBox CampoFoto;
         private RoundedPanel roundedPanel1;
         private System.Windows.Forms.Button btnMostrarSenhaConfirmar;
         private System.Windows.Forms.Button btnMostrarSenha;
@@ -457,5 +459,6 @@
         private System.Windows.Forms.Button AddSoldier;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboTS;
+        private RoundedPictureBox roundedPictureBox1;
     }
 }

@@ -56,5 +56,16 @@ namespace formatiic.Screens
                 
             }
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CheckList check = new CheckList();
+            check.Show();
+        }
+
+        private void SoldadoCard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

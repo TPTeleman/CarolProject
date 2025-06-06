@@ -254,7 +254,7 @@
             this.roundedPanel1.Controls.Add(this.pictureBox2);
             this.roundedPanel1.Controls.Add(this.pictureBox1);
             this.roundedPanel1.Controls.Add(this.label2);
-            this.roundedPanel1.CornerRadius = 30;
+            this.roundedPanel1.CornerRadius = 20;
             this.roundedPanel1.Location = new System.Drawing.Point(534, 120);
             this.roundedPanel1.Name = "roundedPanel1";
             this.roundedPanel1.Size = new System.Drawing.Size(412, 283);

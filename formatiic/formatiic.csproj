@@ -107,6 +107,12 @@
     <Compile Include="ClassesVisuais\RoundedPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Screens\CheckList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\CheckList.Designer.cs">
+      <DependentUpon>CheckList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\FormSoldier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     <Compile Include="Scripts\ConnectionDB.cs" />
     <Compile Include="Scripts\PasswordHassher.cs" />
     <Compile Include="Scripts\Shooter.cs" />
+    <EmbeddedResource Include="Screens\CheckList.resx">
+      <DependentUpon>CheckList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\FormSoldier.resx">
       <DependentUpon>FormSoldier.cs</DependentUpon>
     </EmbeddedResource>
