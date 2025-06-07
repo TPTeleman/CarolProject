@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.roundedPanel1 = new RoundedPanel();
-            this.Data = new System.Windows.Forms.Label();
+            this.txtDateofbirth = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.Atrasado = new System.Windows.Forms.RadioButton();
@@ -38,8 +38,8 @@
             this.linkRemover = new System.Windows.Forms.LinkLabel();
             this.Editar = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
-            this.Id = new System.Windows.Forms.Label();
-            this.Nome = new System.Windows.Forms.Label();
+            this.txtWarname = new System.Windows.Forms.Label();
+            this.txtFullname = new System.Windows.Forms.Label();
             this.foto = new RoundedPictureBox();
             this.roundedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.foto)).BeginInit();
@@ -51,7 +51,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.roundedPanel1.AutoSize = true;
             this.roundedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.roundedPanel1.Controls.Add(this.Data);
+            this.roundedPanel1.Controls.Add(this.txtDateofbirth);
             this.roundedPanel1.Controls.Add(this.label1);
             this.roundedPanel1.Controls.Add(this.linkLabel1);
             this.roundedPanel1.Controls.Add(this.Atrasado);
@@ -60,8 +60,8 @@
             this.roundedPanel1.Controls.Add(this.linkRemover);
             this.roundedPanel1.Controls.Add(this.Editar);
             this.roundedPanel1.Controls.Add(this.label2);
-            this.roundedPanel1.Controls.Add(this.Id);
-            this.roundedPanel1.Controls.Add(this.Nome);
+            this.roundedPanel1.Controls.Add(this.txtWarname);
+            this.roundedPanel1.Controls.Add(this.txtFullname);
             this.roundedPanel1.Controls.Add(this.foto);
             this.roundedPanel1.CornerRadius = 10;
             this.roundedPanel1.Location = new System.Drawing.Point(0, 0);
@@ -70,17 +70,17 @@
             this.roundedPanel1.TabIndex = 0;
             this.roundedPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.roundedPanel1_Paint);
             // 
-            // Data
+            // txtDateofbirth
             // 
-            this.Data.AutoSize = true;
-            this.Data.BackColor = System.Drawing.Color.Transparent;
-            this.Data.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Data.Location = new System.Drawing.Point(354, 41);
-            this.Data.Name = "Data";
-            this.Data.Size = new System.Drawing.Size(65, 13);
-            this.Data.TabIndex = 9;
-            this.Data.Text = "00/00/0000";
-            this.Data.Click += new System.EventHandler(this.Data_Click);
+            this.txtDateofbirth.AutoSize = true;
+            this.txtDateofbirth.BackColor = System.Drawing.Color.Transparent;
+            this.txtDateofbirth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.txtDateofbirth.Location = new System.Drawing.Point(354, 41);
+            this.txtDateofbirth.Name = "txtDateofbirth";
+            this.txtDateofbirth.Size = new System.Drawing.Size(65, 13);
+            this.txtDateofbirth.TabIndex = 9;
+            this.txtDateofbirth.Text = "00/00/0000";
+            this.txtDateofbirth.Click += new System.EventHandler(this.Data_Click);
             // 
             // label1
             // 
@@ -179,31 +179,31 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Nome de guerra:";
             // 
-            // Id
+            // txtWarname
             // 
-            this.Id.AutoSize = true;
-            this.Id.BackColor = System.Drawing.Color.Transparent;
-            this.Id.Font = new System.Drawing.Font("Myanmar Text", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Id.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Id.Location = new System.Drawing.Point(181, 37);
-            this.Id.Name = "Id";
-            this.Id.Size = new System.Drawing.Size(120, 23);
-            this.Id.TabIndex = 2;
-            this.Id.Text = "Nome nome nome";
-            this.Id.Click += new System.EventHandler(this.Id_Click);
+            this.txtWarname.AutoSize = true;
+            this.txtWarname.BackColor = System.Drawing.Color.Transparent;
+            this.txtWarname.Font = new System.Drawing.Font("Myanmar Text", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtWarname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.txtWarname.Location = new System.Drawing.Point(181, 37);
+            this.txtWarname.Name = "txtWarname";
+            this.txtWarname.Size = new System.Drawing.Size(120, 23);
+            this.txtWarname.TabIndex = 2;
+            this.txtWarname.Text = "Nome nome nome";
+            this.txtWarname.Click += new System.EventHandler(this.Id_Click);
             // 
-            // Nome
+            // txtFullname
             // 
-            this.Nome.AutoSize = true;
-            this.Nome.BackColor = System.Drawing.Color.Transparent;
-            this.Nome.Font = new System.Drawing.Font("Myanmar Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Nome.Location = new System.Drawing.Point(72, 11);
-            this.Nome.Name = "Nome";
-            this.Nome.Size = new System.Drawing.Size(178, 34);
-            this.Nome.TabIndex = 1;
-            this.Nome.Text = "Nome Nome Nome";
-            this.Nome.Click += new System.EventHandler(this.Nome_Click);
+            this.txtFullname.AutoSize = true;
+            this.txtFullname.BackColor = System.Drawing.Color.Transparent;
+            this.txtFullname.Font = new System.Drawing.Font("Myanmar Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFullname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.txtFullname.Location = new System.Drawing.Point(72, 11);
+            this.txtFullname.Name = "txtFullname";
+            this.txtFullname.Size = new System.Drawing.Size(178, 34);
+            this.txtFullname.TabIndex = 1;
+            this.txtFullname.Text = "Nome Nome Nome";
+            this.txtFullname.Click += new System.EventHandler(this.Nome_Click);
             // 
             // foto
             // 
@@ -240,16 +240,16 @@
         #endregion
 
         private RoundedPanel roundedPanel1;
-        private System.Windows.Forms.Label Nome;
+        public System.Windows.Forms.Label txtFullname;
         private RoundedPictureBox foto;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label Id;
+        public System.Windows.Forms.Label txtWarname;
         private System.Windows.Forms.RadioButton Atrasado;
         private System.Windows.Forms.RadioButton Ausente;
         private System.Windows.Forms.RadioButton Presente;
         private System.Windows.Forms.LinkLabel linkRemover;
         private System.Windows.Forms.LinkLabel Editar;
-        private System.Windows.Forms.Label Data;
+        public System.Windows.Forms.Label txtDateofbirth;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label1;
     }

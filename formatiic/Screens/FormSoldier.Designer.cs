@@ -43,7 +43,7 @@
             this.Adicionar = new System.Windows.Forms.Button();
             this.btnMostrarSenha = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.birthdayPicker = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -115,7 +115,7 @@
             this.roundedPanel1.Controls.Add(this.Adicionar);
             this.roundedPanel1.Controls.Add(this.btnMostrarSenha);
             this.roundedPanel1.Controls.Add(this.label4);
-            this.roundedPanel1.Controls.Add(this.textBox1);
+            this.roundedPanel1.Controls.Add(this.txtAddress);
             this.roundedPanel1.Controls.Add(this.birthdayPicker);
             this.roundedPanel1.Controls.Add(this.label8);
             this.roundedPanel1.Controls.Add(this.txtNome);
@@ -280,16 +280,16 @@
             this.label4.TabIndex = 26;
             this.label4.Text = "Data de Nascimento:";
             // 
-            // textBox1
+            // txtAddress
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox1.Font = new System.Drawing.Font("Myanmar Text", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(57, 519);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(287, 25);
-            this.textBox1.TabIndex = 25;
+            this.txtAddress.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtAddress.BackColor = System.Drawing.SystemColors.Control;
+            this.txtAddress.Font = new System.Drawing.Font("Myanmar Text", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(57, 519);
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(287, 25);
+            this.txtAddress.TabIndex = 25;
             // 
             // birthdayPicker
             // 
@@ -447,7 +447,7 @@
         private System.Windows.Forms.Button btnMostrarSenha;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.DateTimePicker birthdayPicker;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtEmail;

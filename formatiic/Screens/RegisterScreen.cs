@@ -41,8 +41,8 @@ namespace formatiic
                 return null;
             } 
 
-            Shooter s = new Shooter(name, email, cellphone, password);
-            return s;
+            //Shooter s = new Shooter(name, email, cellphone, password);
+            return null;
         }
 
         private void botaoCadastrar_Click(object sender, EventArgs e)
@@ -70,9 +70,9 @@ namespace formatiic
                     string sql = "INSERT INTO shooter_tbl (name, email, cellphone, password) " +
                                  "VALUES (@name, @email, @cellphone, @password)";
                     cmd = new MySqlCommand(sql, con);
-                    cmd.Parameters.AddWithValue("@name", s.Name);
+                    cmd.Parameters.AddWithValue("@name", s.Fullname);
                     cmd.Parameters.AddWithValue("@email", s.Email);
-                    cmd.Parameters.AddWithValue("@cellphone", s.Cellphone);
+                    cmd.Parameters.AddWithValue("@cellphone", s.Contact);
                     cmd.Parameters.AddWithValue("@password", hashedPassword);
 
                     try
