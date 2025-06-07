@@ -93,7 +93,9 @@ namespace formatiic.Screens
 
         private void label6_Click(object sender, EventArgs e)
         {
-
+            GuardaADM guarda = new GuardaADM();
+            guarda.Show();
+            this.Close();
         }
 
         private void label1_Click(object sender, EventArgs e)

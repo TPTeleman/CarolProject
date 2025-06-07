@@ -107,6 +107,18 @@
     <Compile Include="ClassesVisuais\RoundedPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Screens\CardGuarda1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\CardGuarda1.Designer.cs">
+      <DependentUpon>CardGuarda1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\CardGuarda2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\CardGuarda2.Designer.cs">
+      <DependentUpon>CardGuarda2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\CheckList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +130,12 @@
     </Compile>
     <Compile Include="Screens\FormSoldier.Designer.cs">
       <DependentUpon>FormSoldier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\GuardaADM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\GuardaADM.Designer.cs">
+      <DependentUpon>GuardaADM.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Perfil.cs">
       <SubType>Form</SubType>
@@ -154,11 +172,20 @@
     <Compile Include="Scripts\ConnectionDB.cs" />
     <Compile Include="Scripts\PasswordHassher.cs" />
     <Compile Include="Scripts\Shooter.cs" />
+    <EmbeddedResource Include="Screens\CardGuarda1.resx">
+      <DependentUpon>CardGuarda1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\CardGuarda2.resx">
+      <DependentUpon>CardGuarda2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\CheckList.resx">
       <DependentUpon>CheckList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\FormSoldier.resx">
       <DependentUpon>FormSoldier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\GuardaADM.resx">
+      <DependentUpon>GuardaADM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Perfil.resx">
       <DependentUpon>Perfil.cs</DependentUpon>

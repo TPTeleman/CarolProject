@@ -458,6 +458,7 @@
             this.Controls.Add(this.panelDireita);
             this.Controls.Add(this.panel3);
             this.Name = "Principal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
             this.Load += new System.EventHandler(this.Principal_Load);
             this.panel3.ResumeLayout(false);

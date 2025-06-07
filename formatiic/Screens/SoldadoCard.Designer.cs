@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.roundedPanel1 = new RoundedPanel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.Data = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.Atrasado = new System.Windows.Forms.RadioButton();
             this.Ausente = new System.Windows.Forms.RadioButton();
             this.Presente = new System.Windows.Forms.RadioButton();
@@ -40,7 +41,6 @@
             this.Id = new System.Windows.Forms.Label();
             this.Nome = new System.Windows.Forms.Label();
             this.foto = new RoundedPictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.roundedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.foto)).BeginInit();
             this.SuspendLayout();
@@ -70,6 +70,30 @@
             this.roundedPanel1.TabIndex = 0;
             this.roundedPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.roundedPanel1_Paint);
             // 
+            // Data
+            // 
+            this.Data.AutoSize = true;
+            this.Data.BackColor = System.Drawing.Color.Transparent;
+            this.Data.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.Data.Location = new System.Drawing.Point(354, 41);
+            this.Data.Name = "Data";
+            this.Data.Size = new System.Drawing.Size(65, 13);
+            this.Data.TabIndex = 9;
+            this.Data.Text = "00/00/0000";
+            this.Data.Click += new System.EventHandler(this.Data_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Myanmar Text", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(348, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 23);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Nascimento:";
+            // 
             // linkLabel1
             // 
             this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -83,18 +107,6 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Chekc-List";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // Data
-            // 
-            this.Data.AutoSize = true;
-            this.Data.BackColor = System.Drawing.Color.Transparent;
-            this.Data.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Data.Location = new System.Drawing.Point(354, 41);
-            this.Data.Name = "Data";
-            this.Data.Size = new System.Drawing.Size(65, 13);
-            this.Data.TabIndex = 9;
-            this.Data.Text = "00/00/0000";
-            this.Data.Click += new System.EventHandler(this.Data_Click);
             // 
             // Atrasado
             // 
@@ -148,7 +160,7 @@
             this.Editar.AutoSize = true;
             this.Editar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Editar.LinkColor = System.Drawing.Color.Blue;
-            this.Editar.Location = new System.Drawing.Point(1003, 49);
+            this.Editar.Location = new System.Drawing.Point(1005, 49);
             this.Editar.Name = "Editar";
             this.Editar.Size = new System.Drawing.Size(34, 13);
             this.Editar.TabIndex = 4;
@@ -205,18 +217,6 @@
             this.foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.foto.TabIndex = 0;
             this.foto.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Myanmar Text", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(348, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 23);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Nascimento:";
             // 
             // SoldadoCard
             // 

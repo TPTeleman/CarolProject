@@ -30,7 +30,13 @@ namespace formatiic.Screens
             novoSoldado.Width = soldierPanel.ClientSize.Width - 20; // ou qualquer largura desejada
             novoSoldado.Height = 68; // altura desejada
 
+            CardGuarda1 novoSoldadoGuarda = new CardGuarda1();
+            novoSoldadoGuarda.Width = soldierPanel.ClientSize.Width - 20; // ou qualquer largura desejada
+            novoSoldadoGuarda.Height = 68; // altura desejada
+
+
             soldierPanel.Controls.Add(novoSoldado);
+
             this.Close();
         }
 

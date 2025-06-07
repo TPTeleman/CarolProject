@@ -341,6 +341,7 @@
             this.ClientSize = new System.Drawing.Size(776, 576);
             this.Controls.Add(this.panelDireita);
             this.Name = "CheckList";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CheckList";
             this.panelDireita.ResumeLayout(false);
             this.roundedPanel2.ResumeLayout(false);

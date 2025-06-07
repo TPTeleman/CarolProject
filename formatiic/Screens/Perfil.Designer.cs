@@ -39,8 +39,17 @@
             this.icone = new System.Windows.Forms.PictureBox();
             this.panelDireita = new System.Windows.Forms.Panel();
             this.roundedPanel5 = new RoundedPanel();
+            this.label30 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label31 = new System.Windows.Forms.Label();
             this.roundedPanel4 = new RoundedPanel();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.roundedPanel3 = new RoundedPanel();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.roundedPanel2 = new RoundedPanel();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -63,15 +72,6 @@
             this.foto = new RoundedPictureBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label31 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icone)).BeginInit();
@@ -138,6 +138,7 @@
             this.label6.Size = new System.Drawing.Size(174, 34);
             this.label6.TabIndex = 22;
             this.label6.Text = "Turnos da guarda";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label2
             // 
@@ -233,6 +234,43 @@
             this.roundedPanel5.Size = new System.Drawing.Size(219, 90);
             this.roundedPanel5.TabIndex = 39;
             // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.BackColor = System.Drawing.Color.Transparent;
+            this.label30.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label30.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label30.Location = new System.Drawing.Point(98, 38);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(31, 36);
+            this.label30.TabIndex = 33;
+            this.label30.Text = "0";
+            // 
+            // panel6
+            // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.BackColor = System.Drawing.Color.Transparent;
+            this.panel6.BackgroundImage = global::formatiic.Properties.Resources.clock;
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel6.Location = new System.Drawing.Point(147, 8);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(29, 29);
+            this.panel6.TabIndex = 32;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.BackColor = System.Drawing.Color.Transparent;
+            this.label31.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label31.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label31.Location = new System.Drawing.Point(60, 8);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(81, 34);
+            this.label31.TabIndex = 31;
+            this.label31.Text = "Atrasos";
+            // 
             // roundedPanel4
             // 
             this.roundedPanel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -248,6 +286,43 @@
             this.roundedPanel4.Size = new System.Drawing.Size(219, 90);
             this.roundedPanel4.TabIndex = 38;
             // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.BackColor = System.Drawing.Color.Transparent;
+            this.label28.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label28.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label28.Location = new System.Drawing.Point(98, 38);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(31, 36);
+            this.label28.TabIndex = 42;
+            this.label28.Text = "0";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.BackColor = System.Drawing.Color.Transparent;
+            this.label29.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label29.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label29.Location = new System.Drawing.Point(43, 8);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(102, 34);
+            this.label29.TabIndex = 40;
+            this.label29.Text = "Ausências";
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.BackgroundImage = global::formatiic.Properties.Resources.usermiss;
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel5.Location = new System.Drawing.Point(146, 8);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(29, 29);
+            this.panel5.TabIndex = 41;
+            // 
             // roundedPanel3
             // 
             this.roundedPanel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -262,6 +337,43 @@
             this.roundedPanel3.Name = "roundedPanel3";
             this.roundedPanel3.Size = new System.Drawing.Size(219, 90);
             this.roundedPanel3.TabIndex = 37;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.Transparent;
+            this.label26.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label26.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label26.Location = new System.Drawing.Point(96, 39);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(31, 36);
+            this.label26.TabIndex = 42;
+            this.label26.Text = "0";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.Transparent;
+            this.label27.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label27.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label27.Location = new System.Drawing.Point(43, 9);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(102, 34);
+            this.label27.TabIndex = 40;
+            this.label27.Text = "Presenças";
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.BackgroundImage = global::formatiic.Properties.Resources.usercheck;
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel4.Location = new System.Drawing.Point(145, 8);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(29, 29);
+            this.panel4.TabIndex = 41;
             // 
             // roundedPanel2
             // 
@@ -368,7 +480,7 @@
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(164, 29);
             this.label19.TabIndex = 30;
-            this.label19.Text = "Cuturnos engraxados:";
+            this.label19.Text = "Coturnos engraxados:";
             // 
             // label18
             // 
@@ -550,117 +662,6 @@
             this.label14.TabIndex = 25;
             this.label14.Text = ".";
             // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label26.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label26.Location = new System.Drawing.Point(96, 39);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(31, 36);
-            this.label26.TabIndex = 42;
-            this.label26.Text = "0";
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.BackgroundImage = global::formatiic.Properties.Resources.usercheck;
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Location = new System.Drawing.Point(145, 8);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(29, 29);
-            this.panel4.TabIndex = 41;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label27.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label27.Location = new System.Drawing.Point(43, 9);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(102, 34);
-            this.label27.TabIndex = 40;
-            this.label27.Text = "Presenças";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.BackColor = System.Drawing.Color.Transparent;
-            this.label28.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label28.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label28.Location = new System.Drawing.Point(98, 38);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(31, 36);
-            this.label28.TabIndex = 42;
-            this.label28.Text = "0";
-            // 
-            // panel5
-            // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.BackgroundImage = global::formatiic.Properties.Resources.usermiss;
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel5.Location = new System.Drawing.Point(146, 8);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(29, 29);
-            this.panel5.TabIndex = 41;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.BackColor = System.Drawing.Color.Transparent;
-            this.label29.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label29.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label29.Location = new System.Drawing.Point(43, 8);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(102, 34);
-            this.label29.TabIndex = 40;
-            this.label29.Text = "Ausências";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.BackColor = System.Drawing.Color.Transparent;
-            this.label30.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label30.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label30.Location = new System.Drawing.Point(98, 38);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(31, 36);
-            this.label30.TabIndex = 33;
-            this.label30.Text = "0";
-            // 
-            // panel6
-            // 
-            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel6.BackColor = System.Drawing.Color.Transparent;
-            this.panel6.BackgroundImage = global::formatiic.Properties.Resources.clock;
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel6.Location = new System.Drawing.Point(147, 8);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(29, 29);
-            this.panel6.TabIndex = 32;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.BackColor = System.Drawing.Color.Transparent;
-            this.label31.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label31.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label31.Location = new System.Drawing.Point(60, 8);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(81, 34);
-            this.label31.TabIndex = 31;
-            this.label31.Text = "Atrasos";
-            // 
             // Perfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -669,6 +670,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panelDireita);
             this.Name = "Perfil";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Perfil";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

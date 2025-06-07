@@ -34,7 +34,7 @@ namespace formatiic.Screens
         private void label8_Click(object sender, EventArgs e)
         {
             LoginScreen sair = new LoginScreen();
-            sair.ShowDialog();
+            sair.Show();
             this.Close();
         }
 
@@ -61,6 +61,13 @@ namespace formatiic.Screens
         private void label15_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            GuardaADM guarda = new GuardaADM();
+            guarda.Show();
+            this.Close();
         }
     }
 }

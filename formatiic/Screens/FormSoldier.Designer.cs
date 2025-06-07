@@ -423,6 +423,7 @@
             this.ClientSize = new System.Drawing.Size(896, 704);
             this.Controls.Add(this.panel1);
             this.Name = "FormSoldier";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSoldier";
             this.Load += new System.EventHandler(this.FormSoldier_Load);
             this.panel1.ResumeLayout(false);

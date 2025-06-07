@@ -306,6 +306,7 @@
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LoginScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.LoginScreen_Load);
             this.panelEsquerda.ResumeLayout(false);
