@@ -67,5 +67,11 @@ namespace formatiic.Screens
         {
 
         }
+
+        private void Editar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormSoldier editar = new FormSoldier();
+            editar.Show();
+        }
     }
 }

@@ -166,6 +166,7 @@
             this.Editar.TabIndex = 4;
             this.Editar.TabStop = true;
             this.Editar.Text = "Editar";
+            this.Editar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Editar_LinkClicked);
             // 
             // label2
             // 
