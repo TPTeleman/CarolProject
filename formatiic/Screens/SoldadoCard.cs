@@ -23,7 +23,7 @@ namespace formatiic.Screens
 
         private void roundedPanel1_Paint(object sender, PaintEventArgs e)
         {
-
+        
         }
 
         private void Nome_Click(object sender, EventArgs e)
@@ -69,6 +69,36 @@ namespace formatiic.Screens
         }
 
         private void Editar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Ausente_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Presente_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void foto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Atrasado_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

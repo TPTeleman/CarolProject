@@ -44,7 +44,7 @@ namespace formatiic.Screens
         }
         public void AdicionarCardDeGuarda(CardGuarda1 card)
         {
-            GuardaPanel.Controls.Add(card);
+            
         }
     }
 }
