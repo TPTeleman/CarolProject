@@ -18,12 +18,29 @@ namespace formatiic.Screens
         {
             InitializeComponent();
             this.Size = new Size(1920, 1080);
-            this.MinimumSize = new Size(1200, 720);
+            this.MinimumSize = new Size(1280, 720);
         }
 
         private void Principal_Load(object sender, EventArgs e)
         {
             labeldata.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            if (User.GetUser().IsAdmin) {
+                label2.ForeColor = Color.White;
+                label2.Cursor = Cursors.Hand;
+
+                label7.ForeColor = Color.Gray;
+                label7.Cursor = Cursors.Arrow;
+
+            } 
+            else
+            {
+                label2.ForeColor = Color.Gray;
+                label2.Cursor = Cursors.Arrow;
+
+                label7.ForeColor = Color.White;
+                label7.Cursor = Cursors.Hand;
+            }
+
             LoadAllShooters();
         }
 
@@ -34,7 +51,7 @@ namespace formatiic.Screens
                 if (con != null)
                 {
 
-                    string sql = "SELECT fullname, warname, dateofbirth FROM shooter_tbl";
+                    string sql = "SELECT id, fullname, warname, dateofbirth FROM shooter_tbl";
                     MySqlCommand cmd = new MySqlCommand(sql, con);
 
                     try
@@ -55,6 +72,11 @@ namespace formatiic.Screens
 
                                         row[columnName] = date;
                                     }
+                                    else if (reader.GetFieldType(i) == typeof(int))
+                                    {
+                                        int value = reader.GetInt16(i);
+                                        row[columnName] = value;
+                                    }
                                     else
                                     {
                                         row[columnName] = reader.IsDBNull(i) ? null : reader.GetString(i);
@@ -65,7 +87,8 @@ namespace formatiic.Screens
                                 string warname = row["warname"] as string;
                                 DateTime dateofbirth = row["dateofbirth"] is DateTime dt ? dt: DateTime.MinValue;
 
-                                CreateShooterCard(fullname, warname, dateofbirth.ToString("yyyy-MM-dd"));
+                                SoldadoCard s = CreateShooterCard(fullname, warname, dateofbirth.ToString("yyyy-MM-dd"));
+                                s.id = Convert.ToInt16(row["id"]);
                             }
                         }
                     }
@@ -77,7 +100,7 @@ namespace formatiic.Screens
             }
         }
 
-        private void CreateShooterCard(string fullname, string warname, string birthday)
+        private SoldadoCard CreateShooterCard(string fullname, string warname, string birthday)
         {
             SoldadoCard novoSoldado = new SoldadoCard();
             novoSoldado.Width = SoldierPanel.ClientSize.Width - 20;
@@ -88,6 +111,14 @@ namespace formatiic.Screens
             novoSoldado.txtFullname.Text = fullname;
             novoSoldado.txtWarname.Text = warname;
             novoSoldado.txtDateofbirth.Text = birthday;
+
+            if (!User.GetUser().IsAdmin)
+            {
+                novoSoldado.linkEditar.Visible = false;
+                novoSoldado.linkRemover.Visible = false;
+            }
+
+            return novoSoldado;
         }
 
         private void panelDireita_Paint(object sender, PaintEventArgs e)
@@ -119,13 +150,9 @@ namespace formatiic.Screens
 
         private void label2_Click(object sender, EventArgs e)
         {
-        
-
-
-
+            if (!User.GetUser().IsAdmin) { return; }
             FormSoldier formAdd = new FormSoldier(this.SoldierPanel);
             formAdd.ShowDialog();
-
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -136,7 +163,7 @@ namespace formatiic.Screens
         private void label8_Click(object sender, EventArgs e)
         {
             LoginScreen sair = new LoginScreen();
-            sair.ShowDialog();
+            sair.Show();
             this.Close();
         }
 
@@ -152,6 +179,7 @@ namespace formatiic.Screens
 
         private void label7_Click(object sender, EventArgs e)
         {
+            if (User.GetUser().IsAdmin) { return; }
             Perfil perfil = new Perfil();  
             perfil.Show();
             this.Close();
@@ -170,6 +198,11 @@ namespace formatiic.Screens
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ConfirmAtt_Click(object sender, EventArgs e)
         {
 
         }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using formatiic.Scripts;
+using MySql.Data.MySqlClient;
 
 namespace formatiic.Screens
 {
@@ -16,11 +18,52 @@ namespace formatiic.Screens
         {
             InitializeComponent();
             this.Size = new Size(1920, 1080);
-            this.MinimumSize = new Size(1200, 720);
+            this.MinimumSize = new Size(1280, 720);
+
+            label2.ForeColor = Color.Gray;
+            label2.Cursor = Cursors.Arrow;
+
+            if (User.GetUser().IsCabo) {
+                label1.ForeColor = Color.White;
+                label1.Cursor = Cursors.Hand;
+            } 
+            else
+            {
+                label1.ForeColor = Color.Gray;
+                label1.Cursor = Cursors.Arrow;
+            }
+            
+
+        }
+
+        private void FillProfile()
+        {
+            using (MySqlConnection con = ConnectionDB.GetConnection())
+            {
+                if (con != null)
+                {
+
+                    string sql = "SELECT fullname, warname, dateofbirth FROM shooter_tbl";
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                    try
+                    {
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            
+                        }
+                    }
+                    catch (MySqlException ex)
+                    {
+                        MessageBox.Show("Erro de banco de dados: " + ex.Message);
+                    }
+                }
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
+            if (!User.GetUser().IsCabo) { return; }
             Principal principal = new Principal();
             principal.Show();
             this.Close();
@@ -65,6 +108,7 @@ namespace formatiic.Screens
 
         private void label6_Click(object sender, EventArgs e)
         {
+            //if (User.GetUser().IsAdmin) { return; }
             GuardaADM guarda = new GuardaADM();
             guarda.Show();
             this.Close();

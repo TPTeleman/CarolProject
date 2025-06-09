@@ -12,7 +12,7 @@ namespace formatiic.Scripts
     {
         private static readonly string server = "localhost";
         private static readonly string user = "root";
-        private static readonly string password = "root";
+        private static readonly string password = "";
         private static readonly string database = "formatiicdb";
 
         public static MySqlConnection GetConnection()
