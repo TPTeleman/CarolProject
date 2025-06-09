@@ -133,7 +133,6 @@
             this.campoSenhaLogin.Name = "campoSenhaLogin";
             this.campoSenhaLogin.Size = new System.Drawing.Size(300, 29);
             this.campoSenhaLogin.TabIndex = 3;
-            this.campoSenhaLogin.Text = "senhaLegal123";
             // 
             // campoEmailLogin
             // 
@@ -145,7 +144,6 @@
             this.campoEmailLogin.Name = "campoEmailLogin";
             this.campoEmailLogin.Size = new System.Drawing.Size(300, 29);
             this.campoEmailLogin.TabIndex = 2;
-            this.campoEmailLogin.Text = "formatiicadm@gmail.com";
             // 
             // botaoLogin
             // 

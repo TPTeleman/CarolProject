@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -46,22 +45,5 @@ public static class PasswordHasher
             result |= a[i] ^ b[i];
         }
         return result == 0;
-    }
-
-    public static string GeneratePassword(string name, DateTime birthday)
-    {
-        string primeiroNome = name.Split(' ')[0];
-        string ano = birthday.Year.ToString().Substring(2, 2);
-        string aleatorio = GenerateRandomLetters(4);
-
-        return primeiroNome + ano + aleatorio;
-    }
-
-    private static string GenerateRandomLetters(int quantidade)
-    {
-        const string letras = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz";
-        var random = new Random();
-        return new string(Enumerable.Repeat(letras, quantidade)
-            .Select(s => s[random.Next(s.Length)]).ToArray());
     }
 }

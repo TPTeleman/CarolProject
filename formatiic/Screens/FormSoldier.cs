@@ -67,12 +67,8 @@ namespace formatiic.Screens
                         return;
                     }
 
-                    string password = PasswordHasher.GeneratePassword(s.Fullname, s.Dateofbirth);
-                    MessageBox.Show(password);
-                    string hashedPassword = PasswordHasher.HashPassword(password);
-
-                    string sql = "INSERT INTO shooter_tbl (fullname, warname, email, cellphone, bloodtype, dateofbirth, address, password) " +
-                                 "VALUES (@fullname, @warname, @email, @cellphone, @bloodtype, @dateofbirth, @address, @password)";
+                    string sql = "INSERT INTO shooter_tbl (fullname, warname, email, cellphone, bloodtype, dateofbirth, address) " +
+                                 "VALUES (@fullname, @warname, @email, @cellphone, @bloodtype, @dateofbirth, @address)";
                     cmd = new MySqlCommand(sql, con);
                     cmd.Parameters.AddWithValue("@fullname", s.Fullname);
                     cmd.Parameters.AddWithValue("@warname", s.Warname);
@@ -81,7 +77,6 @@ namespace formatiic.Screens
                     cmd.Parameters.AddWithValue("@bloodtype", s.Bloodtype);
                     cmd.Parameters.AddWithValue("@dateofbirth", s.Dateofbirth.ToString("yyyy-MM-dd"));
                     cmd.Parameters.AddWithValue("@address", s.Address);
-                    cmd.Parameters.AddWithValue("@password", hashedPassword);
 
                     try
                     {
@@ -89,23 +84,9 @@ namespace formatiic.Screens
                         if (i > 0)
                         {
                             MessageBox.Show("Dados inseridos com sucesso!");
+                            CreateShooterCard(s.Fullname, s.Warname, s.Dateofbirth.ToString("yyyy-MM-dd"));
 
-                            sql = "SELECT id FROM shooter_tbl WHERE fullname = @fullname AND email = @email";
-                            cmd = new MySqlCommand(sql, con);
-                            cmd.Parameters.AddWithValue("@fullname", s.Fullname);
-                            cmd.Parameters.AddWithValue("@email", s.Email);
-
-                            object result = cmd.ExecuteScalar();
-
-                            if (result != null)
-                            {
-                                int shooterID = Convert.ToInt32(result);
-
-                                SoldadoCard c = CreateShooterCard(s.Fullname, s.Warname, s.Dateofbirth.ToString("yyyy-MM-dd"));
-                                c.id = Convert.ToInt16(shooterID);
-
-                                this.Close();
-                            }
+                            this.Close();
                         }
                         else
                         {
@@ -122,7 +103,7 @@ namespace formatiic.Screens
             novoSoldadoGuarda.Width = soldierPanel.ClientSize.Width - 20;
             novoSoldadoGuarda.Height = 68;*/
         }
-        private SoldadoCard CreateShooterCard(string fullname, string warname, string birthday)
+        private void CreateShooterCard(string fullname, string warname, string birthday)
         {
             SoldadoCard novoSoldado = new SoldadoCard();
             novoSoldado.Width = soldierPanel.ClientSize.Width - 20;
@@ -133,14 +114,6 @@ namespace formatiic.Screens
             novoSoldado.txtFullname.Text = fullname;
             novoSoldado.txtWarname.Text = warname;
             novoSoldado.txtDateofbirth.Text = birthday;
-
-            if (!User.GetUser().IsAdmin)
-            {
-                novoSoldado.linkEditar.Visible = false;
-                novoSoldado.linkRemover.Visible = false;
-            }
-
-            return novoSoldado;
         }
 
 

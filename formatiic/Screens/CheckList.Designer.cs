@@ -33,23 +33,23 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.roundedPanel6 = new RoundedPanel();
             this.label5 = new System.Windows.Forms.Label();
-            this.accessoriesPen = new System.Windows.Forms.RadioButton();
-            this.accessoriesOK = new System.Windows.Forms.RadioButton();
+            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.roundedPanel5 = new RoundedPanel();
-            this.bootsPen = new System.Windows.Forms.RadioButton();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
-            this.bootsOK = new System.Windows.Forms.RadioButton();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.roundedPanel4 = new RoundedPanel();
-            this.uniformPen = new System.Windows.Forms.RadioButton();
-            this.uniformOK = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.roundedPanel3 = new RoundedPanel();
-            this.hairPen = new System.Windows.Forms.RadioButton();
-            this.hairOK = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.roundedPanel1 = new RoundedPanel();
-            this.beardPen = new System.Windows.Forms.RadioButton();
-            this.beardOK = new System.Windows.Forms.RadioButton();
+            this.acessoriosProibidosPending = new System.Windows.Forms.RadioButton();
+            this.acessoriosProibidosOK = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.panelDireita.SuspendLayout();
@@ -104,14 +104,13 @@
             this.btnSalvar.TabIndex = 27;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // roundedPanel6
             // 
             this.roundedPanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.roundedPanel6.Controls.Add(this.label5);
-            this.roundedPanel6.Controls.Add(this.accessoriesPen);
-            this.roundedPanel6.Controls.Add(this.accessoriesOK);
+            this.roundedPanel6.Controls.Add(this.radioButton7);
+            this.roundedPanel6.Controls.Add(this.radioButton8);
             this.roundedPanel6.CornerRadius = 10;
             this.roundedPanel6.Location = new System.Drawing.Point(12, 302);
             this.roundedPanel6.Name = "roundedPanel6";
@@ -128,51 +127,50 @@
             this.label5.Text = "Sem acessórios proibidos";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // accessoriesPen
+            // radioButton7
             // 
-            this.accessoriesPen.AutoSize = true;
-            this.accessoriesPen.Checked = true;
-            this.accessoriesPen.Location = new System.Drawing.Point(217, 14);
-            this.accessoriesPen.Name = "accessoriesPen";
-            this.accessoriesPen.Size = new System.Drawing.Size(71, 17);
-            this.accessoriesPen.TabIndex = 5;
-            this.accessoriesPen.TabStop = true;
-            this.accessoriesPen.Text = "Pendente";
-            this.accessoriesPen.UseVisualStyleBackColor = true;
+            this.radioButton7.AutoSize = true;
+            this.radioButton7.Location = new System.Drawing.Point(217, 14);
+            this.radioButton7.Name = "radioButton7";
+            this.radioButton7.Size = new System.Drawing.Size(71, 17);
+            this.radioButton7.TabIndex = 5;
+            this.radioButton7.TabStop = true;
+            this.radioButton7.Text = "Pendente";
+            this.radioButton7.UseVisualStyleBackColor = true;
             // 
-            // accessoriesOK
+            // radioButton8
             // 
-            this.accessoriesOK.AutoSize = true;
-            this.accessoriesOK.Location = new System.Drawing.Point(303, 14);
-            this.accessoriesOK.Name = "accessoriesOK";
-            this.accessoriesOK.Size = new System.Drawing.Size(40, 17);
-            this.accessoriesOK.TabIndex = 10;
-            this.accessoriesOK.Text = "OK";
-            this.accessoriesOK.UseVisualStyleBackColor = true;
+            this.radioButton8.AutoSize = true;
+            this.radioButton8.Location = new System.Drawing.Point(303, 14);
+            this.radioButton8.Name = "radioButton8";
+            this.radioButton8.Size = new System.Drawing.Size(40, 17);
+            this.radioButton8.TabIndex = 10;
+            this.radioButton8.TabStop = true;
+            this.radioButton8.Text = "OK";
+            this.radioButton8.UseVisualStyleBackColor = true;
             // 
             // roundedPanel5
             // 
             this.roundedPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.roundedPanel5.Controls.Add(this.bootsPen);
+            this.roundedPanel5.Controls.Add(this.radioButton5);
             this.roundedPanel5.Controls.Add(this.label4);
-            this.roundedPanel5.Controls.Add(this.bootsOK);
+            this.roundedPanel5.Controls.Add(this.radioButton6);
             this.roundedPanel5.CornerRadius = 10;
             this.roundedPanel5.Location = new System.Drawing.Point(12, 244);
             this.roundedPanel5.Name = "roundedPanel5";
             this.roundedPanel5.Size = new System.Drawing.Size(417, 45);
             this.roundedPanel5.TabIndex = 40;
             // 
-            // bootsPen
+            // radioButton5
             // 
-            this.bootsPen.AutoSize = true;
-            this.bootsPen.Checked = true;
-            this.bootsPen.Location = new System.Drawing.Point(217, 14);
-            this.bootsPen.Name = "bootsPen";
-            this.bootsPen.Size = new System.Drawing.Size(71, 17);
-            this.bootsPen.TabIndex = 5;
-            this.bootsPen.TabStop = true;
-            this.bootsPen.Text = "Pendente";
-            this.bootsPen.UseVisualStyleBackColor = true;
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Location = new System.Drawing.Point(217, 14);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(71, 17);
+            this.radioButton5.TabIndex = 5;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "Pendente";
+            this.radioButton5.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -183,21 +181,22 @@
             this.label4.TabIndex = 35;
             this.label4.Text = "Botas engraxadas";
             // 
-            // bootsOK
+            // radioButton6
             // 
-            this.bootsOK.AutoSize = true;
-            this.bootsOK.Location = new System.Drawing.Point(303, 14);
-            this.bootsOK.Name = "bootsOK";
-            this.bootsOK.Size = new System.Drawing.Size(40, 17);
-            this.bootsOK.TabIndex = 10;
-            this.bootsOK.Text = "OK";
-            this.bootsOK.UseVisualStyleBackColor = true;
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.Location = new System.Drawing.Point(303, 14);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(40, 17);
+            this.radioButton6.TabIndex = 10;
+            this.radioButton6.TabStop = true;
+            this.radioButton6.Text = "OK";
+            this.radioButton6.UseVisualStyleBackColor = true;
             // 
             // roundedPanel4
             // 
             this.roundedPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.roundedPanel4.Controls.Add(this.uniformPen);
-            this.roundedPanel4.Controls.Add(this.uniformOK);
+            this.roundedPanel4.Controls.Add(this.radioButton3);
+            this.roundedPanel4.Controls.Add(this.radioButton4);
             this.roundedPanel4.Controls.Add(this.label3);
             this.roundedPanel4.CornerRadius = 10;
             this.roundedPanel4.Location = new System.Drawing.Point(12, 186);
@@ -205,27 +204,27 @@
             this.roundedPanel4.Size = new System.Drawing.Size(417, 45);
             this.roundedPanel4.TabIndex = 39;
             // 
-            // uniformPen
+            // radioButton3
             // 
-            this.uniformPen.AutoSize = true;
-            this.uniformPen.Checked = true;
-            this.uniformPen.Location = new System.Drawing.Point(217, 14);
-            this.uniformPen.Name = "uniformPen";
-            this.uniformPen.Size = new System.Drawing.Size(71, 17);
-            this.uniformPen.TabIndex = 5;
-            this.uniformPen.TabStop = true;
-            this.uniformPen.Text = "Pendente";
-            this.uniformPen.UseVisualStyleBackColor = true;
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(217, 14);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(71, 17);
+            this.radioButton3.TabIndex = 5;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Pendente";
+            this.radioButton3.UseVisualStyleBackColor = true;
             // 
-            // uniformOK
+            // radioButton4
             // 
-            this.uniformOK.AutoSize = true;
-            this.uniformOK.Location = new System.Drawing.Point(303, 14);
-            this.uniformOK.Name = "uniformOK";
-            this.uniformOK.Size = new System.Drawing.Size(40, 17);
-            this.uniformOK.TabIndex = 10;
-            this.uniformOK.Text = "OK";
-            this.uniformOK.UseVisualStyleBackColor = true;
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(303, 14);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(40, 17);
+            this.radioButton4.TabIndex = 10;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "OK";
+            this.radioButton4.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -239,8 +238,8 @@
             // roundedPanel3
             // 
             this.roundedPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.roundedPanel3.Controls.Add(this.hairPen);
-            this.roundedPanel3.Controls.Add(this.hairOK);
+            this.roundedPanel3.Controls.Add(this.radioButton1);
+            this.roundedPanel3.Controls.Add(this.radioButton2);
             this.roundedPanel3.Controls.Add(this.label2);
             this.roundedPanel3.CornerRadius = 10;
             this.roundedPanel3.Location = new System.Drawing.Point(12, 127);
@@ -248,27 +247,27 @@
             this.roundedPanel3.Size = new System.Drawing.Size(417, 45);
             this.roundedPanel3.TabIndex = 38;
             // 
-            // hairPen
+            // radioButton1
             // 
-            this.hairPen.AutoSize = true;
-            this.hairPen.Checked = true;
-            this.hairPen.Location = new System.Drawing.Point(217, 14);
-            this.hairPen.Name = "hairPen";
-            this.hairPen.Size = new System.Drawing.Size(71, 17);
-            this.hairPen.TabIndex = 5;
-            this.hairPen.TabStop = true;
-            this.hairPen.Text = "Pendente";
-            this.hairPen.UseVisualStyleBackColor = true;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(217, 14);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(71, 17);
+            this.radioButton1.TabIndex = 5;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Pendente";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // hairOK
+            // radioButton2
             // 
-            this.hairOK.AutoSize = true;
-            this.hairOK.Location = new System.Drawing.Point(303, 14);
-            this.hairOK.Name = "hairOK";
-            this.hairOK.Size = new System.Drawing.Size(40, 17);
-            this.hairOK.TabIndex = 10;
-            this.hairOK.Text = "OK";
-            this.hairOK.UseVisualStyleBackColor = true;
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(303, 14);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(40, 17);
+            this.radioButton2.TabIndex = 10;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "OK";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -282,8 +281,8 @@
             // roundedPanel1
             // 
             this.roundedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.roundedPanel1.Controls.Add(this.beardPen);
-            this.roundedPanel1.Controls.Add(this.beardOK);
+            this.roundedPanel1.Controls.Add(this.acessoriosProibidosPending);
+            this.roundedPanel1.Controls.Add(this.acessoriosProibidosOK);
             this.roundedPanel1.Controls.Add(this.label1);
             this.roundedPanel1.CornerRadius = 10;
             this.roundedPanel1.Location = new System.Drawing.Point(12, 69);
@@ -291,27 +290,27 @@
             this.roundedPanel1.Size = new System.Drawing.Size(417, 45);
             this.roundedPanel1.TabIndex = 37;
             // 
-            // beardPen
+            // acessoriosProibidosPending
             // 
-            this.beardPen.AutoSize = true;
-            this.beardPen.Checked = true;
-            this.beardPen.Location = new System.Drawing.Point(217, 14);
-            this.beardPen.Name = "beardPen";
-            this.beardPen.Size = new System.Drawing.Size(71, 17);
-            this.beardPen.TabIndex = 5;
-            this.beardPen.TabStop = true;
-            this.beardPen.Text = "Pendente";
-            this.beardPen.UseVisualStyleBackColor = true;
+            this.acessoriosProibidosPending.AutoSize = true;
+            this.acessoriosProibidosPending.Location = new System.Drawing.Point(217, 14);
+            this.acessoriosProibidosPending.Name = "acessoriosProibidosPending";
+            this.acessoriosProibidosPending.Size = new System.Drawing.Size(71, 17);
+            this.acessoriosProibidosPending.TabIndex = 5;
+            this.acessoriosProibidosPending.TabStop = true;
+            this.acessoriosProibidosPending.Text = "Pendente";
+            this.acessoriosProibidosPending.UseVisualStyleBackColor = true;
             // 
-            // beardOK
+            // acessoriosProibidosOK
             // 
-            this.beardOK.AutoSize = true;
-            this.beardOK.Location = new System.Drawing.Point(303, 14);
-            this.beardOK.Name = "beardOK";
-            this.beardOK.Size = new System.Drawing.Size(40, 17);
-            this.beardOK.TabIndex = 10;
-            this.beardOK.Text = "OK";
-            this.beardOK.UseVisualStyleBackColor = true;
+            this.acessoriosProibidosOK.AutoSize = true;
+            this.acessoriosProibidosOK.Location = new System.Drawing.Point(303, 14);
+            this.acessoriosProibidosOK.Name = "acessoriosProibidosOK";
+            this.acessoriosProibidosOK.Size = new System.Drawing.Size(40, 17);
+            this.acessoriosProibidosOK.TabIndex = 10;
+            this.acessoriosProibidosOK.TabStop = true;
+            this.acessoriosProibidosOK.Text = "OK";
+            this.acessoriosProibidosOK.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -371,21 +370,21 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RadioButton beardOK;
-        private System.Windows.Forms.RadioButton beardPen;
+        private System.Windows.Forms.RadioButton acessoriosProibidosOK;
+        private System.Windows.Forms.RadioButton acessoriosProibidosPending;
         private RoundedPanel roundedPanel1;
         private RoundedPanel roundedPanel6;
-        private System.Windows.Forms.RadioButton accessoriesPen;
-        private System.Windows.Forms.RadioButton accessoriesOK;
+        private System.Windows.Forms.RadioButton radioButton7;
+        private System.Windows.Forms.RadioButton radioButton8;
         private RoundedPanel roundedPanel5;
-        private System.Windows.Forms.RadioButton bootsPen;
-        private System.Windows.Forms.RadioButton bootsOK;
+        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.RadioButton radioButton6;
         private RoundedPanel roundedPanel4;
-        private System.Windows.Forms.RadioButton uniformPen;
-        private System.Windows.Forms.RadioButton uniformOK;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton4;
         private RoundedPanel roundedPanel3;
-        private System.Windows.Forms.RadioButton hairPen;
-        private System.Windows.Forms.RadioButton hairOK;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Button btnSalvar;
     }
 }

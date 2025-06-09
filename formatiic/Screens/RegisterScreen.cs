@@ -65,7 +65,7 @@ namespace formatiic
                         return;
                     }
 
-                    string hashedPassword = PasswordHasher.HashPassword("");
+                    string hashedPassword = PasswordHasher.HashPassword(s.Password);
 
                     string sql = "INSERT INTO shooter_tbl (name, email, cellphone, password) " +
                                  "VALUES (@name, @email, @cellphone, @password)";

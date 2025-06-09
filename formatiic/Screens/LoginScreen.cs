@@ -28,16 +28,10 @@ namespace formatiic
             {
                 if (con != null)
                 {
-                    bool isAdmin = false;
                     string email = campoEmailLogin.Text;
                     string password = campoSenhaLogin.Text;
 
-                    if (email.Contains("@")) { 
-                        if (email.Split('@')[0] == "formatiicadm") { isAdmin = true; }
-                    }
-
                     string sql = "SELECT id, password FROM shooter_tbl WHERE email = @email";
-                    if (isAdmin) { sql = "SELECT email, passcode FROM adm_tbl WHERE email = @email"; }
                     MySqlCommand cmd = new MySqlCommand(sql, con);
                     cmd.Parameters.AddWithValue("@email", email);
 
@@ -45,54 +39,11 @@ namespace formatiic
                     {
                         if (reader.Read())
                         {
-                            string storedHash;
-                            if (isAdmin)
-                            {
-                                storedHash = reader.GetString("passcode");
-                            } else
-                            {
-                                storedHash = reader.GetString("password");
-                         
-                            }
+                            string storedHash = reader.GetString("password");
 
                             if (PasswordHasher.VerifyPassword(password, storedHash))
                             {
-                                User u = User.GetUser();
-                                u.IsAdmin = isAdmin;
-
-                                if (isAdmin == false) {
-                                    int id = reader.GetInt16("id");
-                                    u.ID = id.ToString();
-
-                                    reader.Close();
-                                    bool isCabo = false;
-                                    sql = "SELECT COUNT(*) FROM cabo_tbl WHERE shooter_id = @id";
-                                    MySqlCommand cabo_cmd = new MySqlCommand(sql, con);
-                                    cabo_cmd.Parameters.AddWithValue("@id", id);
-
-                                    int count = Convert.ToInt16(cabo_cmd.ExecuteScalar());
-                                    if (count > 0)
-                                    {
-                                        isCabo = true;
-                                        //MessageBox.Show("Atirador é cabo!");
-                                    }
-
-                                    u.IsCabo = isCabo;
-                                }
-
-                                //MessageBox.Show("Logado com sucesso ["+ u.ID +"]! Adm Status: " + u.IsAdmin.ToString());
-
-                                if (u.IsAdmin)
-                                {
-                                    Principal p = new Principal();
-                                    p.Show();
-                                } else
-                                {
-                                    Perfil p = new Perfil();
-                                    p.Show();
-                                }
-
-                                this.Hide();
+                                MessageBox.Show("Logado com sucesso!");
                             }
                             else
                             {

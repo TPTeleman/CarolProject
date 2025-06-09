@@ -32,10 +32,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.icone = new System.Windows.Forms.PictureBox();
             this.roundedPanel1 = new RoundedPanel();
-            this.CancelSoldier = new System.Windows.Forms.Button();
             this.roundedPictureBox1 = new RoundedPictureBox();
             this.comboTS = new System.Windows.Forms.ComboBox();
-            this.ConfirmSoldier = new System.Windows.Forms.Button();
+            this.AddSoldier = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnMostrarSenhaConfirmar = new System.Windows.Forms.Button();
@@ -98,10 +97,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.roundedPanel1.BackColor = System.Drawing.Color.White;
-            this.roundedPanel1.Controls.Add(this.CancelSoldier);
             this.roundedPanel1.Controls.Add(this.roundedPictureBox1);
             this.roundedPanel1.Controls.Add(this.comboTS);
-            this.roundedPanel1.Controls.Add(this.ConfirmSoldier);
+            this.roundedPanel1.Controls.Add(this.AddSoldier);
             this.roundedPanel1.Controls.Add(this.txtEmail);
             this.roundedPanel1.Controls.Add(this.label2);
             this.roundedPanel1.Controls.Add(this.btnMostrarSenhaConfirmar);
@@ -125,23 +123,6 @@
             this.roundedPanel1.Name = "roundedPanel1";
             this.roundedPanel1.Size = new System.Drawing.Size(516, 635);
             this.roundedPanel1.TabIndex = 10;
-            // 
-            // CancelSoldier
-            // 
-            this.CancelSoldier.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
-            this.CancelSoldier.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.CancelSoldier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.CancelSoldier.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CancelSoldier.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.CancelSoldier.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelSoldier.ForeColor = System.Drawing.Color.White;
-            this.CancelSoldier.Location = new System.Drawing.Point(399, 572);
-            this.CancelSoldier.Name = "CancelSoldier";
-            this.CancelSoldier.Size = new System.Drawing.Size(98, 33);
-            this.CancelSoldier.TabIndex = 35;
-            this.CancelSoldier.Text = "Cancelar";
-            this.CancelSoldier.UseVisualStyleBackColor = false;
-            this.CancelSoldier.Click += new System.EventHandler(this.CancelSoldier_Click);
             // 
             // roundedPictureBox1
             // 
@@ -199,21 +180,20 @@
             this.comboTS.Size = new System.Drawing.Size(70, 33);
             this.comboTS.TabIndex = 33;
             // 
-            // ConfirmSoldier
+            // AddSoldier
             // 
-            this.ConfirmSoldier.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.ConfirmSoldier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ConfirmSoldier.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ConfirmSoldier.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ConfirmSoldier.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConfirmSoldier.ForeColor = System.Drawing.Color.White;
-            this.ConfirmSoldier.Location = new System.Drawing.Point(183, 572);
-            this.ConfirmSoldier.Name = "ConfirmSoldier";
-            this.ConfirmSoldier.Size = new System.Drawing.Size(164, 33);
-            this.ConfirmSoldier.TabIndex = 9;
-            this.ConfirmSoldier.Text = "Confirmar";
-            this.ConfirmSoldier.UseVisualStyleBackColor = false;
-            this.ConfirmSoldier.Click += new System.EventHandler(this.ConfirmSoldier_Click);
+            this.AddSoldier.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.AddSoldier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.AddSoldier.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddSoldier.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddSoldier.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddSoldier.ForeColor = System.Drawing.Color.White;
+            this.AddSoldier.Location = new System.Drawing.Point(182, 572);
+            this.AddSoldier.Name = "AddSoldier";
+            this.AddSoldier.Size = new System.Drawing.Size(164, 33);
+            this.AddSoldier.TabIndex = 9;
+            this.AddSoldier.Text = "Adicionar Soldado";
+            this.AddSoldier.UseVisualStyleBackColor = false;
             // 
             // txtEmail
             // 
@@ -407,9 +387,9 @@
             this.label1.Location = new System.Drawing.Point(141, 17);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 48);
+            this.label1.Size = new System.Drawing.Size(254, 48);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Editar soldado";
+            this.label1.Text = "Cadastrar soldado";
             // 
             // label9
             // 
@@ -450,7 +430,7 @@
         private RoundedPanel roundedPanel1;
         private RoundedPictureBox roundedPictureBox1;
         private System.Windows.Forms.ComboBox comboTS;
-        private System.Windows.Forms.Button ConfirmSoldier;
+        private System.Windows.Forms.Button AddSoldier;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnMostrarSenhaConfirmar;
@@ -468,6 +448,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button CancelSoldier;
     }
 }
