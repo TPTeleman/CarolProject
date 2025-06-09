@@ -8,7 +8,7 @@ namespace formatiic.Scripts
 {
     internal class Shooter
     {
-        private string fullname, warname, contact, bloodtype, email, address, password;
+        private string fullname, warname, contact, bloodtype, email, address;
         private DateTime dateofbirth;
 
         public Shooter(string fullname, string warname, string bloodtype, string email, string contact, string address, DateTime dateofbirth)
@@ -29,6 +29,5 @@ namespace formatiic.Scripts
         public string Contact { get { return contact; } }
         public string Address { get { return address; } }
         public DateTime Dateofbirth { get { return dateofbirth; } }
-        public string Password { get { return password; } }
     }
 }

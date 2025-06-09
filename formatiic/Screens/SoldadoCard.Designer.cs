@@ -35,9 +35,9 @@
             this.txtDateofbirth = new System.Windows.Forms.Label();
             this.linkRemover = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.Editar = new System.Windows.Forms.LinkLabel();
+            this.linkEditar = new System.Windows.Forms.LinkLabel();
             this.Presente = new System.Windows.Forms.RadioButton();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkList = new System.Windows.Forms.LinkLabel();
             this.txtFullname = new System.Windows.Forms.Label();
             this.Ausente = new System.Windows.Forms.RadioButton();
             this.Atrasado = new System.Windows.Forms.RadioButton();
@@ -55,9 +55,9 @@
             this.roundedPanel1.Controls.Add(this.txtDateofbirth);
             this.roundedPanel1.Controls.Add(this.linkRemover);
             this.roundedPanel1.Controls.Add(this.label1);
-            this.roundedPanel1.Controls.Add(this.Editar);
+            this.roundedPanel1.Controls.Add(this.linkEditar);
             this.roundedPanel1.Controls.Add(this.Presente);
-            this.roundedPanel1.Controls.Add(this.linkLabel1);
+            this.roundedPanel1.Controls.Add(this.linkList);
             this.roundedPanel1.Controls.Add(this.txtFullname);
             this.roundedPanel1.Controls.Add(this.Ausente);
             this.roundedPanel1.Controls.Add(this.Atrasado);
@@ -122,10 +122,10 @@
             // 
             // linkRemover
             // 
-            this.linkRemover.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkRemover.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.linkRemover.AutoSize = true;
             this.linkRemover.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.linkRemover.Location = new System.Drawing.Point(1122, 44);
+            this.linkRemover.Location = new System.Drawing.Point(550, 42);
             this.linkRemover.Name = "linkRemover";
             this.linkRemover.Size = new System.Drawing.Size(50, 13);
             this.linkRemover.TabIndex = 5;
@@ -146,24 +146,25 @@
             this.label1.Text = "Nascimento:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // Editar
+            // linkEditar
             // 
-            this.Editar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Editar.AutoSize = true;
-            this.Editar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Editar.LinkColor = System.Drawing.Color.Blue;
-            this.Editar.Location = new System.Drawing.Point(1080, 44);
-            this.Editar.Name = "Editar";
-            this.Editar.Size = new System.Drawing.Size(34, 13);
-            this.Editar.TabIndex = 4;
-            this.Editar.TabStop = true;
-            this.Editar.Text = "Editar";
-            this.Editar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Editar_LinkClicked);
+            this.linkEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.linkEditar.AutoSize = true;
+            this.linkEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.linkEditar.LinkColor = System.Drawing.Color.Blue;
+            this.linkEditar.Location = new System.Drawing.Point(508, 42);
+            this.linkEditar.Name = "linkEditar";
+            this.linkEditar.Size = new System.Drawing.Size(34, 13);
+            this.linkEditar.TabIndex = 4;
+            this.linkEditar.TabStop = true;
+            this.linkEditar.Text = "Editar";
+            this.linkEditar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Editar_LinkClicked);
             // 
             // Presente
             // 
             this.Presente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Presente.AutoSize = true;
+            this.Presente.Checked = true;
             this.Presente.Location = new System.Drawing.Point(575, 25);
             this.Presente.Name = "Presente";
             this.Presente.Size = new System.Drawing.Size(14, 13);
@@ -172,19 +173,19 @@
             this.Presente.UseVisualStyleBackColor = true;
             this.Presente.CheckedChanged += new System.EventHandler(this.Presente_CheckedChanged);
             // 
-            // linkLabel1
+            // linkList
             // 
-            this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.linkLabel1.LinkColor = System.Drawing.Color.Blue;
-            this.linkLabel1.Location = new System.Drawing.Point(1015, 44);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(57, 13);
-            this.linkLabel1.TabIndex = 10;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Chekc-List";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.linkList.AutoSize = true;
+            this.linkList.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.linkList.LinkColor = System.Drawing.Color.Blue;
+            this.linkList.Location = new System.Drawing.Point(443, 42);
+            this.linkList.Name = "linkList";
+            this.linkList.Size = new System.Drawing.Size(51, 13);
+            this.linkList.TabIndex = 10;
+            this.linkList.TabStop = true;
+            this.linkList.Text = "Inspeção";
+            this.linkList.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // txtFullname
             // 
@@ -246,12 +247,12 @@
         public System.Windows.Forms.Label txtFullname;
         public System.Windows.Forms.Label txtWarname;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.LinkLabel Editar;
-        private System.Windows.Forms.LinkLabel linkRemover;
-        private System.Windows.Forms.RadioButton Presente;
-        private System.Windows.Forms.RadioButton Ausente;
-        private System.Windows.Forms.RadioButton Atrasado;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        public System.Windows.Forms.LinkLabel linkEditar;
+        public System.Windows.Forms.LinkLabel linkRemover;
+        public System.Windows.Forms.RadioButton Presente;
+        public System.Windows.Forms.RadioButton Ausente;
+        public System.Windows.Forms.RadioButton Atrasado;
+        public System.Windows.Forms.LinkLabel linkList;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label txtDateofbirth;
         private RoundedPanel roundedPanel1;

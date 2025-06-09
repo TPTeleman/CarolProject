@@ -107,6 +107,12 @@
     <Compile Include="ClassesVisuais\RoundedPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Screens\EditSoldier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\EditSoldier.Designer.cs">
+      <DependentUpon>EditSoldier.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\CardGuarda1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -136,6 +142,12 @@
     </Compile>
     <Compile Include="Screens\GuardaADM.Designer.cs">
       <DependentUpon>GuardaADM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\GuardaCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\GuardaCard.Designer.cs">
+      <DependentUpon>GuardaCard.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Perfil.cs">
       <SubType>Form</SubType>
@@ -172,6 +184,10 @@
     <Compile Include="Scripts\ConnectionDB.cs" />
     <Compile Include="Scripts\PasswordHassher.cs" />
     <Compile Include="Scripts\Shooter.cs" />
+    <Compile Include="Scripts\User.cs" />
+    <EmbeddedResource Include="Screens\EditSoldier.resx">
+      <DependentUpon>EditSoldier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\CardGuarda1.resx">
       <DependentUpon>CardGuarda1.cs</DependentUpon>
     </EmbeddedResource>
