@@ -39,23 +39,23 @@
             this.icone = new System.Windows.Forms.PictureBox();
             this.panelDireita = new System.Windows.Forms.Panel();
             this.roundedPanel5 = new RoundedPanel();
-            this.label30 = new System.Windows.Forms.Label();
+            this.lateLbl = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label31 = new System.Windows.Forms.Label();
             this.roundedPanel4 = new RoundedPanel();
-            this.label28 = new System.Windows.Forms.Label();
+            this.skipLbl = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.roundedPanel3 = new RoundedPanel();
-            this.label26 = new System.Windows.Forms.Label();
+            this.attendanceLbl = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.roundedPanel2 = new RoundedPanel();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.accessoriesLbl = new System.Windows.Forms.Label();
+            this.bootsLbl = new System.Windows.Forms.Label();
+            this.uniformLbl = new System.Windows.Forms.Label();
+            this.hairLbl = new System.Windows.Forms.Label();
+            this.beardLbl = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -63,12 +63,12 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.roundedPanel1 = new RoundedPanel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.birthdayLbl = new System.Windows.Forms.Label();
+            this.cellphoneLbl = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.rankLbl = new System.Windows.Forms.Label();
+            this.fullnameLbl = new System.Windows.Forms.Label();
             this.foto = new RoundedPictureBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -224,7 +224,7 @@
             this.roundedPanel5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.roundedPanel5.AutoSize = true;
             this.roundedPanel5.BackColor = System.Drawing.Color.White;
-            this.roundedPanel5.Controls.Add(this.label30);
+            this.roundedPanel5.Controls.Add(this.lateLbl);
             this.roundedPanel5.Controls.Add(this.panel6);
             this.roundedPanel5.Controls.Add(this.label31);
             this.roundedPanel5.CornerRadius = 15;
@@ -234,18 +234,18 @@
             this.roundedPanel5.Size = new System.Drawing.Size(219, 90);
             this.roundedPanel5.TabIndex = 39;
             // 
-            // label30
+            // lateLbl
             // 
-            this.label30.AutoSize = true;
-            this.label30.BackColor = System.Drawing.Color.Transparent;
-            this.label30.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label30.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label30.Location = new System.Drawing.Point(98, 38);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(31, 36);
-            this.label30.TabIndex = 33;
-            this.label30.Text = "0";
+            this.lateLbl.AutoSize = true;
+            this.lateLbl.BackColor = System.Drawing.Color.Transparent;
+            this.lateLbl.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.lateLbl.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lateLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lateLbl.Location = new System.Drawing.Point(98, 38);
+            this.lateLbl.Name = "lateLbl";
+            this.lateLbl.Size = new System.Drawing.Size(31, 36);
+            this.lateLbl.TabIndex = 33;
+            this.lateLbl.Text = "0";
             // 
             // panel6
             // 
@@ -253,6 +253,7 @@
             this.panel6.BackColor = System.Drawing.Color.Transparent;
             this.panel6.BackgroundImage = global::formatiic.Properties.Resources.clock;
             this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel6.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.panel6.Location = new System.Drawing.Point(147, 8);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(29, 29);
@@ -262,7 +263,7 @@
             // 
             this.label31.AutoSize = true;
             this.label31.BackColor = System.Drawing.Color.Transparent;
-            this.label31.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label31.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.label31.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label31.Location = new System.Drawing.Point(60, 8);
@@ -276,7 +277,7 @@
             this.roundedPanel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.roundedPanel4.AutoSize = true;
             this.roundedPanel4.BackColor = System.Drawing.Color.White;
-            this.roundedPanel4.Controls.Add(this.label28);
+            this.roundedPanel4.Controls.Add(this.skipLbl);
             this.roundedPanel4.Controls.Add(this.label29);
             this.roundedPanel4.Controls.Add(this.panel5);
             this.roundedPanel4.CornerRadius = 15;
@@ -286,24 +287,24 @@
             this.roundedPanel4.Size = new System.Drawing.Size(219, 90);
             this.roundedPanel4.TabIndex = 38;
             // 
-            // label28
+            // skipLbl
             // 
-            this.label28.AutoSize = true;
-            this.label28.BackColor = System.Drawing.Color.Transparent;
-            this.label28.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label28.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label28.Location = new System.Drawing.Point(98, 38);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(31, 36);
-            this.label28.TabIndex = 42;
-            this.label28.Text = "0";
+            this.skipLbl.AutoSize = true;
+            this.skipLbl.BackColor = System.Drawing.Color.Transparent;
+            this.skipLbl.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.skipLbl.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skipLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.skipLbl.Location = new System.Drawing.Point(98, 38);
+            this.skipLbl.Name = "skipLbl";
+            this.skipLbl.Size = new System.Drawing.Size(31, 36);
+            this.skipLbl.TabIndex = 42;
+            this.skipLbl.Text = "0";
             // 
             // label29
             // 
             this.label29.AutoSize = true;
             this.label29.BackColor = System.Drawing.Color.Transparent;
-            this.label29.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label29.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.label29.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label29.Location = new System.Drawing.Point(43, 8);
@@ -318,6 +319,7 @@
             this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.BackgroundImage = global::formatiic.Properties.Resources.usermiss;
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel5.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.panel5.Location = new System.Drawing.Point(146, 8);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(29, 29);
@@ -328,7 +330,7 @@
             this.roundedPanel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.roundedPanel3.AutoSize = true;
             this.roundedPanel3.BackColor = System.Drawing.Color.White;
-            this.roundedPanel3.Controls.Add(this.label26);
+            this.roundedPanel3.Controls.Add(this.attendanceLbl);
             this.roundedPanel3.Controls.Add(this.label27);
             this.roundedPanel3.Controls.Add(this.panel4);
             this.roundedPanel3.CornerRadius = 15;
@@ -338,24 +340,24 @@
             this.roundedPanel3.Size = new System.Drawing.Size(219, 90);
             this.roundedPanel3.TabIndex = 37;
             // 
-            // label26
+            // attendanceLbl
             // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label26.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label26.Location = new System.Drawing.Point(96, 39);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(31, 36);
-            this.label26.TabIndex = 42;
-            this.label26.Text = "0";
+            this.attendanceLbl.AutoSize = true;
+            this.attendanceLbl.BackColor = System.Drawing.Color.Transparent;
+            this.attendanceLbl.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.attendanceLbl.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.attendanceLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.attendanceLbl.Location = new System.Drawing.Point(96, 39);
+            this.attendanceLbl.Name = "attendanceLbl";
+            this.attendanceLbl.Size = new System.Drawing.Size(31, 36);
+            this.attendanceLbl.TabIndex = 42;
+            this.attendanceLbl.Text = "0";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label27.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.label27.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label27.Location = new System.Drawing.Point(43, 9);
@@ -370,6 +372,7 @@
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.BackgroundImage = global::formatiic.Properties.Resources.usercheck;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel4.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.panel4.Location = new System.Drawing.Point(145, 8);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(29, 29);
@@ -380,11 +383,11 @@
             this.roundedPanel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.roundedPanel2.AutoSize = true;
             this.roundedPanel2.BackColor = System.Drawing.Color.White;
-            this.roundedPanel2.Controls.Add(this.label25);
-            this.roundedPanel2.Controls.Add(this.label24);
-            this.roundedPanel2.Controls.Add(this.label23);
-            this.roundedPanel2.Controls.Add(this.label22);
-            this.roundedPanel2.Controls.Add(this.label21);
+            this.roundedPanel2.Controls.Add(this.accessoriesLbl);
+            this.roundedPanel2.Controls.Add(this.bootsLbl);
+            this.roundedPanel2.Controls.Add(this.uniformLbl);
+            this.roundedPanel2.Controls.Add(this.hairLbl);
+            this.roundedPanel2.Controls.Add(this.beardLbl);
             this.roundedPanel2.Controls.Add(this.label20);
             this.roundedPanel2.Controls.Add(this.label19);
             this.roundedPanel2.Controls.Add(this.label18);
@@ -398,65 +401,65 @@
             this.roundedPanel2.Size = new System.Drawing.Size(360, 297);
             this.roundedPanel2.TabIndex = 26;
             // 
-            // label25
+            // accessoriesLbl
             // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label25.Location = new System.Drawing.Point(226, 237);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(34, 29);
-            this.label25.TabIndex = 36;
-            this.label25.Text = "OK";
+            this.accessoriesLbl.AutoSize = true;
+            this.accessoriesLbl.BackColor = System.Drawing.Color.Transparent;
+            this.accessoriesLbl.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accessoriesLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.accessoriesLbl.Location = new System.Drawing.Point(226, 237);
+            this.accessoriesLbl.Name = "accessoriesLbl";
+            this.accessoriesLbl.Size = new System.Drawing.Size(34, 29);
+            this.accessoriesLbl.TabIndex = 36;
+            this.accessoriesLbl.Text = "OK";
             // 
-            // label24
+            // bootsLbl
             // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label24.Location = new System.Drawing.Point(196, 191);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(34, 29);
-            this.label24.TabIndex = 35;
-            this.label24.Text = "OK";
+            this.bootsLbl.AutoSize = true;
+            this.bootsLbl.BackColor = System.Drawing.Color.Transparent;
+            this.bootsLbl.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bootsLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.bootsLbl.Location = new System.Drawing.Point(196, 191);
+            this.bootsLbl.Name = "bootsLbl";
+            this.bootsLbl.Size = new System.Drawing.Size(34, 29);
+            this.bootsLbl.TabIndex = 35;
+            this.bootsLbl.Text = "OK";
             // 
-            // label23
+            // uniformLbl
             // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label23.Location = new System.Drawing.Point(205, 145);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(34, 29);
-            this.label23.TabIndex = 34;
-            this.label23.Text = "OK";
+            this.uniformLbl.AutoSize = true;
+            this.uniformLbl.BackColor = System.Drawing.Color.Transparent;
+            this.uniformLbl.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uniformLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.uniformLbl.Location = new System.Drawing.Point(205, 145);
+            this.uniformLbl.Name = "uniformLbl";
+            this.uniformLbl.Size = new System.Drawing.Size(34, 29);
+            this.uniformLbl.TabIndex = 34;
+            this.uniformLbl.Text = "OK";
             // 
-            // label22
+            // hairLbl
             // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label22.Location = new System.Drawing.Point(153, 99);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(34, 29);
-            this.label22.TabIndex = 33;
-            this.label22.Text = "OK";
+            this.hairLbl.AutoSize = true;
+            this.hairLbl.BackColor = System.Drawing.Color.Transparent;
+            this.hairLbl.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hairLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.hairLbl.Location = new System.Drawing.Point(153, 99);
+            this.hairLbl.Name = "hairLbl";
+            this.hairLbl.Size = new System.Drawing.Size(34, 29);
+            this.hairLbl.TabIndex = 33;
+            this.hairLbl.Text = "OK";
             // 
-            // label21
+            // beardLbl
             // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label21.Location = new System.Drawing.Point(122, 53);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(34, 29);
-            this.label21.TabIndex = 32;
-            this.label21.Text = "OK";
+            this.beardLbl.AutoSize = true;
+            this.beardLbl.BackColor = System.Drawing.Color.Transparent;
+            this.beardLbl.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.beardLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.beardLbl.Location = new System.Drawing.Point(122, 53);
+            this.beardLbl.Name = "beardLbl";
+            this.beardLbl.Size = new System.Drawing.Size(34, 29);
+            this.beardLbl.TabIndex = 32;
+            this.beardLbl.Text = "OK";
             // 
             // label20
             // 
@@ -536,12 +539,12 @@
             this.roundedPanel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.roundedPanel1.AutoSize = true;
             this.roundedPanel1.BackColor = System.Drawing.Color.White;
-            this.roundedPanel1.Controls.Add(this.label12);
-            this.roundedPanel1.Controls.Add(this.label11);
+            this.roundedPanel1.Controls.Add(this.birthdayLbl);
+            this.roundedPanel1.Controls.Add(this.cellphoneLbl);
             this.roundedPanel1.Controls.Add(this.label10);
             this.roundedPanel1.Controls.Add(this.label9);
-            this.roundedPanel1.Controls.Add(this.label5);
-            this.roundedPanel1.Controls.Add(this.label4);
+            this.roundedPanel1.Controls.Add(this.rankLbl);
+            this.roundedPanel1.Controls.Add(this.fullnameLbl);
             this.roundedPanel1.Controls.Add(this.foto);
             this.roundedPanel1.Controls.Add(this.label13);
             this.roundedPanel1.Controls.Add(this.label14);
@@ -553,37 +556,37 @@
             this.roundedPanel1.TabIndex = 16;
             this.roundedPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.roundedPanel1_Paint);
             // 
-            // label12
+            // birthdayLbl
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Myanmar Text", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Gray;
-            this.label12.Location = new System.Drawing.Point(236, 53);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(28, 25);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "00";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
+            this.birthdayLbl.AutoSize = true;
+            this.birthdayLbl.Font = new System.Drawing.Font("Myanmar Text", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.birthdayLbl.ForeColor = System.Drawing.Color.Gray;
+            this.birthdayLbl.Location = new System.Drawing.Point(278, 51);
+            this.birthdayLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.birthdayLbl.Name = "birthdayLbl";
+            this.birthdayLbl.Size = new System.Drawing.Size(98, 25);
+            this.birthdayLbl.TabIndex = 23;
+            this.birthdayLbl.Text = "dd-MM-YYYY";
+            this.birthdayLbl.Click += new System.EventHandler(this.label12_Click);
             // 
-            // label11
+            // cellphoneLbl
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Myanmar Text", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Gray;
-            this.label11.Location = new System.Drawing.Point(335, 53);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(112, 25);
-            this.label11.TabIndex = 22;
-            this.label11.Text = "00-00000-0000";
+            this.cellphoneLbl.AutoSize = true;
+            this.cellphoneLbl.Font = new System.Drawing.Font("Myanmar Text", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cellphoneLbl.ForeColor = System.Drawing.Color.Gray;
+            this.cellphoneLbl.Location = new System.Drawing.Point(447, 53);
+            this.cellphoneLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.cellphoneLbl.Name = "cellphoneLbl";
+            this.cellphoneLbl.Size = new System.Drawing.Size(112, 25);
+            this.cellphoneLbl.TabIndex = 22;
+            this.cellphoneLbl.Text = "00-00000-0000";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Myanmar Text", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Gray;
-            this.label10.Location = new System.Drawing.Point(277, 52);
+            this.label10.Location = new System.Drawing.Point(389, 52);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(66, 25);
@@ -598,33 +601,33 @@
             this.label9.Location = new System.Drawing.Point(195, 52);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 25);
+            this.label9.Size = new System.Drawing.Size(87, 25);
             this.label9.TabIndex = 20;
-            this.label9.Text = "Idade:";
+            this.label9.Text = "Nascimento:";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // label5
+            // rankLbl
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Myanmar Text", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(120, 52);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 25);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Patente";
+            this.rankLbl.AutoSize = true;
+            this.rankLbl.Font = new System.Drawing.Font("Myanmar Text", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rankLbl.ForeColor = System.Drawing.Color.Gray;
+            this.rankLbl.Location = new System.Drawing.Point(120, 52);
+            this.rankLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.rankLbl.Name = "rankLbl";
+            this.rankLbl.Size = new System.Drawing.Size(59, 25);
+            this.rankLbl.TabIndex = 19;
+            this.rankLbl.Text = "Patente";
             // 
-            // label4
+            // fullnameLbl
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(117, 31);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(141, 29);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "Nome Do Soldado";
+            this.fullnameLbl.AutoSize = true;
+            this.fullnameLbl.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fullnameLbl.Location = new System.Drawing.Point(117, 31);
+            this.fullnameLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.fullnameLbl.Name = "fullnameLbl";
+            this.fullnameLbl.Size = new System.Drawing.Size(141, 29);
+            this.fullnameLbl.TabIndex = 18;
+            this.fullnameLbl.Text = "Nome Do Soldado";
             // 
             // foto
             // 
@@ -655,7 +658,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Myanmar Text", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Gray;
-            this.label14.Location = new System.Drawing.Point(254, 31);
+            this.label14.Location = new System.Drawing.Point(366, 31);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(31, 56);
@@ -707,13 +710,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private RoundedPanel roundedPanel1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label rankLbl;
+        private System.Windows.Forms.Label fullnameLbl;
         private RoundedPictureBox foto;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label cellphoneLbl;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label birthdayLbl;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private RoundedPanel roundedPanel2;
@@ -723,21 +726,21 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label accessoriesLbl;
+        private System.Windows.Forms.Label bootsLbl;
+        private System.Windows.Forms.Label uniformLbl;
+        private System.Windows.Forms.Label hairLbl;
+        private System.Windows.Forms.Label beardLbl;
         private RoundedPanel roundedPanel3;
         private RoundedPanel roundedPanel5;
         private RoundedPanel roundedPanel4;
-        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label attendanceLbl;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label skipLbl;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label lateLbl;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label31;
     }

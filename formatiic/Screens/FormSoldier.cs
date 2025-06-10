@@ -88,7 +88,7 @@ namespace formatiic.Screens
                         int i = cmd.ExecuteNonQuery();
                         if (i > 0)
                         {
-                            MessageBox.Show("Dados inseridos com sucesso!");
+                            //MessageBox.Show("Dados inseridos com sucesso!");
 
                             sql = "SELECT id FROM shooter_tbl WHERE fullname = @fullname AND email = @email";
                             cmd = new MySqlCommand(sql, con);

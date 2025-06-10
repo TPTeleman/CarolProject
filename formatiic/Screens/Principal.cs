@@ -89,7 +89,7 @@ namespace formatiic.Screens
                                 string warname = row["warname"] as string;
                                 DateTime dateofbirth = row["dateofbirth"] is DateTime dt ? dt: DateTime.MinValue;
 
-                                SoldadoCard s = CreateShooterCard(fullname, warname, dateofbirth.ToString("yyyy-MM-dd"));
+                                SoldadoCard s = CreateShooterCard(fullname, warname, dateofbirth.ToString("dd-MM-yyyy"));
                                 s.id = Convert.ToInt16(row["id"]);
                             }
                         }

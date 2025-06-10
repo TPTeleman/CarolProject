@@ -133,7 +133,6 @@
             this.campoSenhaLogin.Name = "campoSenhaLogin";
             this.campoSenhaLogin.Size = new System.Drawing.Size(300, 29);
             this.campoSenhaLogin.TabIndex = 3;
-            this.campoSenhaLogin.Text = "senhaLegal123";
             // 
             // campoEmailLogin
             // 
@@ -145,7 +144,6 @@
             this.campoEmailLogin.Name = "campoEmailLogin";
             this.campoEmailLogin.Size = new System.Drawing.Size(300, 29);
             this.campoEmailLogin.TabIndex = 2;
-            this.campoEmailLogin.Text = "formatiicadm@gmail.com";
             // 
             // botaoLogin
             // 
@@ -187,6 +185,7 @@
             this.button2.TabIndex = 15;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel2

@@ -56,29 +56,69 @@ namespace formatiic.Screens
             {
                 using (MySqlConnection con = ConnectionDB.GetConnection())
                 {
-                    if (con != null) 
+                    if (con != null)
                     {
-                        string sql = "DELETE FROM shooter_tbl WHERE id = @id";
-                        MySqlCommand cmd = new MySqlCommand(sql, con);
-                        cmd.Parameters.AddWithValue("@id", id);
+                        MySqlTransaction transaction = null;
 
-                        if (cmd.ExecuteNonQuery() > 0) 
+                        try
                         {
-                            this.Parent.Controls.Remove(this);
-                            MessageBox.Show("Atirador removido com sucesso!");
+                            transaction = con.BeginTransaction();
+
+                            string sqlAttendance = "DELETE FROM attendance_tbl WHERE shooter_id = @id";
+                            MySqlCommand cmdAttendance = new MySqlCommand(sqlAttendance, con, transaction);
+                            cmdAttendance.Parameters.AddWithValue("@id", id);
+                            cmdAttendance.ExecuteNonQuery();
+
+                            string sqlDaily = "DELETE FROM daily_tbl WHERE shooter_id = @id";
+                            MySqlCommand cmdDaily = new MySqlCommand(sqlDaily, con, transaction);
+                            cmdDaily.Parameters.AddWithValue("@id", id);
+                            cmdDaily.ExecuteNonQuery();
+
+                            string sqlCabo = "DELETE FROM cabo_tbl WHERE shooter_id = @id";
+                            MySqlCommand cmdCabo = new MySqlCommand(sqlCabo, con, transaction);
+                            cmdCabo.Parameters.AddWithValue("@id", id);
+                            cmdCabo.ExecuteNonQuery();
+
+                            string sqlShooter = "DELETE FROM shooter_tbl WHERE id = @id";
+                            MySqlCommand cmdShooter = new MySqlCommand(sqlShooter, con, transaction);
+                            cmdShooter.Parameters.AddWithValue("@id", id);
+
+                            if (cmdShooter.ExecuteNonQuery() > 0)
+                            {
+                                transaction.Commit();
+                                this.Parent.Controls.Remove(this);
+                                MessageBox.Show("Atirador removido com sucesso!");
+                            }
+                            else
+                            {
+                                transaction.Rollback();
+                                MessageBox.Show("Não foi possível remover o atirador.");
+                            }
                         }
-                        else
+                        catch (MySqlException ex)
                         {
-                            MessageBox.Show("Não foi possível remover o atirador.");
+                            if (transaction != null)
+                            {
+                                transaction.Rollback();
+                            }
+                            MessageBox.Show("Erro de banco de dados: " + ex.Message);
+                        }
+                        finally
+                        {
+                            if (transaction != null)
+                            {
+                                transaction.Dispose();
+                            }
                         }
                     }
                 }
             }
         }
 
+
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            CheckList check = new CheckList();
+            CheckList check = new CheckList(id);
             check.id = id;
             check.Show();
         }
