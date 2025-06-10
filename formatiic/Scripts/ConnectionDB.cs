@@ -35,5 +35,26 @@ namespace formatiic.Scripts
             }
 
         }
+
+        public static MySqlConnection GetSubConnection()
+        {
+            string connString = $"server={server};uid={user};pwd={password};database={database}";
+            MySqlConnection con;
+
+            try
+            {
+                con = new MySqlConnection();
+                con.ConnectionString = connString;
+                con.Open();
+
+                return con;
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show($"Database connection failed:\n{ex.Message}", "Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+
+        }
     }
 }

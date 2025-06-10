@@ -14,6 +14,8 @@ namespace formatiic.Screens
 {
     public partial class Principal: Form
     {
+        private List<SoldadoCard> shooterCards = new List<SoldadoCard>();
+
         public Principal()
         {
             InitializeComponent();
@@ -98,6 +100,30 @@ namespace formatiic.Screens
                     }
                 }
             }
+            using (MySqlConnection con = ConnectionDB.GetConnection())
+            {
+                if (con != null)
+                {
+                    foreach (SoldadoCard s in shooterCards)
+                    {
+                        string att_sql = "SELECT att_status FROM attendance_tbl WHERE shooter_id = @sid";
+                        MySqlCommand att_cmd = new MySqlCommand(att_sql, con);
+                        att_cmd.Parameters.AddWithValue("@sid", s.id);
+
+                        object result = att_cmd.ExecuteScalar();
+
+                        if (result != null)
+                        {
+                            string cast_res = result.ToString();
+
+                            s.Presente.Checked = cast_res == "presente";
+                            s.Atrasado.Checked = cast_res == "atrasado";
+                            s.Ausente.Checked = cast_res == "ausente";
+                        }
+                    }
+                }
+            }
+            UpdateAttendanceInfo();
         }
 
         private SoldadoCard CreateShooterCard(string fullname, string warname, string birthday)
@@ -107,6 +133,7 @@ namespace formatiic.Screens
             novoSoldado.Height = 68;
 
             SoldierPanel.Controls.Add(novoSoldado);
+            shooterCards.Add(novoSoldado);
 
             novoSoldado.txtFullname.Text = fullname;
             novoSoldado.txtWarname.Text = warname;
@@ -202,9 +229,130 @@ namespace formatiic.Screens
 
         }
 
+        private void UpdateAttendanceInfo()
+        {
+            string sql = "SELECT COUNT(id) FROM attendance_tbl WHERE DATE(timestamp) = @date AND att_status = @status";
+
+            for (int i = 1; i <= 3; i++)
+            {
+                using (MySqlConnection con = ConnectionDB.GetConnection())
+                {
+                    if (con != null)
+                    {
+                        MySqlCommand cmd = new MySqlCommand(sql, con);
+                        cmd.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-MM-dd"));
+                        cmd.Parameters.AddWithValue("@status", i);
+
+                        object result = cmd.ExecuteScalar();
+
+                        if (result != null)
+                        {
+                            string cast_res = result.ToString();
+
+                            switch (i)
+                            {
+                                case 1:
+                                    presentLbl.Text = cast_res;
+                                    break;
+                                case 2:
+                                    lateLbl.Text = cast_res;
+                                    break;
+                                case 3:
+                                    awayLbl.Text = cast_res;
+                                    break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         private void ConfirmAtt_Click(object sender, EventArgs e)
         {
+            if (!User.GetUser().IsCabo && !User.GetUser().IsAdmin) { return; }
 
+            foreach (SoldadoCard card in shooterCards) 
+            {
+                int att;
+
+                if (card.Presente.Checked) 
+                {
+                    att = 1;
+                }
+                else if (card.Atrasado.Checked)
+                {
+                    att = 2;
+                }
+                else
+                {
+                    att = 3;
+                }
+
+                string sql = "SELECT id FROM attendance_tbl WHERE shooter_id = @sid AND DATE(timestamp) = @date";
+
+                using (MySqlConnection con = ConnectionDB.GetConnection())
+                {
+                    if (con != null)
+                    {
+                        MySqlCommand cmd = new MySqlCommand(sql, con);
+                        cmd.Parameters.AddWithValue("@sid", card.id);
+                        cmd.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-MM-dd"));
+
+                        object result = cmd.ExecuteScalar();
+
+                        if (result != null)
+                        {
+                            int attID = Convert.ToInt16(result);
+                            UpdateAttendance(attID, card.id, att);
+                        }
+                        else
+                        {
+                            //MessageBox.Show("Not found, creating new row.");
+                            InsertAttendance(card.id, att);
+                        }
+                    }
+                }
+            }
+
+            MessageBox.Show("Chamada enviada!");
+
+            UpdateAttendanceInfo();
         }
+
+        private void InsertAttendance(int shooterId, int att)
+        {
+            string sql = "INSERT INTO attendance_tbl (shooter_id, att_status) VALUES (@sid, @status)";
+
+            using (MySqlConnection con = ConnectionDB.GetConnection())
+            {
+                if (con != null)
+                {
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    cmd.Parameters.AddWithValue("@sid", shooterId);
+                    cmd.Parameters.AddWithValue("@status", att);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        private void UpdateAttendance(int id, int shooterId, int att)
+        {
+            string sql = "UPDATE attendance_tbl SET att_status = @status, timestamp = DATE(@date) + INTERVAL (TIME(timestamp)) HOUR_SECOND WHERE shooter_id = @sid";
+
+            using (MySqlConnection con = ConnectionDB.GetConnection())
+            {
+                if (con != null)
+                {
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    cmd.Parameters.AddWithValue("@sid", shooterId);
+                    cmd.Parameters.AddWithValue("@status", att);
+                    cmd.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-MM-dd"));
+
+                   cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
     }
 }

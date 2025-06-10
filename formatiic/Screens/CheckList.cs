@@ -41,7 +41,7 @@ namespace formatiic.Screens
 
             using (MySqlConnection con = ConnectionDB.GetConnection()) 
             {
-                if (con != null) 
+                if (con != null)
                 {
                     MySqlCommand cmd = new MySqlCommand(sql, con);
                     cmd.Parameters.AddWithValue("@sid", id);
