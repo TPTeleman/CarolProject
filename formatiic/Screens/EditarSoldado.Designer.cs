@@ -1,6 +1,6 @@
 ﻿namespace formatiic.Screens
 {
-    partial class EditSoldier
+    partial class EditarSoldado
     {
         /// <summary>
         /// Required designer variable.
@@ -192,7 +192,7 @@
             this.AddSoldier.Name = "AddSoldier";
             this.AddSoldier.Size = new System.Drawing.Size(164, 33);
             this.AddSoldier.TabIndex = 9;
-            this.AddSoldier.Text = "Adicionar Soldado";
+            this.AddSoldier.Text = "Atualizar";
             this.AddSoldier.UseVisualStyleBackColor = false;
             // 
             // txtEmail
@@ -403,15 +403,15 @@
             this.label9.TabIndex = 28;
             this.label9.Text = "Endereço:";
             // 
-            // EditSoldier
+            // EditarSoldado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(896, 704);
             this.Controls.Add(this.panel1);
-            this.Name = "EditSoldier";
+            this.Name = "EditarSoldado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EditSoldier";
+            this.Text = "EditarSoldado";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.icone)).EndInit();

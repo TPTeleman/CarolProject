@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace formatiic.Screens
 {
-    public partial class FormEditSoldier : Form
+    public partial class EditarSoldado : Form
     {
-        public FormEditSoldier()
+        public EditarSoldado()
         {
             InitializeComponent();
         }

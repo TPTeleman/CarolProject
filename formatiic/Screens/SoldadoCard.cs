@@ -70,7 +70,8 @@ namespace formatiic.Screens
 
         private void Editar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            EditarSoldado editar = new EditarSoldado();
+            editar.Show();
         }
 
         private void label1_Click(object sender, EventArgs e)

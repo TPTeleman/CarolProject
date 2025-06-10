@@ -125,6 +125,12 @@
     <Compile Include="Screens\CheckList.Designer.cs">
       <DependentUpon>CheckList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\EditarSoldado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\EditarSoldado.Designer.cs">
+      <DependentUpon>EditarSoldado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\FormSoldier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\CheckList.resx">
       <DependentUpon>CheckList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\EditarSoldado.resx">
+      <DependentUpon>EditarSoldado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\FormSoldier.resx">
       <DependentUpon>FormSoldier.cs</DependentUpon>
