@@ -14,7 +14,8 @@ namespace formatiic.Screens
     public partial class SoldadoCard : UserControl
     {
 
-        
+        public int SoldierId { get; set; }
+
         public SoldadoCard()
         {
             InitializeComponent();
@@ -70,8 +71,8 @@ namespace formatiic.Screens
 
         private void Editar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            EditarSoldado editar = new EditarSoldado();
-            editar.Show();
+            EditarSoldado editarForm = new EditarSoldado(this); // 'this' é o SoldadoCard atual
+            editarForm.ShowDialog();
         }
 
         private void label1_Click(object sender, EventArgs e)

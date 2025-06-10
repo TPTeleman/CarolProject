@@ -34,7 +34,7 @@
             this.roundedPanel1 = new RoundedPanel();
             this.roundedPictureBox1 = new RoundedPictureBox();
             this.comboTS = new System.Windows.Forms.ComboBox();
-            this.AddSoldier = new System.Windows.Forms.Button();
+            this.AttSoldier = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnMostrarSenhaConfirmar = new System.Windows.Forms.Button();
@@ -69,6 +69,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(896, 704);
             this.panel1.TabIndex = 9;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
@@ -99,7 +100,7 @@
             this.roundedPanel1.BackColor = System.Drawing.Color.White;
             this.roundedPanel1.Controls.Add(this.roundedPictureBox1);
             this.roundedPanel1.Controls.Add(this.comboTS);
-            this.roundedPanel1.Controls.Add(this.AddSoldier);
+            this.roundedPanel1.Controls.Add(this.AttSoldier);
             this.roundedPanel1.Controls.Add(this.txtEmail);
             this.roundedPanel1.Controls.Add(this.label2);
             this.roundedPanel1.Controls.Add(this.btnMostrarSenhaConfirmar);
@@ -180,20 +181,21 @@
             this.comboTS.Size = new System.Drawing.Size(70, 33);
             this.comboTS.TabIndex = 33;
             // 
-            // AddSoldier
+            // AttSoldier
             // 
-            this.AddSoldier.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.AddSoldier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.AddSoldier.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AddSoldier.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddSoldier.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddSoldier.ForeColor = System.Drawing.Color.White;
-            this.AddSoldier.Location = new System.Drawing.Point(182, 572);
-            this.AddSoldier.Name = "AddSoldier";
-            this.AddSoldier.Size = new System.Drawing.Size(164, 33);
-            this.AddSoldier.TabIndex = 9;
-            this.AddSoldier.Text = "Atualizar";
-            this.AddSoldier.UseVisualStyleBackColor = false;
+            this.AttSoldier.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.AttSoldier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.AttSoldier.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AttSoldier.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AttSoldier.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AttSoldier.ForeColor = System.Drawing.Color.White;
+            this.AttSoldier.Location = new System.Drawing.Point(182, 572);
+            this.AttSoldier.Name = "AttSoldier";
+            this.AttSoldier.Size = new System.Drawing.Size(164, 33);
+            this.AttSoldier.TabIndex = 9;
+            this.AttSoldier.Text = "Atualizar";
+            this.AttSoldier.UseVisualStyleBackColor = false;
+            this.AttSoldier.Click += new System.EventHandler(this.AddSoldier_Click);
             // 
             // txtEmail
             // 
@@ -430,7 +432,7 @@
         private RoundedPanel roundedPanel1;
         private RoundedPictureBox roundedPictureBox1;
         private System.Windows.Forms.ComboBox comboTS;
-        private System.Windows.Forms.Button AddSoldier;
+        private System.Windows.Forms.Button AttSoldier;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnMostrarSenhaConfirmar;
