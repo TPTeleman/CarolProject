@@ -31,7 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -69,7 +68,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.rankLbl = new System.Windows.Forms.Label();
             this.fullnameLbl = new System.Windows.Forms.Label();
-            this.foto = new RoundedPictureBox();
+            this.fotoPerfil = new RoundedPictureBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -81,7 +80,7 @@
             this.roundedPanel3.SuspendLayout();
             this.roundedPanel2.SuspendLayout();
             this.roundedPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.foto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoPerfil)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -89,7 +88,6 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(80)))));
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -105,7 +103,7 @@
             this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label8.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(18, 311);
+            this.label8.Location = new System.Drawing.Point(18, 248);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 34);
             this.label8.TabIndex = 24;
@@ -119,26 +117,12 @@
             this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label7.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(18, 254);
+            this.label7.Location = new System.Drawing.Point(18, 194);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(62, 34);
             this.label7.TabIndex = 23;
             this.label7.Text = "Perfil";
             this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label6.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(18, 197);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(174, 34);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Turnos da guarda";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label2
             // 
@@ -545,7 +529,7 @@
             this.roundedPanel1.Controls.Add(this.label9);
             this.roundedPanel1.Controls.Add(this.rankLbl);
             this.roundedPanel1.Controls.Add(this.fullnameLbl);
-            this.roundedPanel1.Controls.Add(this.foto);
+            this.roundedPanel1.Controls.Add(this.fotoPerfil);
             this.roundedPanel1.Controls.Add(this.label13);
             this.roundedPanel1.Controls.Add(this.label14);
             this.roundedPanel1.CornerRadius = 20;
@@ -628,18 +612,19 @@
             this.fullnameLbl.Size = new System.Drawing.Size(141, 29);
             this.fullnameLbl.TabIndex = 18;
             this.fullnameLbl.Text = "Nome Do Soldado";
+            this.fullnameLbl.Click += new System.EventHandler(this.fullnameLbl_Click);
             // 
-            // foto
+            // fotoPerfil
             // 
-            this.foto.BackColor = System.Drawing.Color.DarkGray;
-            this.foto.BackgroundImage = global::formatiic.Properties.Resources.user;
-            this.foto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.foto.Location = new System.Drawing.Point(16, 12);
-            this.foto.Name = "foto";
-            this.foto.Size = new System.Drawing.Size(100, 98);
-            this.foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.foto.TabIndex = 17;
-            this.foto.TabStop = false;
+            this.fotoPerfil.BackColor = System.Drawing.Color.DarkGray;
+            this.fotoPerfil.BackgroundImage = global::formatiic.Properties.Resources.user;
+            this.fotoPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.fotoPerfil.Location = new System.Drawing.Point(16, 12);
+            this.fotoPerfil.Name = "fotoPerfil";
+            this.fotoPerfil.Size = new System.Drawing.Size(100, 98);
+            this.fotoPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.fotoPerfil.TabIndex = 17;
+            this.fotoPerfil.TabStop = false;
             // 
             // label13
             // 
@@ -692,7 +677,7 @@
             this.roundedPanel2.PerformLayout();
             this.roundedPanel1.ResumeLayout(false);
             this.roundedPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.foto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoPerfil)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -706,13 +691,12 @@
         private System.Windows.Forms.Panel panelDireita;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private RoundedPanel roundedPanel1;
         private System.Windows.Forms.Label rankLbl;
         private System.Windows.Forms.Label fullnameLbl;
-        private RoundedPictureBox foto;
+        private RoundedPictureBox fotoPerfil;
         private System.Windows.Forms.Label cellphoneLbl;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;

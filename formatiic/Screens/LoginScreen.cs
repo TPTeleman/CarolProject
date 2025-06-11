@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using formatiic.Screens;
 using formatiic.Scripts;
 using MySql.Data.MySqlClient;
+using System.IO;
 
 namespace formatiic
 {
@@ -33,7 +34,7 @@ namespace formatiic
                     string password = campoSenhaLogin.Text;
 
                     if (email.Contains("@")) { 
-                        if (email.Split('@')[0] == "formatiicadm") { isAdmin = true; }
+                        if (email.Split('@')[0] == "formatticadm") { isAdmin = true; }
                     }
 
                     string sql = "SELECT id, password FROM shooter_tbl WHERE email = @email";
@@ -187,7 +188,35 @@ namespace formatiic
 
         private void label5_Click(object sender, EventArgs e)
         {
+            Ajuda ajuda = new Ajuda();
+            ajuda.Show();
+        }
 
+        private void Manualusuario_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Caminho absoluto do arquivo dentro da sua máquina
+                string caminhoArquivoOrigem = @"C:\Users\giiml\Desktop\CarolProject\Manual_Sistema.pdf";
+
+                
+                using (SaveFileDialog salvarComo = new SaveFileDialog())
+                {
+                    salvarComo.Filter = "Arquivos PDF (*.pdf)|*.pdf";
+                    salvarComo.Title = "Salvar Manual de Usuário";
+                    salvarComo.FileName = "Manual_Sistema.pdf";
+
+                    if (salvarComo.ShowDialog() == DialogResult.OK)
+                    {
+                        File.Copy(caminhoArquivoOrigem, salvarComo.FileName, true);
+                        MessageBox.Show("Manual salvo com sucesso!", "Download concluído", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro ao salvar o arquivo: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

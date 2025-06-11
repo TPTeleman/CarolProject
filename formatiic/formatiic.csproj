@@ -107,6 +107,12 @@
     <Compile Include="ClassesVisuais\RoundedPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Screens\Ajuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Ajuda.Designer.cs">
+      <DependentUpon>Ajuda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\EditSoldier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,9 @@
     <Compile Include="Scripts\PasswordHassher.cs" />
     <Compile Include="Scripts\Shooter.cs" />
     <Compile Include="Scripts\User.cs" />
+    <EmbeddedResource Include="Screens\Ajuda.resx">
+      <DependentUpon>Ajuda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\EditSoldier.resx">
       <DependentUpon>EditSoldier.cs</DependentUpon>
     </EmbeddedResource>

@@ -1,14 +1,15 @@
-﻿using System;
+﻿using formatiic.Scripts;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using formatiic.Scripts;
-using MySql.Data.MySqlClient;
 using static System.Net.WebRequestMethods;
 
 namespace formatiic.Screens
@@ -17,6 +18,8 @@ namespace formatiic.Screens
     {
 
         private FlowLayoutPanel soldierPanel;
+
+        private SoldadoCard fotoCard;
 
         public FormSoldier(FlowLayoutPanel panel)
         {
@@ -36,6 +39,8 @@ namespace formatiic.Screens
             string address = txtAddress.Text;
             string bloodtype = comboTS.Text;
             DateTime dateofbirth = birthdayPicker.Value;
+            Image photo = FotoSoldado.Image;
+           
 
             /*if (fullname == "" || warname == "" || email == "" || cellphone == "")
             {
@@ -43,7 +48,7 @@ namespace formatiic.Screens
                 return null;
             }*/
 
-            Shooter s = new Shooter(fullname, warname, bloodtype, email, cellphone, address, dateofbirth);
+            Shooter s = new Shooter(fullname, warname, bloodtype, email, cellphone, address, dateofbirth,photo);
             return s;
         }
 
@@ -71,10 +76,10 @@ namespace formatiic.Screens
                     MessageBox.Show(password);
                     string hashedPassword = PasswordHasher.HashPassword(password);
 
-                    string sql = "INSERT INTO shooter_tbl (fullname, warname, email, cellphone, bloodtype, dateofbirth, address, password) " +
-                                 "VALUES (@fullname, @warname, @email, @cellphone, @bloodtype, @dateofbirth, @address, @password)";
+                    string sql = "INSERT INTO shooter_tbl (fullname, warname, email, cellphone, bloodtype, dateofbirth, address, password, photo) " +
+                                 "VALUES (@fullname, @warname, @email, @cellphone, @bloodtype, @dateofbirth, @address, @password, @photo)";
                     cmd = new MySqlCommand(sql, con);
-                    cmd.Parameters.AddWithValue("@fullname", s.Fullname);
+                    cmd.Parameters.AddWithValue("@fullname", s.Fullname); 
                     cmd.Parameters.AddWithValue("@warname", s.Warname);
                     cmd.Parameters.AddWithValue("@email", s.Email);
                     cmd.Parameters.AddWithValue("@cellphone", s.Contact);
@@ -82,6 +87,8 @@ namespace formatiic.Screens
                     cmd.Parameters.AddWithValue("@dateofbirth", s.Dateofbirth.ToString("yyyy-MM-dd"));
                     cmd.Parameters.AddWithValue("@address", s.Address);
                     cmd.Parameters.AddWithValue("@password", hashedPassword);
+                    byte[] imgBytes = ImageToByteArray(s.Photo);
+                    cmd.Parameters.AddWithValue("@photo", imgBytes);
 
                     try
                     {
@@ -101,7 +108,7 @@ namespace formatiic.Screens
                             {
                                 int shooterID = Convert.ToInt32(result);
 
-                                SoldadoCard c = CreateShooterCard(s.Fullname, s.Warname, s.Dateofbirth.ToString("yyyy-MM-dd"));
+                                SoldadoCard c = CreateShooterCard(s.Fullname, s.Warname, s.Dateofbirth.ToString("yyyy-MM-dd"),s.Photo);
                                 c.id = Convert.ToInt16(shooterID);
 
                                 this.Close();
@@ -118,11 +125,9 @@ namespace formatiic.Screens
                     }
                 }
             }
-            /*CardGuarda1 novoSoldadoGuarda = new CardGuarda1();
-            novoSoldadoGuarda.Width = soldierPanel.ClientSize.Width - 20;
-            novoSoldadoGuarda.Height = 68;*/
+        
         }
-        private SoldadoCard CreateShooterCard(string fullname, string warname, string birthday)
+        private SoldadoCard CreateShooterCard(string fullname, string warname, string birthday, Image photo)
         {
             SoldadoCard novoSoldado = new SoldadoCard();
             novoSoldado.Width = soldierPanel.ClientSize.Width - 20;
@@ -133,6 +138,7 @@ namespace formatiic.Screens
             novoSoldado.txtFullname.Text = fullname;
             novoSoldado.txtWarname.Text = warname;
             novoSoldado.txtDateofbirth.Text = birthday;
+            novoSoldado.fotoCard.Image = photo;
 
             if (!User.GetUser().IsAdmin)
             {
@@ -159,9 +165,23 @@ namespace formatiic.Screens
 
         }
 
+        private byte[] ImageToByteArray(Image img)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                img.Save(ms, img.RawFormat);
+                return ms.ToArray();
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image Files|.jpg;.jpeg;*.png;";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                FotoSoldado.Image = Image.FromFile(open.FileName);
+            }
         }
 
         private void FormSoldier_Load(object sender, EventArgs e)
@@ -192,6 +212,11 @@ namespace formatiic.Screens
         private void roundedPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void txtTel_Click(object sender, EventArgs e)
+        {
+        
         }
     }
 }

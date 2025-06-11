@@ -37,14 +37,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labeldata = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.roundedPanel3 = new RoundedPanel();
             this.lateLbl = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -57,6 +52,9 @@
             this.presentLbl = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SoldierPanel = new RoundedFlowLayoutPanel();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icone)).BeginInit();
@@ -108,7 +106,6 @@
             this.panelDireita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panelDireita.Controls.Add(this.ConfirmAtt);
             this.panelDireita.Controls.Add(this.panel1);
-            this.panelDireita.Controls.Add(this.button1);
             this.panelDireita.Controls.Add(this.panel2);
             this.panelDireita.Controls.Add(this.roundedPanel3);
             this.panelDireita.Controls.Add(this.roundedPanel2);
@@ -126,17 +123,18 @@
             // 
             // ConfirmAtt
             // 
-            this.ConfirmAtt.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ConfirmAtt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ConfirmAtt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.ConfirmAtt.BackgroundImage = global::formatiic.Properties.Resources.upLoad;
+            this.ConfirmAtt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ConfirmAtt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ConfirmAtt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ConfirmAtt.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConfirmAtt.ForeColor = System.Drawing.Color.White;
-            this.ConfirmAtt.Location = new System.Drawing.Point(1025, 75);
+            this.ConfirmAtt.Location = new System.Drawing.Point(1177, 337);
             this.ConfirmAtt.Name = "ConfirmAtt";
-            this.ConfirmAtt.Size = new System.Drawing.Size(153, 33);
+            this.ConfirmAtt.Size = new System.Drawing.Size(33, 29);
             this.ConfirmAtt.TabIndex = 28;
-            this.ConfirmAtt.Text = "Enviar";
             this.ConfirmAtt.UseVisualStyleBackColor = false;
             this.ConfirmAtt.Click += new System.EventHandler(this.ConfirmAtt_Click);
             // 
@@ -146,7 +144,6 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -173,7 +170,7 @@
             this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label8.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(18, 258);
+            this.label8.Location = new System.Drawing.Point(18, 209);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 34);
             this.label8.TabIndex = 19;
@@ -186,25 +183,12 @@
             this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label7.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(18, 206);
+            this.label7.Location = new System.Drawing.Point(18, 152);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(62, 34);
             this.label7.TabIndex = 18;
             this.label7.Text = "Perfil";
             this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label6.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(18, 149);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(174, 34);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "Turnos da guarda";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label2
             // 
@@ -218,20 +202,6 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "Cadastrar soldado";
             this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button1.BackgroundImage = global::formatiic.Properties.Resources.upLoad;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(990, 34);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(28, 28);
-            this.button1.TabIndex = 26;
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -257,46 +227,6 @@
             this.labeldata.Text = "--/--/----";
             this.labeldata.Click += new System.EventHandler(this.label11_Click);
             // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label10.Location = new System.Drawing.Point(919, 79);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(95, 34);
-            this.label10.TabIndex = 22;
-            this.label10.Text = "Atrasado";
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label9.Location = new System.Drawing.Point(773, 79);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 34);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "Ausente";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(623, 79);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 34);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Presente";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
             // roundedPanel3
             // 
             this.roundedPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -305,10 +235,11 @@
             this.roundedPanel3.Controls.Add(this.panel6);
             this.roundedPanel3.Controls.Add(this.label13);
             this.roundedPanel3.CornerRadius = 10;
-            this.roundedPanel3.Location = new System.Drawing.Point(958, 390);
+            this.roundedPanel3.Location = new System.Drawing.Point(958, 415);
             this.roundedPanel3.Name = "roundedPanel3";
             this.roundedPanel3.Size = new System.Drawing.Size(156, 91);
             this.roundedPanel3.TabIndex = 24;
+            this.roundedPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.roundedPanel3_Paint);
             // 
             // lateLbl
             // 
@@ -322,6 +253,7 @@
             this.lateLbl.Size = new System.Drawing.Size(31, 36);
             this.lateLbl.TabIndex = 30;
             this.lateLbl.Text = "0";
+            this.lateLbl.Click += new System.EventHandler(this.lateLbl_Click);
             // 
             // panel6
             // 
@@ -356,7 +288,7 @@
             this.roundedPanel2.Controls.Add(this.panel5);
             this.roundedPanel2.Controls.Add(this.label12);
             this.roundedPanel2.CornerRadius = 10;
-            this.roundedPanel2.Location = new System.Drawing.Point(662, 390);
+            this.roundedPanel2.Location = new System.Drawing.Point(662, 415);
             this.roundedPanel2.Name = "roundedPanel2";
             this.roundedPanel2.Size = new System.Drawing.Size(156, 91);
             this.roundedPanel2.TabIndex = 24;
@@ -373,6 +305,7 @@
             this.awayLbl.Size = new System.Drawing.Size(31, 36);
             this.awayLbl.TabIndex = 29;
             this.awayLbl.Text = "0";
+            this.awayLbl.Click += new System.EventHandler(this.awayLbl_Click);
             // 
             // panel5
             // 
@@ -407,7 +340,7 @@
             this.roundedPanel1.Controls.Add(this.panel4);
             this.roundedPanel1.Controls.Add(this.label11);
             this.roundedPanel1.CornerRadius = 10;
-            this.roundedPanel1.Location = new System.Drawing.Point(360, 390);
+            this.roundedPanel1.Location = new System.Drawing.Point(360, 415);
             this.roundedPanel1.Name = "roundedPanel1";
             this.roundedPanel1.Size = new System.Drawing.Size(156, 91);
             this.roundedPanel1.TabIndex = 23;
@@ -424,6 +357,7 @@
             this.presentLbl.Size = new System.Drawing.Size(31, 36);
             this.presentLbl.TabIndex = 28;
             this.presentLbl.Text = "0";
+            this.presentLbl.Click += new System.EventHandler(this.presentLbl_Click);
             // 
             // panel4
             // 
@@ -449,6 +383,46 @@
             this.label11.Size = new System.Drawing.Size(100, 34);
             this.label11.TabIndex = 20;
             this.label11.Text = "Presentes";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label10.Location = new System.Drawing.Point(1011, 79);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(95, 34);
+            this.label10.TabIndex = 22;
+            this.label10.Text = "Atrasado";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label9.Location = new System.Drawing.Point(865, 79);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(87, 34);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Ausente";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label4.Location = new System.Drawing.Point(715, 79);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(92, 34);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Presente";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // SoldierPanel
             // 
@@ -513,7 +487,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
@@ -522,7 +495,6 @@
         private System.Windows.Forms.Label awayLbl;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;

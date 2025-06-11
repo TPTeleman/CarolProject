@@ -39,7 +39,7 @@
             this.panelDireita = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.Manualusuario = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -131,6 +131,7 @@
             this.campoSenhaLogin.Location = new System.Drawing.Point(591, 265);
             this.campoSenhaLogin.Multiline = true;
             this.campoSenhaLogin.Name = "campoSenhaLogin";
+            this.campoSenhaLogin.PasswordChar = '*';
             this.campoSenhaLogin.Size = new System.Drawing.Size(300, 29);
             this.campoSenhaLogin.TabIndex = 3;
             // 
@@ -191,7 +192,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.Manualusuario);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.panel1);
@@ -201,17 +202,18 @@
             this.panel2.Size = new System.Drawing.Size(1065, 51);
             this.panel2.TabIndex = 10;
             // 
-            // label6
+            // Manualusuario
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(878, 21);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 13);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Manual do usuário";
+            this.Manualusuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Manualusuario.AutoSize = true;
+            this.Manualusuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Manualusuario.ForeColor = System.Drawing.Color.White;
+            this.Manualusuario.Location = new System.Drawing.Point(878, 21);
+            this.Manualusuario.Name = "Manualusuario";
+            this.Manualusuario.Size = new System.Drawing.Size(94, 13);
+            this.Manualusuario.TabIndex = 2;
+            this.Manualusuario.Text = "Manual do usuário";
+            this.Manualusuario.Click += new System.EventHandler(this.Manualusuario_Click);
             // 
             // panel3
             // 
@@ -343,7 +345,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label Manualusuario;
         private System.Windows.Forms.Button button2;
     }
 }

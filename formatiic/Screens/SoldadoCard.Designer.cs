@@ -31,7 +31,7 @@
             this.roundedPanel1 = new RoundedPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtWarname = new System.Windows.Forms.Label();
-            this.foto = new RoundedPictureBox();
+            this.fotoCard = new RoundedPictureBox();
             this.txtDateofbirth = new System.Windows.Forms.Label();
             this.linkRemover = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,7 +42,7 @@
             this.Ausente = new System.Windows.Forms.RadioButton();
             this.Atrasado = new System.Windows.Forms.RadioButton();
             this.roundedPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.foto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoCard)).BeginInit();
             this.SuspendLayout();
             // 
             // roundedPanel1
@@ -51,7 +51,7 @@
             this.roundedPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.roundedPanel1.Controls.Add(this.label2);
             this.roundedPanel1.Controls.Add(this.txtWarname);
-            this.roundedPanel1.Controls.Add(this.foto);
+            this.roundedPanel1.Controls.Add(this.fotoCard);
             this.roundedPanel1.Controls.Add(this.txtDateofbirth);
             this.roundedPanel1.Controls.Add(this.linkRemover);
             this.roundedPanel1.Controls.Add(this.label1);
@@ -67,6 +67,7 @@
             this.roundedPanel1.Name = "roundedPanel1";
             this.roundedPanel1.Size = new System.Drawing.Size(1193, 66);
             this.roundedPanel1.TabIndex = 12;
+            this.roundedPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.roundedPanel1_Paint_1);
             // 
             // label2
             // 
@@ -94,26 +95,26 @@
             this.txtWarname.Text = "Nome nome nome";
             this.txtWarname.Click += new System.EventHandler(this.Id_Click);
             // 
-            // foto
+            // fotoCard
             // 
-            this.foto.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.foto.BackColor = System.Drawing.Color.Transparent;
-            this.foto.BackgroundImage = global::formatiic.Properties.Resources.user;
-            this.foto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.foto.Location = new System.Drawing.Point(3, 1);
-            this.foto.Name = "foto";
-            this.foto.Size = new System.Drawing.Size(60, 60);
-            this.foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.foto.TabIndex = 0;
-            this.foto.TabStop = false;
-            this.foto.Click += new System.EventHandler(this.foto_Click);
+            this.fotoCard.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.fotoCard.BackColor = System.Drawing.Color.Transparent;
+            this.fotoCard.BackgroundImage = global::formatiic.Properties.Resources.user;
+            this.fotoCard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.fotoCard.Location = new System.Drawing.Point(3, 1);
+            this.fotoCard.Name = "fotoCard";
+            this.fotoCard.Size = new System.Drawing.Size(60, 60);
+            this.fotoCard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.fotoCard.TabIndex = 0;
+            this.fotoCard.TabStop = false;
+            this.fotoCard.Click += new System.EventHandler(this.foto_Click);
             // 
             // txtDateofbirth
             // 
             this.txtDateofbirth.AutoSize = true;
             this.txtDateofbirth.BackColor = System.Drawing.Color.Transparent;
             this.txtDateofbirth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.txtDateofbirth.Location = new System.Drawing.Point(351, 42);
+            this.txtDateofbirth.Location = new System.Drawing.Point(391, 41);
             this.txtDateofbirth.Name = "txtDateofbirth";
             this.txtDateofbirth.Size = new System.Drawing.Size(65, 13);
             this.txtDateofbirth.TabIndex = 9;
@@ -125,7 +126,7 @@
             this.linkRemover.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.linkRemover.AutoSize = true;
             this.linkRemover.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.linkRemover.Location = new System.Drawing.Point(550, 42);
+            this.linkRemover.Location = new System.Drawing.Point(619, 42);
             this.linkRemover.Name = "linkRemover";
             this.linkRemover.Size = new System.Drawing.Size(50, 13);
             this.linkRemover.TabIndex = 5;
@@ -135,11 +136,12 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Myanmar Text", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(345, 26);
+            this.label1.Location = new System.Drawing.Point(385, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 23);
             this.label1.TabIndex = 11;
@@ -152,7 +154,7 @@
             this.linkEditar.AutoSize = true;
             this.linkEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkEditar.LinkColor = System.Drawing.Color.Blue;
-            this.linkEditar.Location = new System.Drawing.Point(508, 42);
+            this.linkEditar.Location = new System.Drawing.Point(577, 42);
             this.linkEditar.Name = "linkEditar";
             this.linkEditar.Size = new System.Drawing.Size(34, 13);
             this.linkEditar.TabIndex = 4;
@@ -165,7 +167,7 @@
             this.Presente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Presente.AutoSize = true;
             this.Presente.Checked = true;
-            this.Presente.Location = new System.Drawing.Point(575, 25);
+            this.Presente.Location = new System.Drawing.Point(744, 25);
             this.Presente.Name = "Presente";
             this.Presente.Size = new System.Drawing.Size(14, 13);
             this.Presente.TabIndex = 6;
@@ -179,7 +181,7 @@
             this.linkList.AutoSize = true;
             this.linkList.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkList.LinkColor = System.Drawing.Color.Blue;
-            this.linkList.Location = new System.Drawing.Point(443, 42);
+            this.linkList.Location = new System.Drawing.Point(512, 42);
             this.linkList.Name = "linkList";
             this.linkList.Size = new System.Drawing.Size(51, 13);
             this.linkList.TabIndex = 10;
@@ -204,7 +206,7 @@
             // 
             this.Ausente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Ausente.AutoSize = true;
-            this.Ausente.Location = new System.Drawing.Point(722, 25);
+            this.Ausente.Location = new System.Drawing.Point(891, 25);
             this.Ausente.Name = "Ausente";
             this.Ausente.Size = new System.Drawing.Size(14, 13);
             this.Ausente.TabIndex = 7;
@@ -216,7 +218,7 @@
             // 
             this.Atrasado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Atrasado.AutoSize = true;
-            this.Atrasado.Location = new System.Drawing.Point(871, 25);
+            this.Atrasado.Location = new System.Drawing.Point(1040, 25);
             this.Atrasado.Name = "Atrasado";
             this.Atrasado.Size = new System.Drawing.Size(14, 13);
             this.Atrasado.TabIndex = 8;
@@ -236,14 +238,14 @@
             this.Load += new System.EventHandler(this.SoldadoCard_Load);
             this.roundedPanel1.ResumeLayout(false);
             this.roundedPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.foto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoCard)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private RoundedPictureBox foto;
+        public RoundedPictureBox fotoCard;
         public System.Windows.Forms.Label txtFullname;
         public System.Windows.Forms.Label txtWarname;
         private System.Windows.Forms.Label label2;

@@ -34,7 +34,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.icone = new System.Windows.Forms.PictureBox();
             this.roundedPanel1 = new RoundedPanel();
-            this.roundedPictureBox1 = new RoundedPictureBox();
+            this.FotoSoldado = new RoundedPictureBox();
             this.comboTS = new System.Windows.Forms.ComboBox();
             this.AddSoldier = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -58,7 +58,7 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icone)).BeginInit();
             this.roundedPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FotoSoldado)).BeginInit();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -106,7 +106,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.roundedPanel1.BackColor = System.Drawing.Color.White;
-            this.roundedPanel1.Controls.Add(this.roundedPictureBox1);
+            this.roundedPanel1.Controls.Add(this.FotoSoldado);
             this.roundedPanel1.Controls.Add(this.comboTS);
             this.roundedPanel1.Controls.Add(this.AddSoldier);
             this.roundedPanel1.Controls.Add(this.txtEmail);
@@ -134,18 +134,18 @@
             this.roundedPanel1.TabIndex = 10;
             this.roundedPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.roundedPanel1_Paint);
             // 
-            // roundedPictureBox1
+            // FotoSoldado
             // 
-            this.roundedPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.roundedPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.roundedPictureBox1.BackgroundImage = global::formatiic.Properties.Resources.user;
-            this.roundedPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.roundedPictureBox1.Location = new System.Drawing.Point(381, 111);
-            this.roundedPictureBox1.Name = "roundedPictureBox1";
-            this.roundedPictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.roundedPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.roundedPictureBox1.TabIndex = 34;
-            this.roundedPictureBox1.TabStop = false;
+            this.FotoSoldado.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.FotoSoldado.BackColor = System.Drawing.Color.Transparent;
+            this.FotoSoldado.BackgroundImage = global::formatiic.Properties.Resources.user;
+            this.FotoSoldado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FotoSoldado.Location = new System.Drawing.Point(381, 111);
+            this.FotoSoldado.Name = "FotoSoldado";
+            this.FotoSoldado.Size = new System.Drawing.Size(100, 100);
+            this.FotoSoldado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.FotoSoldado.TabIndex = 34;
+            this.FotoSoldado.TabStop = false;
             // 
             // comboTS
             // 
@@ -351,6 +351,7 @@
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(287, 25);
             this.txtTel.TabIndex = 8;
+            this.txtTel.Click += new System.EventHandler(this.txtTel_Click);
             // 
             // txtNomeG
             // 
@@ -431,7 +432,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.icone)).EndInit();
             this.roundedPanel1.ResumeLayout(false);
             this.roundedPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FotoSoldado)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -461,6 +462,6 @@
         private System.Windows.Forms.Button AddSoldier;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboTS;
-        private RoundedPictureBox roundedPictureBox1;
+        private RoundedPictureBox FotoSoldado;
     }
 }

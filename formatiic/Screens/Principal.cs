@@ -1,14 +1,15 @@
-﻿using System;
+﻿using formatiic.Scripts;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using formatiic.Scripts;
-using MySql.Data.MySqlClient;
 
 namespace formatiic.Screens
 {
@@ -53,7 +54,7 @@ namespace formatiic.Screens
                 if (con != null)
                 {
 
-                    string sql = "SELECT id, fullname, warname, dateofbirth FROM shooter_tbl";
+                    string sql = "SELECT id, fullname, warname, dateofbirth, photo  FROM shooter_tbl";
                     MySqlCommand cmd = new MySqlCommand(sql, con);
 
                     try
@@ -79,6 +80,10 @@ namespace formatiic.Screens
                                         int value = reader.GetInt16(i);
                                         row[columnName] = value;
                                     }
+                                    else if (reader.GetFieldType(i) == typeof(byte[]) && !reader.IsDBNull(i))
+                                    {
+                                        row[columnName] = reader["photo"];
+                                    }
                                     else
                                     {
                                         row[columnName] = reader.IsDBNull(i) ? null : reader.GetString(i);
@@ -89,7 +94,16 @@ namespace formatiic.Screens
                                 string warname = row["warname"] as string;
                                 DateTime dateofbirth = row["dateofbirth"] is DateTime dt ? dt: DateTime.MinValue;
 
-                                SoldadoCard s = CreateShooterCard(fullname, warname, dateofbirth.ToString("dd-MM-yyyy"));
+                                Image foto = null;
+                                if (row.ContainsKey("photo") && row["photo"] is byte[] imgBytes && imgBytes.Length > 0)
+                                {
+                                    using (MemoryStream ms = new MemoryStream(imgBytes))
+                                    {
+                                        foto = Image.FromStream(ms);
+                                    }
+                                }
+
+                                SoldadoCard s = CreateShooterCard(fullname, warname, dateofbirth.ToString("dd-MM-yyyy"),foto);
                                 s.id = Convert.ToInt16(row["id"]);
                             }
                         }
@@ -126,7 +140,7 @@ namespace formatiic.Screens
             UpdateAttendanceInfo();
         }
 
-        private SoldadoCard CreateShooterCard(string fullname, string warname, string birthday)
+        private SoldadoCard CreateShooterCard(string fullname, string warname, string birthday, Image foto)
         {
             SoldadoCard novoSoldado = new SoldadoCard();
             novoSoldado.Width = SoldierPanel.ClientSize.Width - 20;
@@ -138,6 +152,11 @@ namespace formatiic.Screens
             novoSoldado.txtFullname.Text = fullname;
             novoSoldado.txtWarname.Text = warname;
             novoSoldado.txtDateofbirth.Text = birthday;
+
+            if (foto != null)
+            {
+                novoSoldado.fotoCard.Image = foto;
+            }
 
             if (!User.GetUser().IsAdmin)
             {
@@ -354,5 +373,24 @@ namespace formatiic.Screens
             }
         }
 
+        private void roundedPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void presentLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void awayLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lateLbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -16,12 +16,15 @@ namespace formatiic.Screens
     public partial class SoldadoCard : UserControl
     {
         public int id;
-        
+        //public System.Windows.Forms.PictureBox fotoCard;
+
         public SoldadoCard()
         {
             InitializeComponent();
             linkRemover.LinkClicked += LinkRemover_LinkClicked;
         }
+
+
 
         private void roundedPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -160,6 +163,11 @@ namespace formatiic.Screens
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roundedPanel1_Paint_1(object sender, PaintEventArgs e)
         {
 
         }

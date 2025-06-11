@@ -52,6 +52,8 @@
             this.beardOK = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.icone = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panelDireita.SuspendLayout();
             this.roundedPanel2.SuspendLayout();
             this.roundedPanel6.SuspendLayout();
@@ -59,6 +61,8 @@
             this.roundedPanel4.SuspendLayout();
             this.roundedPanel3.SuspendLayout();
             this.roundedPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.icone)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelDireita
@@ -335,11 +339,33 @@
             this.label16.TabIndex = 7;
             this.label16.Text = "Check-list de inspeção diária";
             // 
+            // icone
+            // 
+            this.icone.BackColor = System.Drawing.Color.Transparent;
+            this.icone.Image = global::formatiic.Properties.Resources.ico;
+            this.icone.Location = new System.Drawing.Point(3, -2);
+            this.icone.Name = "icone";
+            this.icone.Size = new System.Drawing.Size(40, 40);
+            this.icone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.icone.TabIndex = 14;
+            this.icone.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.icone);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(776, 34);
+            this.panel2.TabIndex = 18;
+            // 
             // CheckList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(776, 576);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelDireita);
             this.Name = "CheckList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -357,6 +383,8 @@
             this.roundedPanel3.PerformLayout();
             this.roundedPanel1.ResumeLayout(false);
             this.roundedPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.icone)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -387,5 +415,7 @@
         private System.Windows.Forms.RadioButton hairPen;
         private System.Windows.Forms.RadioButton hairOK;
         private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.PictureBox icone;
+        private System.Windows.Forms.Panel panel2;
     }
 }

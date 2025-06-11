@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,8 +11,9 @@ namespace formatiic.Scripts
     {
         private string fullname, warname, contact, bloodtype, email, address;
         private DateTime dateofbirth;
+        private Image photo;
 
-        public Shooter(string fullname, string warname, string bloodtype, string email, string contact, string address, DateTime dateofbirth)
+        public Shooter(string fullname, string warname, string bloodtype, string email, string contact, string address, DateTime dateofbirth, Image photo)
         {
             this.fullname = fullname;
             this.warname = warname;
@@ -20,6 +22,7 @@ namespace formatiic.Scripts
             this.address = address;
             this.dateofbirth = dateofbirth;
             this.contact = contact;
+            this.photo = photo;
         }
 
         public string Fullname { get { return fullname; } }
@@ -29,5 +32,6 @@ namespace formatiic.Scripts
         public string Contact { get { return contact; } }
         public string Address { get { return address; } }
         public DateTime Dateofbirth { get { return dateofbirth; } }
+        public Image Photo { get { return photo; } }
     }
 }
